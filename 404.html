@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page déplacée - La Guerre de l'Hérésie</title>
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        if (path.endsWith('.php')) {
+          window.location.replace(path.slice(0, -4) + '.html' + window.location.search + window.location.hash);
+        }
+      }());
+    </script>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 3rem; line-height: 1.5; }
+    </style>
+  </head>
+  <body>
+    <h1>Page introuvable</h1>
+    <p>Cette page a peut-être été déplacée lors de la migration vers GitHub Pages.</p>
+    <p><a href="./">Retour à l'accueil</a></p>
+  </body>
+</html>

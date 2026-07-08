@@ -1,0 +1,11 @@
+/* Local fallback for the former shared NatersCreations stylesheet.
+   The page-specific stylesheets keep the visual identity of this site.
+   This file prevents a missing external dependency on GitHub Pages. */
+
+.site-header {
+  min-height: 100vh;
+}
+
+.hes {
+  z-index: 20;
+}
