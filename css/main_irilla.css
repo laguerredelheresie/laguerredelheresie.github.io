@@ -9,9 +9,9 @@ body
 	margin                      : 0;
 	text-align					: center;
 	font-family					: "Papyrus", Times, serif;
-	overflow-x				: hidden;
-	max-width 				: 100vw;
-	width 					: 95%;
+	  width: 100%;
+	  max-width: none;
+	  overflow-x: hidden;
 }
 * {
 	box-sizing: border-box;
