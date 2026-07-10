@@ -6,9 +6,16 @@
     <title>Page déplacée - La Guerre de l'Hérésie</title>
     <script>
       (function () {
+        var canonicalOrigin = "https://laguerredelheresie.com";
         var path = window.location.pathname;
-        if (path.endsWith('.php')) {
-          window.location.replace(path.slice(0, -4) + '.html' + window.location.search + window.location.hash);
+        var targetPath = path;
+
+        if (path.endsWith(".php")) {
+          targetPath = path.slice(0, -4) + ".html";
+        }
+
+        if (window.location.hostname === "laguerredelheresie.github.io" || targetPath !== path) {
+          window.location.replace(canonicalOrigin + targetPath + window.location.search + window.location.hash);
         }
       }());
     </script>
@@ -18,7 +25,7 @@
   </head>
   <body>
     <h1>Page introuvable</h1>
-    <p>Cette page a peut-être été déplacée lors de la migration vers GitHub Pages.</p>
-    <p><a href="./">Retour à l'accueil</a></p>
+    <p>Cette page a peut-être été déplacée lors de la migration vers le domaine officiel.</p>
+    <p><a href="https://laguerredelheresie.com/">Retour à l'accueil</a></p>
   </body>
 </html>
