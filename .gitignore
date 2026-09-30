@@ -1,0 +1,4 @@
+# Ignore configuration and build script
+.idea
+.idea/*
+.idea/
