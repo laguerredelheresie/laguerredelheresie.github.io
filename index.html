@@ -765,6 +765,21 @@
                 line-height: 1.2;
                 text-align: center;
             }
+
+            /* Force all visible card typography to true black on mobile. */
+            article a.mobile-character-card,
+            article a.mobile-character-card:link,
+            article a.mobile-character-card:visited,
+            article a.mobile-character-card:hover,
+            article a.mobile-character-card:active,
+            article .mobile-character-card > span,
+            article .mobile-character-card strong,
+            article .mobile-character-card small {
+                color: #000 !important;
+                -webkit-text-fill-color: #000 !important;
+                text-shadow: none !important;
+            }
+            article .mobile-character-card small { opacity: 1 !important; }
         }
 </style>
 </head>
@@ -1246,8 +1261,8 @@
 						</tr>
 				</table><br></br>
 
-				<br></br><h1 class="characters-more-desktop">Plus de détails ? Plongez dans la <a href="https://laguerredelheresie.fandom.com/fr/wiki/Wiki_laguerredelheresie" >fandom</a></h1>
-				<h1 class="characters-more-mobile" style="display:none">Retrouvez tous les personnages: <a href="https://laguerredelheresie.fandom.com/fr/wiki/Wiki_laguerredelheresie">fandom</a></h1>
+				<br></br><h1 class="characters-more-desktop">Plus de détails ? Plongez dans la <a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" >fandom</a></h1>
+				<h1 class="characters-more-mobile" style="display:none">Retrouvez tous les personnages: <a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms">fandom</a></h1>
 				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" ><img src="pictures/Wiki_LaGuerreDeLHeresie_QR.PNG" alt="La guerre de l'hérésie - wiki" #WikiLaGuerreDeLHeresie width="27%" /></a>
 
 			</div><br></br>
