@@ -70,8 +70,9 @@
 
             body > header {
                 position: relative;
-                width: 100vw;
+                width: 100%;
                 min-height: 100svh;
+                box-sizing: border-box;
                 margin: 0 !important;
                 padding: 0 18px 28px;
                 display: flex;
@@ -87,7 +88,7 @@
                 position: absolute;
                 inset: 0;
                 z-index: -2;
-                background: url("pictures/LaGuerredelHeresie_Wallpaper_m_Pruinae.JPG") center top / cover no-repeat;
+                background: url("pictures/LaGuerredelHeresie_Wallpaper_m_Pruinae.PNG") center top / cover no-repeat;
             }
 
             body > header::after {
@@ -119,15 +120,15 @@
             body > header .shop a {
                 display: grid;
                 place-items: center;
-                width: 48px;
-                height: 48px;
+                width: 56px;
+                height: 56px;
             }
 
             body > header .shop_img {
-                width: 42px !important;
-                height: 42px !important;
+                width: 50px !important;
+                height: 50px !important;
                 min-width: 0 !important;
-                max-width: 42px;
+                max-width: 50px;
                 margin: 0 !important;
                 object-fit: contain;
                 filter: drop-shadow(0 3px 7px rgba(0,0,0,.35));
@@ -135,6 +136,7 @@
 
             article {
                 width: 100%;
+                box-sizing: border-box;
                 margin: 0 !important;
                 padding: 34px 16px 48px;
                 background: linear-gradient(#f6f1e7, #fffdf8 22%, #f6f1e7);
@@ -240,15 +242,30 @@
             article table.calendar {
                 width: 100%;
                 display: table;
-                font-size: .72rem;
+                font-size: .60rem;
+                line-height: 1.25;
                 border-collapse: collapse;
             }
 
             article table.calendar td,
             article table.calendar th {
-                padding: 8px 5px !important;
+                padding: 5px 3px !important;
                 overflow-wrap: anywhere;
             }
+
+            .invisible { display: none !important; visibility: hidden !important; }
+
+            body > header .shop a[href*="booknode.com"] { display: none !important; }
+
+            article table.calendar h1, article table.calendar h2, article table.calendar h3, article table.calendar p {
+                font-size: .60rem !important; line-height: 1.2 !important; margin-left: 0 !important;
+            }
+
+            article .carte {
+                display: block; width: 100% !important; max-width: 100% !important; min-width: 0 !important; height: auto !important; margin: 0 auto !important; box-sizing: border-box;
+            }
+
+            article .core > table:has(.carte) { width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
 
             footer { margin: 0 !important; padding: 28px 16px !important; }
         }
@@ -256,8 +273,8 @@
         @media screen and (max-width: 480px) {
             body > header { padding-inline: 12px; }
             body > header .shop { gap: 8px; padding: 11px 8px; }
-            body > header .shop a { width: 42px; height: 42px; }
-            body > header .shop_img { width: 36px !important; height: 36px !important; max-width: 36px; }
+            body > header .shop a { width: 48px; height: 48px; }
+            body > header .shop_img { width: 44px !important; height: 44px !important; max-width: 44px; }
             article { padding-inline: 13px; }
         }
         </style>
