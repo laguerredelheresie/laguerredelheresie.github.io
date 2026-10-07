@@ -584,3 +584,129 @@ h1.character-name-fixed {
 @media screen and (max-width: 520px) {
     h1.character-name-fixed { font-size: clamp(1.55rem, 8.3vw, 2.35rem) !important; }
 }
+
+
+/* ==========================================================================
+   HARD FIX: Pruinae Enneis must be one physical visual line
+   ========================================================================== */
+h1.character-name-force {
+    display: block !important;
+    position: relative !important;
+    float: none !important;
+    clear: both !important;
+    width: max-content !important;
+    min-width: max-content !important;
+    max-width: none !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    white-space: pre !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    font-size: clamp(2rem, 4vw, 4rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.035em !important;
+}
+
+/* Scale to fit narrow screens, but never create a second line. */
+@media screen and (max-width: 600px) {
+    h1.character-name-force {
+        font-size: clamp(1.65rem, 8vw, 2.55rem) !important;
+    }
+}
+@media screen and (max-width: 390px) {
+    h1.character-name-force {
+        font-size: 1.65rem !important;
+    }
+}
+
+/* Register book selector */
+.book-selector { display:flex; align-items:center; justify-content:center; gap:.55rem; margin:.25rem 0 1rem; color:#d4b36c; font-family:inherit; font-size:.82rem; letter-spacing:.08em; }
+.book-selector span { margin-right:.1rem; opacity:.8; }
+.book-link { appearance:none; border:0; border-bottom:1px solid transparent; padding:.12rem .2rem; background:none; color:inherit; font:inherit; cursor:pointer; opacity:.5; }
+.book-link:hover { opacity:.85; }
+.book-link.active { opacity:1; border-bottom-color:currentColor; text-shadow:0 0 10px rgba(212,179,108,.45); }
+
+/* Register book selector: centered with extra spacing */
+.registry .book-selector {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    gap:.7rem;
+    margin:1rem auto 1.8rem;
+    text-align:center;
+}
+.registry .book-selector span { margin-right:.35rem; }
+
+/* Larger register details */
+.registry dl { font-size:1.08rem; }
+.registry dt { font-size:.78rem; letter-spacing:.08em; }
+.registry dd { font-size:1.12rem; line-height:1.25; }
+
+/* Register: labels and values at the same size, with more vertical breathing room */
+.registry dl { row-gap:.85rem !important; }
+.registry dt,
+.registry dd {
+    font-size:1.12rem !important;
+    line-height:1.35 !important;
+}
+.registry dt { letter-spacing:.06em; }
+
+
+/* ==========================================================================
+   Shared character-page consistency
+   ========================================================================== */
+.hero-copy > h1.character-name {
+    display:block !important;
+    width:max-content !important;
+    min-width:max-content !important;
+    max-width:none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    white-space:nowrap !important;
+    word-break:keep-all !important;
+    overflow-wrap:normal !important;
+    hyphens:none !important;
+    writing-mode:horizontal-tb !important;
+    font-size:clamp(2rem,4vw,4rem) !important;
+    line-height:1.05 !important;
+    letter-spacing:-.035em !important;
+}
+.registry dl { row-gap:.85rem !important; }
+.registry dt,.registry dd { font-size:1.12rem !important; line-height:1.35 !important; }
+.registry dt { letter-spacing:.06em; }
+.lore p a.character-link { color:var(--gold,#d4b36c); text-decoration:none; border-bottom:1px solid rgba(212,179,108,.35); }
+.lore p a.character-link:hover { border-bottom-color:currentColor; }
+@media screen and (max-width:600px) {
+    .hero-copy > h1.character-name { font-size:clamp(1.55rem,7.2vw,2.5rem) !important; }
+}
+
+/* Character wiki + directory */
+.wiki-page-link { display:block; width:max-content; margin:.55rem auto 1rem; color:var(--gold,#d4b36c); font-size:.82rem; letter-spacing:.08em; text-decoration:none; border-bottom:1px solid rgba(212,179,108,.35); }
+.wiki-page-link:hover { border-bottom-color:currentColor; }
+.character-directory { padding:3rem 0 5rem; text-align:center; }
+.character-directory > h1 { margin:.25rem 0 .65rem; }
+.directory-intro { opacity:.78; margin-bottom:2rem; }
+.character-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1.25rem; text-align:left; }
+.character-card { border:1px solid rgba(212,179,108,.28); background:rgba(5,9,24,.58); padding:.8rem; }
+.character-card-link { display:grid; grid-template-columns:74px 1fr; gap:1rem; align-items:center; color:inherit; text-decoration:none; }
+.character-thumb { width:74px; height:92px; overflow:hidden; border:1px solid rgba(212,179,108,.4); }
+.character-thumb img { width:100% !important; height:100% !important; object-fit:cover; margin:0 !important; transform:none !important; }
+.character-card h2 { margin:0 0 .25rem; font-size:1.15rem; }
+.character-card p { margin:0; opacity:.65; font-size:.82rem; }
+.image-path { display:block; margin-top:.7rem; padding:.45rem .5rem; overflow-wrap:anywhere; font-size:.68rem; opacity:.58; border-top:1px solid rgba(212,179,108,.15); }
+
+.hero-rank{width:max-content;max-width:100%;margin:.55rem auto 1rem;color:var(--gold,#d4b36c);font-size:.9rem;letter-spacing:.08em;text-align:center}
+.characters-simple{padding:3rem 0 5rem;text-align:center}.characters-simple>h1{margin:.25rem 0 1.7rem}
+.mini-character-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.7rem;max-width:1000px;margin:0 auto}
+.mini-character-card{display:flex;align-items:center;gap:.7rem;min-height:68px;padding:.45rem;color:inherit;text-decoration:none;text-align:left;border:1px solid rgba(212,179,108,.28);background:rgba(5,9,24,.58)}
+.mini-character-card:hover{border-color:rgba(212,179,108,.65);transform:translateY(-2px)}
+.mini-character-card>img{flex:0 0 48px;width:48px!important;height:54px!important;margin:0!important;object-fit:cover;transform:none!important;border:1px solid rgba(212,179,108,.35)}
+.mini-character-card strong{display:block;font-size:.88rem;line-height:1.15}.mini-character-card small{display:block;margin-top:.2rem;font-size:.66rem;line-height:1.2;opacity:.58}
+.portal-links{grid-template-columns:repeat(3,minmax(0,1fr))!important}@media(max-width:700px){.portal-links{grid-template-columns:1fr!important}}
