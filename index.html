@@ -605,18 +605,83 @@
 }
         </script>
 
-    </head>
+    <style>
 
+        /* Mobile character directory: same compact cards as personnages.html. */
+        @media screen and (max-width: 1000px) {
+            article .core_character > table { display: none !important; }
+            article .core_character > a[href*="Lexiques_des_noms"] { display: none !important; }
+            article .core_character > br { display: none !important; }
+
+            article .mobile-character-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: .7rem;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            article .mobile-character-card {
+                display: flex !important;
+                align-items: center;
+                gap: .7rem;
+                min-width: 0;
+                min-height: 68px;
+                padding: .45rem;
+                color: #eee4cf !important;
+                text-decoration: none !important;
+                text-align: left !important;
+                border: 1px solid rgba(212,179,108,.28);
+                background: rgba(5,9,24,.88);
+                box-sizing: border-box;
+            }
+
+            article .mobile-character-card > img {
+                flex: 0 0 48px;
+                display: block;
+                width: 48px !important;
+                height: 54px !important;
+                min-width: 48px !important;
+                max-width: 48px !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                object-fit: cover;
+                transform: none !important;
+                border: 1px solid rgba(212,179,108,.35);
+            }
+
+            article .mobile-character-card > span { min-width: 0; }
+            article .mobile-character-card strong {
+                display: block;
+                margin: 0;
+                color: #eee4cf;
+                font-family: Georgia, 'Times New Roman', serif;
+                font-size: .88rem;
+                font-weight: 700;
+                line-height: 1.15;
+                overflow-wrap: anywhere;
+            }
+        }
+
+        @media screen and (max-width: 430px) {
+            article .mobile-character-grid { grid-template-columns: 1fr; }
+        }
+</style>
+</head>
+	
 	<!--
-  	 _   _       _            _____  _____                _   _
-	| \ | |     | |          / ____|/ ____|              | | (_)
-	|  \| | __ _| |_ ___ _ _| (___ | |     _ __ ___  __ _| |_ _  ___  _ __  ___
+  	 _   _       _            _____  _____                _   _                 
+	| \ | |     | |          / ____|/ ____|              | | (_)                
+	|  \| | __ _| |_ ___ _ _| (___ | |     _ __ ___  __ _| |_ _  ___  _ __  ___ 
 	| . ` |/ _` | __/ _ \ '__\___ \| |    | '__/ _ \/ _` | __| |/ _ \| '_ \/ __|
 	| |\  | (_| | ||  __/ |  ____) | |____| | |  __/ (_| | |_| | (_) | | | \__ \
 	|_| \_|\__,_|\__\___|_| |_____/ \_____|_|  \___|\__,_|\__|_|\___/|_| |_|___/ -->
-
-
-
+	
+	
+	
     <body #LaGuerreDeLHérésie #QuentinNater #NaterQuentin #Roman #Medieval class='site-header' role='banner' >
 		<!-- GitHub Pages: ancien compteur PHP supprimé, car Pages ne lance pas de code serveur. -->
 <header>
@@ -626,7 +691,7 @@
 			<h2 #="la guerre de l'hérésie - livre 2 : l'aube d'un idéal" class='invisible' >la guerre de l'hérésie - livre 2 : l'aube d'un idéal</h2>
 			<h2 #="la guerre de l'hérésie - livre 3 : l'illusion d'un souhait" class='invisible' >la guerre de l'hérésie - livre 3 : l'illusion d'un souhait</h2>
 
-
+			
 			<img src="pictures/LaGuerredelHeresie_Livre3_VeroneEditions.JPG" width="0px" height="0px" />
 			<div class="shop" >
 				<a href='https://www.fnac.com/ia10677023/Quentin-Nater' ><img src='pictures/fnac.png' class='shop_img' alt="FNAC : La guerre de l'heresie" #FNACLaGuerreDeLHeresie ></a>
@@ -636,16 +701,16 @@
 				<a href='https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms' ><img src='pictures/wiki_l.PNG' class='shop_img' alt="wiki La guerre de l'heresie" #WikiLaGuerreDeLHeresie ></a>
 				<a href='https://www.instagram.com/quentin_nater/' ><img src='pictures/logo_instagram.PNG' class='shop_img' alt="Instagram Quentin Nater : La guerre de l'heresie" #InstagramQuentinNaterLaGuerreDeLHeresie ></a>
 			</div>
-
-
+			
+			
 			<a href='#top' class='topArrow' ><img src='pictures/tools/topArraw.PNG' class='topArrow' ></a>
 			<a href='#end' class='bottomArraw' ><img src='pictures/tools/bottomArraw.PNG' class='bottomArraw' ></a>
 		</header>
-
-
-
-		<article #="S'estomper vers les Ténèbres" #LaGuerreDeLHérésie #="la guerre de l'heresie" >
-
+		
+			
+		
+		<article #="S'estomper vers les Ténèbres" #LaGuerreDeLHérésie #="la guerre de l'heresie" >				  
+			
 			<div class='core' >
 			<!--<h1 style="padding-top:20%; padding-bottom:35%; text-align:center; font-size:250%; color:#66329a;" >L'Illusion d'un Souhait est enfin sorti !!! <a href="#lids3" > Commander !</a> &#9876;&#65039; &#128009; </h1>--><br></br>
 				<div class="cor_tab_right" >
@@ -670,7 +735,7 @@
                     </table>
 				 </div>
 			</div>
-
+			
 			<div class='core' >
 				<div class="cor_tab_right" >
                     <table>
@@ -731,7 +796,7 @@
                                 <h2>« Réunis les quatre races Vastums, emprunte les Portails d’Aaraxios et traverse les mondes, un à un. Découvre les peuples originels, comprends leur réalité, déchiffre les conséquences de cette guerre et rejoins-moi sur Heara avant la Lune de Docéliande pour sauver ton peuple et t’offrir un futur. »
                                         <br />Porté par l’avènement de la guerre, l’ordre de la Reine du Temps résonne encore dans le coeur de Pruinae Enneis, la sylphide du lac Azur. Ses choix, dictés par le poids de son épée, pourraient bien sceller le destin des mortels. Des déserts brûlants aux plaines glacées, des forêts enchantées aux cités merveilleuses, Pruinae devra affronter son passé et percer les mystères des divinités. Entre romance et secrets, l’Ordre de l’Hérésie s’engage dans un périple empreint de magie, promis à entrer dans la légende… ou à sombrer dans l’oubli.
                                 </h2>
-                                <br /><h2>Date de sortie: 24 Octobre 2026 !</h2><h2> Date du vernissage: 07 Novembre 2026!</h2>
+                                <br /><h2>Date de sortie: 24 Octobre 2026 !</h2><h2> Date du vernissage: 07 novembre 2026!</h2>
                         </tr>
 
                     </table>
@@ -954,6 +1019,77 @@
 			<div class='core_character'>
 				<h1 id='personnages' #="La Guerre de l'heresie : Les personnages" #LaGuerreDeLHeresieLesPersonnages class='title_character' >Les Personnages</h1>
 				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms"><h4>Lexique des noms officiel de la Guerre de l'Hérésie (par livre)</h4></a><br />
+
+				<div class="mobile-character-grid" aria-label="Personnages" style="display:none">
+					<a class="mobile-character-card" href="page/nate_ansicht.html">
+						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Nate Ansicht" />
+						<span><strong>Nate Ansicht</strong></span>
+					</a>
+					<div class="mobile-character-card">
+						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Slicer Streik" />
+						<span><strong>Slicer Streik</strong></span>
+					</div>
+					<a class="mobile-character-card" href="page/ryvin_hydrs.html">
+						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Ryvin Hydrs" />
+						<span><strong>Ryvin Hydrs</strong></span>
+					</a>
+					<a class="mobile-character-card" href="./page/aree_lazima.html">
+						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Arée Lazima" />
+						<span><strong>Arée Lazima</strong></span>
+					</a>
+					<a class="mobile-character-card" href="page/pruinae_enneis.html">
+						<img src="pictures/_PruinaeEnneisLivre4_Wallpaper_LaGuerreDeLHeresie.png" alt="Pruinae Enneis" />
+						<span><strong>Pruinae Enneis</strong></span>
+					</a>
+					<div class="mobile-character-card">
+						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Nix Sieg" />
+						<span><strong>Nix Sieg</strong></span>
+					</div>
+					<a class="mobile-character-card" href="page/faint_desabel.html">
+						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Faint Desabel" />
+						<span><strong>Faint Desabel</strong></span>
+					</a>
+					<a class="mobile-character-card" href="page/aizon_lowdel.html">
+						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Aizon Lowdel" />
+						<span><strong>Aizon Lowdel</strong></span>
+					</a>
+					<a class="mobile-character-card" href="page/mila.html">
+						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Milobellia Vi Urteil" />
+						<span><strong>Milobellia Vi Urteil</strong></span>
+					</a>
+					<a class="mobile-character-card" href="page/celarian.html">
+						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Celarian" />
+						<span><strong>Celarian</strong></span>
+					</a>
+					<a class="mobile-character-card" href="page/alazia_hora.html">
+						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Alazia Hora" />
+						<span><strong>Alazia Hora</strong></span>
+					</a>
+					<div class="mobile-character-card">
+						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Rayza" />
+						<span><strong>Rayza</strong></span>
+					</div>
+					<div class="mobile-character-card">
+						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Ceaze" />
+						<span><strong>Ceaze</strong></span>
+					</div>
+					<div class="mobile-character-card">
+						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Omia" />
+						<span><strong>Omia</strong></span>
+					</div>
+					<div class="mobile-character-card">
+						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Vespertilio" />
+						<span><strong>Vespertilio</strong></span>
+					</div>
+					<div class="mobile-character-card">
+						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Sillia" />
+						<span><strong>Sillia</strong></span>
+					</div>
+					<a class="mobile-character-card" href="page/irilla.html">
+						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Irilla" />
+						<span><strong>Irilla</strong></span>
+					</a>
+				</div>
 				<table>
 					<tr>
 						<td colspan="2" ><h1 #Vastums #='Vastums' class='main_race' >Vastums</h1></td>
