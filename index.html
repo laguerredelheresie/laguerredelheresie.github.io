@@ -427,7 +427,23 @@
             body > header .shop_img { width: 44px !important; height: 44px !important; max-width: 44px; }
             article { padding-inline: 16px; }
         }
-        </style>
+
+
+        @media screen and (max-width: 1000px) {
+            article .mobile-character-card strong,
+            article .mobile-character-card small {
+                color: #000 !important;
+            }
+
+            article .characters-more-desktop {
+                display: none !important;
+            }
+
+            article .characters-more-mobile {
+                display: block !important;
+            }
+        }
+</style>
 
         <script type="application/ld+json">
 {
@@ -1155,7 +1171,7 @@
 								<td><a href='page/pruinae_enneis.html' class='a_alpha' ><h1 #PruinaeEnneis #='Pruinae Enneis' class='name_left' >Pruinae Enneis</h1></a></td>
 								<td><p>Pruinae est une combattante Sienne de l'ordre de l'Apocalypsia. Second du Chevalier Blanc, <span #="Pruinae Enneis la guerre de l'hérésie" #PruinaeEnneis >Pruinae Enneis</span>, aussi connue sous le nom de sylphide du lac Azur, manie les arts astraux. Elle se bat pour protéger son père et réaliser son rêve de vivre une vie simple.</p></td>
 							</tr>
-							<tr>							
+							<tr>
 								<td><p><span #="Nix Sieg la guerre de l'hérésie" #NixSieg >Nix Sieg</span> est le Chevalier Blanc de la Conquête de l'Apocalypsia. Soldat Sienne, il est le manieur de Nebilis, l'Arc de Midrash. Le guerrier de glace suit une mission capitale qui mettra en péril la société Sienne.</p></td>
 								<td><h1 #NixSieg #='Nix Sieg' class='name_right'  >Nix Sieg</h1></td>
 							</tr>
@@ -1186,7 +1202,7 @@
 						<tr>
 							<td colspan="2" ><h1 #UnionRoyale #='Union Royale' class='main_race' >Union Royale</h1></td>
 						</tr>
-							<tr>							
+							<tr>
 								<td><a href='page/alazia_hora.html' class='a_alpha' ><h1 #AlaziaHora #='Alazia Hora' class='name_left'  >Alazia Hora</h1></a></td>
 								<td><p><span #="Alazia Hora la guerre de l'hérésie" #AlaziaHora >Alazia Hora</span> est la Reine du Temps, souveraine des Elfes. Elle dirige l'Union Royale, une union créée pour lutter contre les Dieux.</p></td>
 							</tr>
@@ -1205,7 +1221,7 @@
 						<tr>
 							<td colspan="2"><h1 #EscouadesDivines #='Escouades Divines' class='main_race' >Escouades Divines</h1></td>
 						</tr>
-							<tr>							
+							<tr>
 								<td><h1 #Omia #='Omia' class='name_left'  >Omia</h1></td>
 								<td><p><span #="Omia la guerre de l'hérésie" #Omia >Omia</span> est le Roi des Dieux, souverain des Realtins et maître de la Réalité. Héritier des desseins de Nécro, il dirige les Escouades Divines dans sa lutte contre l'Union Royale</p></td>
 							</tr>
@@ -1213,7 +1229,7 @@
 								<td><p>Le <span #="Vespertilio la guerre de l'hérésie" #Vespertilio >Vespertilio</span> est le Dieu de la Nuit, souverain des Vesps. Il est le Dieu responsable du massacre des Ansichts. Le Vespertilio est le seul Dieu à avoir été capable de s'échapper de l'illusion d'Omia et le seul à s'être retourné contre lui.</p></td>
 								<td><h1 #Vespertilio #='Vespertilio' class='name_right' >Vespertilio</h1></td>
 							</tr><!--
-							<tr>							
+							<tr>
 								<td><h1 #Despair #='Despair' class='name_left'  >Despair</h1></td>
 								<td><p>Le <span #="Despair la guerre de l'hérésie" #Despair >Despair</span> est un Demi-Dieu, fils d'Omia, le Roi des Dieux. Il dirige les hordes des ténèbres, en tant qu'héritier des Realtins.</p></td>
 							</tr>-->
@@ -1223,14 +1239,15 @@
 							</tr>
 						<tr>
 							<td colspan="2"><h1 #Irilla #='Irilla' class='main_race' ></h1></td>
-							<tr>							
+							<tr>
 								<td><a href='page/irilla.html' class='a_alpha' ><h1 #Irilla #="Irilla La Guerre de l'Hérésie" class='name_left'  >Irilla</h1></a></td>
 								<td><p><span #="Irilla la guerre de l'hérésie" #Irilla >Irilla</span> est connue sous le nom d'enchanteresse de saphir. Irilla est une mystérieuse jeune femme aux longs cheveux noirs et aux yeux sombres avec des reflets de saphir qui possède un certain caractère. Elle cherche à tout prix un trésor plus précieux que sa vie elle-même.</p></td>
 							</tr>
 						</tr>
 				</table><br></br>
-				
-				<br></br><h1>Plus de détails ? Plongez dans la <a href="https://laguerredelheresie.fandom.com/fr/wiki/Wiki_laguerredelheresie" >fandom</a></h1>
+
+				<br></br><h1 class="characters-more-desktop">Plus de détails ? Plongez dans la <a href="https://laguerredelheresie.fandom.com/fr/wiki/Wiki_laguerredelheresie" >fandom</a></h1>
+				<h1 class="characters-more-mobile" style="display:none">Retrouvez tous les personnages: <a href="https://laguerredelheresie.fandom.com/fr/wiki/Wiki_laguerredelheresie">fandom</a></h1>
 				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" ><img src="pictures/Wiki_LaGuerreDeLHeresie_QR.PNG" alt="La guerre de l'hérésie - wiki" #WikiLaGuerreDeLHeresie width="27%" /></a>
 
 			</div><br></br>
