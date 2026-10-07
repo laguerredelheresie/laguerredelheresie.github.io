@@ -267,6 +267,113 @@
 
             article .core > table:has(.carte) { width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
 
+            /* Normalize every main mobile section to the same left/right edge. */
+            article > .core,
+            article > .core_table,
+            article > .core_character,
+            article > hr,
+            article > section,
+            article > .lexicon-article {
+                box-sizing: border-box !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            article .core_character {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            /* Character table: one full-width cell after another, never squeezed columns. */
+            article .core_character > table,
+            article .core_character > table > tbody,
+            article .core_character > table > tbody > tr,
+            article .core_character > table > tr {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            article .core_character > table td {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                box-sizing: border-box !important;
+                margin: 0 !important;
+                padding: 5px 0 12px !important;
+                text-align: left !important;
+            }
+
+            article .core_character .name_left,
+            article .core_character .name_right,
+            article .core_character .race,
+            article .core_character .main_race {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                text-align: left !important;
+                box-sizing: border-box !important;
+            }
+
+            article .core_character td p {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Map table: each map and its description occupy the full mobile width. */
+            article .core > table:has(.carte),
+            article .core > table:has(.carte) > tbody,
+            article .core > table:has(.carte) > tbody > tr,
+            article .core > table:has(.carte) > tr {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            article .core > table:has(.carte) td {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                margin: 0 !important;
+                padding: 0 0 14px !important;
+                box-sizing: border-box !important;
+                text-align: left !important;
+            }
+
+            article .core > table:has(.carte) .td_book {
+                padding: 20px 0 10px !important;
+            }
+
+            article .core > table:has(.carte) .inv_mob {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 6px 0 10px !important;
+                padding: 0 !important;
+                text-align: left !important;
+                box-sizing: border-box !important;
+            }
+
+            article .carte {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
             footer { margin: 0 !important; padding: 28px 16px !important; }
         }
 
@@ -275,7 +382,7 @@
             body > header .shop { gap: 8px; padding: 11px 8px; }
             body > header .shop a { width: 48px; height: 48px; }
             body > header .shop_img { width: 44px !important; height: 44px !important; max-width: 44px; }
-            article { padding-inline: 13px; }
+            article { padding-inline: 16px; }
         }
         </style>
 
