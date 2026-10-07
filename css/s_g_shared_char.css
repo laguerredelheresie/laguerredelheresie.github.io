@@ -711,7 +711,6 @@ h1.character-name-force {
 .mini-character-card strong{display:block;font-size:.88rem;line-height:1.15}.mini-character-card small{display:block;margin-top:.2rem;font-size:.66rem;line-height:1.2;opacity:.58}
 .portal-links{grid-template-columns:repeat(3,minmax(0,1fr))!important}@media(max-width:700px){.portal-links{grid-template-columns:1fr!important}}
 
-/* REGISTRE — mobile */
 @media screen and (max-width: 850px) {
 
     .hero .registry {
