@@ -711,19 +711,35 @@ h1.character-name-force {
 .mini-character-card strong{display:block;font-size:.88rem;line-height:1.15}.mini-character-card small{display:block;margin-top:.2rem;font-size:.66rem;line-height:1.2;opacity:.58}
 .portal-links{grid-template-columns:repeat(3,minmax(0,1fr))!important}@media(max-width:700px){.portal-links{grid-template-columns:1fr!important}}
 
-/* REGISTRE: smaller text on mobile/tablet layout only */
+/* REGISTRE — mobile */
 @media screen and (max-width: 850px) {
-    .hero .registry dl dt,
-    .hero .registry dl dd {
-        font-size: 0.92rem !important;
-        line-height: 1.25 !important;
+
+    .hero .registry {
+        padding: 18px 20px 22px;
     }
 
-    .hero .registry dl dt {
-        letter-spacing: 0.04em !important;
+    .hero .registry dl {
+        grid-template-columns: 46% 54% !important;
+        column-gap: 12px !important;
+        row-gap: 0.7rem !important;
     }
-}
-@media screen and (max-width: 850px) {
+
+    .hero .registry dt,
+    .hero .registry dd {
+        min-width: 0;
+        font-size: 0.88rem !important;
+        line-height: 1.25 !important;
+        overflow-wrap: anywhere;
+    }
+
+    .hero .registry dt {
+        letter-spacing: 0.025em !important;
+    }
+
+    .hero .registry dd {
+        margin: 0 !important;
+    }
+
     .hero .registry h3 {
         font-size: 20px !important;
     }
