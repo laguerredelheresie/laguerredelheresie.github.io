@@ -70,8 +70,9 @@
 
             body > header {
                 position: relative;
-                width: 100vw;
+                width: 100%;
                 min-height: 100svh;
+                box-sizing: border-box;
                 margin: 0 !important;
                 padding: 0 18px 28px;
                 display: flex;
@@ -87,7 +88,7 @@
                 position: absolute;
                 inset: 0;
                 z-index: -2;
-                background: url("pictures/LaGuerredelHeresie_Wallpaper_m_Pruinae.JPG") center top / cover no-repeat;
+                background: url("pictures/LaGuerredelHeresie_Wallpaper_PruinaeEnneis.PNG") center top / cover no-repeat;
             }
 
             body > header::after {
@@ -119,15 +120,15 @@
             body > header .shop a {
                 display: grid;
                 place-items: center;
-                width: 48px;
-                height: 48px;
+                width: 56px;
+                height: 56px;
             }
 
             body > header .shop_img {
-                width: 42px !important;
-                height: 42px !important;
+                width: 50px !important;
+                height: 50px !important;
                 min-width: 0 !important;
-                max-width: 42px;
+                max-width: 50px;
                 margin: 0 !important;
                 object-fit: contain;
                 filter: drop-shadow(0 3px 7px rgba(0,0,0,.35));
@@ -135,6 +136,7 @@
 
             article {
                 width: 100%;
+                box-sizing: border-box;
                 margin: 0 !important;
                 padding: 34px 16px 48px;
                 background: linear-gradient(#f6f1e7, #fffdf8 22%, #f6f1e7);
@@ -240,14 +242,173 @@
             article table.calendar {
                 width: 100%;
                 display: table;
-                font-size: .72rem;
+                font-size: .60rem;
+                line-height: 1.25;
                 border-collapse: collapse;
             }
 
             article table.calendar td,
             article table.calendar th {
-                padding: 8px 5px !important;
+                padding: 5px 3px !important;
                 overflow-wrap: anywhere;
+            }
+
+            .invisible { display: none !important; visibility: hidden !important; }
+
+            body > header .shop a[href*="booknode.com"] { display: none !important; }
+
+            article table.calendar h1, article table.calendar h2, article table.calendar h3, article table.calendar p {
+                font-size: .60rem !important; line-height: 1.2 !important; margin-left: 0 !important;
+            }
+
+            article .carte {
+                display: block; width: 100% !important; max-width: 100% !important; min-width: 0 !important; height: auto !important; margin: 0 auto !important; box-sizing: border-box;
+            }
+
+            article .core > table:has(.carte) { width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
+
+            /* Normalize every main mobile section to the same left/right edge. */
+            article > .core,
+            article > .core_table,
+            article > .core_character,
+            article > hr,
+            article > section,
+            article > .lexicon-article {
+                box-sizing: border-box !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            article .core_character {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            /* Character table: one full-width cell after another, never squeezed columns. */
+            article .core_character > table,
+            article .core_character > table > tbody,
+            article .core_character > table > tbody > tr,
+            article .core_character > table > tr {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            article .core_character > table td {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                box-sizing: border-box !important;
+                margin: 0 !important;
+                padding: 5px 0 12px !important;
+                text-align: left !important;
+            }
+
+            article .core_character .name_left,
+            article .core_character .name_right,
+            article .core_character .race,
+            article .core_character .main_race {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                text-align: left !important;
+                box-sizing: border-box !important;
+            }
+
+            article .core_character td p {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Map table: each map and its description occupy the full mobile width. */
+            article .core > table:has(.carte),
+            article .core > table:has(.carte) > tbody,
+            article .core > table:has(.carte) > tbody > tr,
+            article .core > table:has(.carte) > tr {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-sizing: border-box !important;
+            }
+
+            article .core > table:has(.carte) td {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 0 !important;
+                margin: 0 !important;
+                padding: 0 0 14px !important;
+                box-sizing: border-box !important;
+                text-align: left !important;
+            }
+
+            article .core > table:has(.carte) .td_book {
+                padding: 20px 0 10px !important;
+            }
+
+            article .core > table:has(.carte) .inv_mob {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 6px 0 10px !important;
+                padding: 0 !important;
+                text-align: left !important;
+                box-sizing: border-box !important;
+            }
+
+            article .carte {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            /* Latest mobile fixes: keep all previous v3 behavior intact. */
+            article .core_character > table > tbody > tr:has(.name_right),
+            article .core_character > table > tr:has(.name_right) {
+                display: flex !important;
+                flex-direction: column !important;
+            }
+
+            article .core_character > table > tbody > tr:has(.name_right) > td:has(.name_right),
+            article .core_character > table > tr:has(.name_right) > td:has(.name_right) {
+                order: 1;
+            }
+
+            article .core_character > table > tbody > tr:has(.name_right) > td:has(p),
+            article .core_character > table > tr:has(.name_right) > td:has(p) {
+                order: 2;
+            }
+
+            article .core > .center_insta {
+                display: flex !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                justify-content: center !important;
+                box-sizing: border-box !important;
+            }
+
+            article .core > .center_insta > blockquote.instagram-media.center_insta {
+                display: block !important;
+                width: min(100%, 540px) !important;
+                min-width: 0 !important;
+                max-width: 540px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                box-sizing: border-box !important;
             }
 
             footer { margin: 0 !important; padding: 28px 16px !important; }
@@ -256,9 +417,9 @@
         @media screen and (max-width: 480px) {
             body > header { padding-inline: 12px; }
             body > header .shop { gap: 8px; padding: 11px 8px; }
-            body > header .shop a { width: 42px; height: 42px; }
-            body > header .shop_img { width: 36px !important; height: 36px !important; max-width: 36px; }
-            article { padding-inline: 13px; }
+            body > header .shop a { width: 48px; height: 48px; }
+            body > header .shop_img { width: 44px !important; height: 44px !important; max-width: 44px; }
+            article { padding-inline: 16px; }
         }
         </style>
 
