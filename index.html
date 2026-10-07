@@ -717,6 +717,39 @@
             article .mobile-character-card .character-first { font-size: clamp(.82rem, 4vw, 1rem); }
             article .mobile-character-card .character-surname { font-size: clamp(.7rem, 3.3vw, .86rem); }
         }
+
+        @media screen and (max-width: 1000px) {
+            article .mobile-character-card {
+                background: transparent !important;
+                box-shadow: none !important;
+                border-color: rgba(128, 97, 50, .62) !important;
+            }
+            article .mobile-character-card > span { gap: .18rem; }
+            article .mobile-character-card strong {
+                display: block !important;
+                width: 100%;
+                color: inherit !important;
+                font-family: Georgia, 'Times New Roman', serif;
+                font-size: clamp(.82rem, 3.35vw, 1rem);
+                font-weight: 600;
+                line-height: 1.15;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            article .mobile-character-card small {
+                display: block;
+                width: 100%;
+                margin: 0;
+                color: inherit !important;
+                opacity: .68;
+                font-family: Georgia, 'Times New Roman', serif;
+                font-size: clamp(.58rem, 2.45vw, .72rem);
+                font-weight: 400;
+                line-height: 1.2;
+                text-align: center;
+            }
+        }
 </style>
 </head>
 
@@ -1069,46 +1102,16 @@
 				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms"><h4>Lexique des noms officiel de la Guerre de l'Hérésie (par livre)</h4></a><br />
 
 				<div class="mobile-character-grid" aria-label="Personnages" style="display:none">
-					<a class="mobile-character-card" href="page/nate_ansicht.html">
-						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Nate Ansicht" />
-						<span><strong><span class="character-first">Nate</span><span class="character-surname">Ansicht</span></strong></span>
-					</a>
-					<a class="mobile-character-card" href="page/ryvin_hydrs.html">
-						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Ryvin Hydrs" />
-						<span><strong><span class="character-first">Ryvin</span><span class="character-surname">Hydrs</span></strong></span>
-					</a>
-					<a class="mobile-character-card" href="./page/aree_lazima.html">
-						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Arée Lazima" />
-						<span><strong><span class="character-first">Arée</span><span class="character-surname">Lazima</span></strong></span>
-					</a>
-					<a class="mobile-character-card" href="page/pruinae_enneis.html">
-						<img src="pictures/_PruinaeEnneisLivre4_Wallpaper_LaGuerreDeLHeresie.png" alt="Pruinae Enneis" />
-						<span><strong><span class="character-first">Pruinae</span><span class="character-surname">Enneis</span></strong></span>
-					</a>
-					<a class="mobile-character-card" href="page/faint_desabel.html">
-						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Faint Desabel" />
-						<span><strong><span class="character-first">Faint</span><span class="character-surname">Desabel</span></strong></span>
-					</a>
-					<a class="mobile-character-card" href="page/aizon_lowdel.html">
-						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Aizon Lowdel" />
-						<span><strong><span class="character-first">Aizon</span><span class="character-surname">Lowdel</span></strong></span>
-					</a>
-					<a class="mobile-character-card" href="page/mila.html">
-						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Milobellia Vi Urteil" />
-						<span><strong><span class="character-first">Milobellia</span><span class="character-surname">Vi Urteil</span></strong></span>
-					</a>
-					<a class="mobile-character-card" href="page/celarian.html">
-						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Celarian" />
-						<span><strong><span class="character-first">Celarian</span></strong></span>
-					</a>
-					<a class="mobile-character-card" href="page/alazia_hora.html">
-						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Alazia Hora" />
-						<span><strong><span class="character-first">Alazia</span><span class="character-surname">Hora</span></strong></span>
-					</a>
-					<a class="mobile-character-card" href="page/irilla.html">
-						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Irilla" />
-						<span><strong><span class="character-first">Irilla</span></strong></span>
-					</a>
+					<a class="mobile-character-card" href="page/nate_ansicht.html"><img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Nate Ansicht" /><span><strong>Nate Ansicht</strong><small>Major de la 4e Squada</small></span></a>
+					<a class="mobile-character-card" href="page/pruinae_enneis.html"><img src="pictures/_PruinaeEnneisLivre4_Wallpaper_LaGuerreDeLHeresie.png" alt="Pruinae Enneis" /><span><strong>Pruinae Enneis</strong><small>Second Blanc</small></span></a>
+					<a class="mobile-character-card" href="page/irilla.html"><img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Irilla" /><span><strong>Irilla</strong></span></a>
+					<a class="mobile-character-card" href="page/faint_desabel.html"><img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Faint Desabel" /><span><strong>Faint Desabel</strong><small>Chevalier Noir</small></span></a>
+					<a class="mobile-character-card" href="page/ryvin_hydrs.html"><img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Ryvin Hydrs" /><span><strong>Ryvin Hydrs</strong><small>Prime Major</small></span></a>
+					<a class="mobile-character-card" href="page/aizon_lowdel.html"><img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Aizon Lowdel" /><span><strong>Aizon Lowdel</strong><small>Chef des Starriest</small></span></a>
+					<a class="mobile-character-card" href="./page/aree_lazima.html"><img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Arée Lazima" /><span><strong>Arée Lazima</strong><small>Princep 4e Squada</small></span></a>
+					<a class="mobile-character-card" href="page/mila.html"><img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Milobellia Vi Urteil" /><span><strong>Milobellia Vi Urteil</strong><small>Princesse de Kroyven</small></span></a>
+					<a class="mobile-character-card" href="page/celarian.html"><img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Celarian" /><span><strong>Celarian</strong><small>Chef du Cercle des Urteils</small></span></a>
+					<a class="mobile-character-card" href="page/alazia_hora.html"><img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Alazia Hora" /><span><strong>Alazia Hora</strong><small>Reine du Temps</small></span></a>
 				</div>
 				<table>
 					<tr>
