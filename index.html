@@ -250,7 +250,13 @@
             article table.calendar td,
             article table.calendar th {
                 padding: 5px 3px !important;
-                overflow-wrap: anywhere;
+                overflow-wrap: normal;
+                word-break: normal;
+            }
+
+            article .mobile-character-card:hover {
+                border-color: rgba(212,179,108,.68);
+                background: linear-gradient(145deg, rgba(20,28,48,.98), rgba(7,11,27,.96));
             }
 
             .invisible { display: none !important; visibility: hidden !important; }
@@ -616,7 +622,7 @@
             article .mobile-character-grid {
                 display: grid !important;
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: .7rem;
+                gap: .85rem;
                 width: 100% !important;
                 max-width: 100% !important;
                 margin: 0 !important;
@@ -629,18 +635,20 @@
                 align-items: center;
                 gap: .7rem;
                 min-width: 0;
-                min-height: 68px;
-                padding: .45rem;
+                min-height: 112px;
+                padding: .65rem;
+                border-radius: 10px;
                 color: #eee4cf !important;
                 text-decoration: none !important;
                 text-align: left !important;
                 border: 1px solid rgba(212,179,108,.28);
-                background: rgba(5,9,24,.88);
+                background: linear-gradient(145deg, rgba(12,18,35,.96), rgba(5,9,24,.92));
+                box-shadow: 0 8px 20px rgba(0,0,0,.22), inset 0 0 18px rgba(212,179,108,.04);
                 box-sizing: border-box;
             }
 
             article .mobile-character-card > img {
-                flex: 0 0 48px;
+                flex: 0 0 76px;
                 display: block;
                 width: 48px !important;
                 height: 54px !important;
@@ -649,8 +657,10 @@
                 margin: 0 !important;
                 padding: 0 !important;
                 object-fit: cover;
+                object-position: center top;
                 transform: none !important;
-                border: 1px solid rgba(212,179,108,.35);
+                border: 1px solid rgba(212,179,108,.48);
+                border-radius: 6px;
             }
 
             article .mobile-character-card > span { min-width: 0; }
@@ -659,7 +669,7 @@
                 margin: 0;
                 color: #eee4cf;
                 font-family: Georgia, 'Times New Roman', serif;
-                font-size: .88rem;
+                font-size: clamp(.82rem, 3.3vw, 1rem);
                 font-weight: 700;
                 line-height: 1.15;
                 overflow-wrap: anywhere;
@@ -667,21 +677,39 @@
         }
 
         @media screen and (max-width: 430px) {
-            article .mobile-character-grid { grid-template-columns: 1fr; }
+            article .mobile-character-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: .55rem;
+            }
+            article .mobile-character-card {
+                min-height: 100px;
+                gap: .5rem;
+                padding: .5rem;
+            }
+            article .mobile-character-card > img {
+                flex-basis: 60px;
+                width: 60px !important;
+                min-width: 60px !important;
+                max-width: 60px !important;
+                height: 78px !important;
+            }
+            article .mobile-character-card strong {
+                font-size: clamp(.72rem, 3.5vw, .9rem);
+            }
         }
 </style>
 </head>
-	
+
 	<!--
-  	 _   _       _            _____  _____                _   _                 
-	| \ | |     | |          / ____|/ ____|              | | (_)                
-	|  \| | __ _| |_ ___ _ _| (___ | |     _ __ ___  __ _| |_ _  ___  _ __  ___ 
+  	 _   _       _            _____  _____                _   _
+	| \ | |     | |          / ____|/ ____|              | | (_)
+	|  \| | __ _| |_ ___ _ _| (___ | |     _ __ ___  __ _| |_ _  ___  _ __  ___
 	| . ` |/ _` | __/ _ \ '__\___ \| |    | '__/ _ \/ _` | __| |/ _ \| '_ \/ __|
 	| |\  | (_| | ||  __/ |  ____) | |____| | |  __/ (_| | |_| | (_) | | | \__ \
 	|_| \_|\__,_|\__\___|_| |_____/ \_____|_|  \___|\__,_|\__|_|\___/|_| |_|___/ -->
-	
-	
-	
+
+
+
     <body #LaGuerreDeLHérésie #QuentinNater #NaterQuentin #Roman #Medieval class='site-header' role='banner' >
 		<!-- GitHub Pages: ancien compteur PHP supprimé, car Pages ne lance pas de code serveur. -->
 <header>
@@ -691,7 +719,7 @@
 			<h2 #="la guerre de l'hérésie - livre 2 : l'aube d'un idéal" class='invisible' >la guerre de l'hérésie - livre 2 : l'aube d'un idéal</h2>
 			<h2 #="la guerre de l'hérésie - livre 3 : l'illusion d'un souhait" class='invisible' >la guerre de l'hérésie - livre 3 : l'illusion d'un souhait</h2>
 
-			
+
 			<img src="pictures/LaGuerredelHeresie_Livre3_VeroneEditions.JPG" width="0px" height="0px" />
 			<div class="shop" >
 				<a href='https://www.fnac.com/ia10677023/Quentin-Nater' ><img src='pictures/fnac.png' class='shop_img' alt="FNAC : La guerre de l'heresie" #FNACLaGuerreDeLHeresie ></a>
@@ -701,16 +729,16 @@
 				<a href='https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms' ><img src='pictures/wiki_l.PNG' class='shop_img' alt="wiki La guerre de l'heresie" #WikiLaGuerreDeLHeresie ></a>
 				<a href='https://www.instagram.com/quentin_nater/' ><img src='pictures/logo_instagram.PNG' class='shop_img' alt="Instagram Quentin Nater : La guerre de l'heresie" #InstagramQuentinNaterLaGuerreDeLHeresie ></a>
 			</div>
-			
-			
+
+
 			<a href='#top' class='topArrow' ><img src='pictures/tools/topArraw.PNG' class='topArrow' ></a>
 			<a href='#end' class='bottomArraw' ><img src='pictures/tools/bottomArraw.PNG' class='bottomArraw' ></a>
 		</header>
-		
-			
-		
-		<article #="S'estomper vers les Ténèbres" #LaGuerreDeLHérésie #="la guerre de l'heresie" >				  
-			
+
+
+
+		<article #="S'estomper vers les Ténèbres" #LaGuerreDeLHérésie #="la guerre de l'heresie" >
+
 			<div class='core' >
 			<!--<h1 style="padding-top:20%; padding-bottom:35%; text-align:center; font-size:250%; color:#66329a;" >L'Illusion d'un Souhait est enfin sorti !!! <a href="#lids3" > Commander !</a> &#9876;&#65039; &#128009; </h1>--><br></br>
 				<div class="cor_tab_right" >
@@ -735,7 +763,7 @@
                     </table>
 				 </div>
 			</div>
-			
+
 			<div class='core' >
 				<div class="cor_tab_right" >
                     <table>
@@ -1004,7 +1032,7 @@
               <td><h3>À venir</h3></a></td>
               <td><h3>Fully, Valais, Suisse</h3></a></td>
             </tr>
-			
+
 
             <i>le reste est à venir, restez connectés sur <a href='https://www.instagram.com/quentin_nater/' >instagram</a></i><br></br>
           </table>
@@ -1015,7 +1043,7 @@
 		<hr>
 
 
-			
+
 			<div class='core_character'>
 				<h1 id='personnages' #="La Guerre de l'heresie : Les personnages" #LaGuerreDeLHeresieLesPersonnages class='title_character' >Les Personnages</h1>
 				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms"><h4>Lexique des noms officiel de la Guerre de l'Hérésie (par livre)</h4></a><br />
@@ -1025,10 +1053,6 @@
 						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Nate Ansicht" />
 						<span><strong>Nate Ansicht</strong></span>
 					</a>
-					<div class="mobile-character-card">
-						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Slicer Streik" />
-						<span><strong>Slicer Streik</strong></span>
-					</div>
 					<a class="mobile-character-card" href="page/ryvin_hydrs.html">
 						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Ryvin Hydrs" />
 						<span><strong>Ryvin Hydrs</strong></span>
@@ -1041,10 +1065,6 @@
 						<img src="pictures/_PruinaeEnneisLivre4_Wallpaper_LaGuerreDeLHeresie.png" alt="Pruinae Enneis" />
 						<span><strong>Pruinae Enneis</strong></span>
 					</a>
-					<div class="mobile-character-card">
-						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Nix Sieg" />
-						<span><strong>Nix Sieg</strong></span>
-					</div>
 					<a class="mobile-character-card" href="page/faint_desabel.html">
 						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Faint Desabel" />
 						<span><strong>Faint Desabel</strong></span>
@@ -1065,26 +1085,6 @@
 						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Alazia Hora" />
 						<span><strong>Alazia Hora</strong></span>
 					</a>
-					<div class="mobile-character-card">
-						<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Rayza" />
-						<span><strong>Rayza</strong></span>
-					</div>
-					<div class="mobile-character-card">
-						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Ceaze" />
-						<span><strong>Ceaze</strong></span>
-					</div>
-					<div class="mobile-character-card">
-						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Omia" />
-						<span><strong>Omia</strong></span>
-					</div>
-					<div class="mobile-character-card">
-						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Vespertilio" />
-						<span><strong>Vespertilio</strong></span>
-					</div>
-					<div class="mobile-character-card">
-						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Sillia" />
-						<span><strong>Sillia</strong></span>
-					</div>
 					<a class="mobile-character-card" href="page/irilla.html">
 						<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Irilla" />
 						<span><strong>Irilla</strong></span>
