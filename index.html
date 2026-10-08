@@ -831,6 +831,11 @@
 		@media(max-width:850px){article .core_character .index-codex-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 		@media(max-width:850px){article .core_character .index-codex-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;padding:0 .35rem}article .core_character .index-codex-card{padding:0}article .core_character .index-codex-text strong{font-size:1rem}article .core_character .index-codex-description{font-size:.73rem!important}}
 
+		/* Mobile cards: portrait, name and title only; desktop descriptions remain intact. */
+		@media screen and (max-width: 850px) {
+			article .core_character .index-codex-card .index-codex-description { display: none !important; }
+		}
+
 		/* Remove decorative outlines/shadows from all character card text. */
 		article .core_character .index-codex-card .index-codex-text,
 		article .core_character .index-codex-card .index-codex-text *,
@@ -1848,9 +1853,7 @@
 			<h2 class="invisible" #ParutionSuisse #="Parution Suisse" >La guerre de l'hérésie 4 pruinae</h2>
 		</article>
 		<h4 class="invisible" #RomanQuentinNater id='end' >Mise à jour : 08.10.2026</h4>
-
-
-
+		
         <img src="pictures/LaGuerredelHeresie_b_logo.PNG" alt="la guerre de l'hérésie" class="hes" width="160px" />
 	</body>
 </html>
