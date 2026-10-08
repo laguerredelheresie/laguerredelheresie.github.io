@@ -795,7 +795,25 @@
           .vernissage-feature__link:hover { background:#74502d; transform:translateY(-2px); }
           .vernissage-feature__poster { display:block; text-align:center; }
           .vernissage-feature__poster img { display:block; width:100%; max-width:480px; height:auto; margin:auto; border:5px solid #f8eed8; box-shadow:0 12px 30px rgba(37,23,13,.3); box-sizing:border-box; }
-          @media(max-width:700px) { .vernissage-feature { width:calc(100% - 32px); margin:55px auto 65px; padding:7px; } .vernissage-feature__inner { grid-template-columns:1fr; gap:22px; min-height:0; padding:28px 17px; } .vernissage-feature__title,.vernissage-feature__subtitle,.vernissage-feature__details { text-align:center !important; } .vernissage-feature__copy { text-align:center; } .vernissage-feature__poster img { max-width:390px; } }
+          /* Mobile only: compact, legible and fully visible flyer without cropping. */
+          @media(max-width:700px) {
+            .vernissage-feature { width:calc(100% - 24px); max-width:480px; margin:48px auto 56px; padding:5px; border-radius:10px; }
+            .vernissage-feature__inner { display:flex; flex-direction:column; gap:15px; min-height:0; padding:20px 12px 15px; }
+            .vernissage-feature__copy { width:100%; min-width:0; text-align:center; }
+            .vernissage-feature__eyebrow { font-size:.66rem; letter-spacing:.12em; }
+            .vernissage-feature__title { font-size:clamp(1.65rem,7vw,2.2rem) !important; line-height:1.12 !important; margin:8px 0 !important; text-align:center !important; }
+            .vernissage-feature__subtitle { font-size:clamp(.92rem,3.7vw,1.08rem) !important; line-height:1.35 !important; margin:0 0 12px !important; text-align:center !important; }
+            .vernissage-feature__details { font-size:.92rem !important; line-height:1.5 !important; margin:0 0 10px !important; text-align:center !important; }
+            .vernissage-feature__registration { font-size:.9rem !important; line-height:1.45 !important; margin:0 0 12px !important; text-align:center !important; }
+            .vernissage-feature__link { font-size:.86rem; padding:10px 16px; }
+            .vernissage-feature__poster { width:100%; min-width:0; }
+            .vernissage-feature__poster img { width:auto; max-width:100%; height:auto; max-height:58svh; object-fit:contain; border-width:3px; box-shadow:0 6px 18px rgba(37,23,13,.24); }
+          }
+          @media(max-width:380px) {
+            .vernissage-feature { width:calc(100% - 16px); }
+            .vernissage-feature__inner { padding:16px 9px 12px; gap:12px; }
+            .vernissage-feature__poster img { max-height:52svh; }
+          }
         </style>
 </head>
 
