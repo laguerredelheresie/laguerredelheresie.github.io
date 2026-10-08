@@ -1,63 +1,83 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://laguerredelheresie.com/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/aizon_lowdel.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/alazia_hora.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/aree_lazima.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/celarian.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/faint_desabel.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/irilla.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/mila.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/nate_ansicht.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/pruinae_enneis.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/ryvin_hydrs.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://laguerredelheresie.com/page/satelia.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://laguerredelheresie.com/page/personnages.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://laguerredelheresie.com/page/rayza.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://laguerredelheresie.com/page/ceaze.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://laguerredelheresie.com/page/omia.html</loc>
+    <lastmod>2026-10-08</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>
