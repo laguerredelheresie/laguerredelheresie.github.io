@@ -25,16 +25,16 @@
         <meta name="twitter:title" content="La Guerre de l’Hérésie | Quentin Nater">
         <meta name="twitter:description" content="Explorez les livres, personnages, cartes et langues de La Guerre de l’Hérésie.">
         <meta name="twitter:image" content="https://laguerredelheresie.com/pictures/LaGuerredelHeresie_Livre3_VeroneEditions.JPG">
-		
-		<link rel="stylesheet" href="css/form.css"> 				
-        <link rel="stylesheet" href="css/hes.css"> 
+
+		<link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/hes.css">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <script type="text/javascript" defer src="js/monfichier_jquery_header.js"></script>
 
 		<link id="cssLink" rel="stylesheet" type="text/css" href="css/main_rayza.css">
 
 		<script>
-			function randomizeCSS() 
+			function randomizeCSS()
 			{
 				//const cssFiles = ['css/main_pruinae.css', 'css/main_rayza.css', 'css/main_satelia.css', 'css/main_irilla.css']; // Replace with the paths to your CSS files.
 				const cssFiles = ['css/main_pruinae.css']; // Replace with the paths to your CSS files.
@@ -51,7 +51,7 @@
 					console.error("Element with id 'cssLink' not found!");
 				}
 			}
-			
+
 			randomizeCSS();
 		</script>
 
@@ -815,6 +815,41 @@
             .vernissage-feature__poster img { max-height:52svh; }
           }
         </style>
+	<style id="index-character-cards">
+		/* Unified character codex cards on the main index, desktop and mobile */
+		article .core_character .index-codex-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));gap:1rem;max-width:1440px;margin:1.8rem auto 3rem;padding:0 .75rem;box-sizing:border-box}
+		article .core_character .index-codex-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;padding:.65rem;border:2px solid rgba(173,128,52,.85);border-radius:10px;background:transparent;box-shadow:inset 0 0 0 3px rgba(255,250,232,.75),inset 0 0 0 4px rgba(173,128,52,.75);text-decoration:none!important;color:#30251d!important;transition:transform .2s,border-color .2s}
+		article .core_character a.index-codex-card:hover{transform:translateY(-3px);border-color:#b68a3d}
+		article .core_character .index-codex-image{width:100%;aspect-ratio:4/5;overflow:hidden;border:1px solid rgba(212,179,108,.42);border-radius:6px}
+		article .core_character .index-codex-image img{display:block;width:100%!important;height:100%!important;object-fit:cover;object-position:center top;margin:0!important;max-width:none!important;transform:none!important}
+		article .core_character .index-codex-text{text-align:center;padding:.75rem .15rem .35rem;min-width:0}
+		article .core_character .index-codex-text strong{display:block;font:600 clamp(.95rem,1.35vw,1.22rem)/1.22 Georgia,serif;color:#30251d;overflow-wrap:break-word}
+		article .core_character .index-codex-text small{display:block;margin-top:.4rem;font-size:.78rem;color:#795a31;line-height:1.3}
+		article .core_character .index-codex-description{margin:.75rem 0 0!important;font-size:.78rem!important;line-height:1.55!important;color:#392e24!important;text-align:left!important;overflow-wrap:anywhere}
+		article .core_character .index-codex-description span{color:inherit}
+		@media(max-width:1250px){article .core_character .index-codex-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+		@media(max-width:850px){article .core_character .index-codex-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+		@media(max-width:850px){article .core_character .index-codex-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;padding:0 .35rem}article .core_character .index-codex-card{padding:.45rem}article .core_character .index-codex-text strong{font-size:1rem}article .core_character .index-codex-description{font-size:.73rem!important}}
+
+		/* Remove decorative outlines/shadows from all character card text. */
+		article .core_character .index-codex-card .index-codex-text,
+		article .core_character .index-codex-card .index-codex-text *,
+		article .core_character .mobile-character-card span,
+		article .core_character .mobile-character-card span * {
+		  -webkit-text-stroke: 0 transparent !important;
+		  -webkit-text-stroke-width: 0 !important;
+		  text-stroke: 0 transparent !important;
+		  text-shadow: none !important;
+		  filter: none !important;
+		}
+		@media screen and (max-width: 700px) {
+		  /* Previously 56px: double the gap after the vernissage on phones. */
+		  .vernissage-feature { margin-bottom: 112px !important; }
+		}
+
+		/* The same card grid is used on desktop and mobile. */
+		article .core_character .index-codex-grid { display: grid !important; }
+	</style>
 </head>
 
 	<!--
@@ -1041,13 +1076,9 @@
                 <td><h3 #="Quentin Nater Noël au village - La Guerre de l'Hérésie" >
                 Noël au village, Bouveret, Suisse</h2></td>
               </tr>
-            </table><br></br><br></br>
-
+            </table>
           </details>
-
-
           <!-- 2025 (repliable) -->
-          <br></br>
           <details class="year-toggle">
             <summary class="year-toggle__summary">Calendrier 2025 (cliquer pour afficher)</summary>
 
@@ -1099,9 +1130,7 @@
 
           </details>
 
-
           <!-- 2026 (affiché directement, inchangé) -->
-          <br></br>
           <h1 #="La Guerre de l'heresie : Calendrier 2026" #LaGuerreDeLHeresieCalendrier2026 class='title_character' id='evenements' >Calendrier 2026 de la Guerre de l'Hérésie</h1>
 
           <table class="center calendar">
@@ -1184,138 +1213,141 @@
 				<h1 id='personnages' #="La Guerre de l'heresie : Les personnages" #LaGuerreDeLHeresieLesPersonnages class='title_character' >Les Personnages</h1>
 				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms"><h4>Lexique des noms officiel de la Guerre de l'Hérésie (par livre)</h4></a><br />
 
-				<div class="mobile-character-grid" aria-label="Personnages" style="display:none">
-					<a class="mobile-character-card" href="page/nate_ansicht.html"><img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Nate Ansicht" /><span><strong>Nate Ansicht</strong><small>Major de la 4e Squada</small></span></a>
-					<a class="mobile-character-card" href="page/pruinae_enneis.html"><img src="pictures/_PruinaeEnneisLivre4_Wallpaper_LaGuerreDeLHeresie.png" alt="Pruinae Enneis" /><span><strong>Pruinae Enneis</strong><small>Second Blanc</small></span></a>
-					<a class="mobile-character-card" href="page/irilla.html"><img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Irilla" /><span><strong>Irilla</strong></span></a>
-					<a class="mobile-character-card" href="page/faint_desabel.html"><img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Faint Desabel" /><span><strong>Faint Desabel</strong><small>Chevalier Noir</small></span></a>
-					<a class="mobile-character-card" href="page/ryvin_hydrs.html"><img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Ryvin Hydrs" /><span><strong>Ryvin Hydrs</strong><small>Prime Major</small></span></a>
-					<a class="mobile-character-card" href="page/aizon_lowdel.html"><img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Aizon Lowdel" /><span><strong>Aizon Lowdel</strong><small>Chef des Starriest</small></span></a>
-					<a class="mobile-character-card" href="./page/aree_lazima.html"><img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Arée Lazima" /><span><strong>Arée Lazima</strong><small>Princep 4e Squada</small></span></a>
-					<a class="mobile-character-card" href="page/mila.html"><img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Milobellia Vi Urteil" /><span><strong>Milobellia Vi Urteil</strong><small>Princesse de Kroyven</small></span></a>
-					<a class="mobile-character-card" href="page/celarian.html"><img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Celarian" /><span><strong>Celarian</strong><small>Chef du Cercle des Urteils</small></span></a>
-					<a class="mobile-character-card" href="page/alazia_hora.html"><img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Alazia Hora" /><span><strong>Alazia Hora</strong><small>Reine du Temps</small></span></a>
+				<div class="index-codex-grid" aria-label="Personnages et descriptions">
+					<a class="index-codex-card" href="page/nate_ansicht.html">
+						<div class="index-codex-image">
+							<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Nate Ansicht" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Nate Ansicht</strong>
+							<small>Major de la 4e Squada</small>
+							<p class="index-codex-description"><span="">Nate Ansicht</span>, l'épéiste aux yeux d'argent, est le personnage principal de l'histoire. Dernier héritier de la lignée des Ansichts, il est considéré comme étant le Prince Maudit à la suite des événements qui sont arrivés à sa race. Il prendra les armes sous les bannières de l'armée Streik pour défier les Fantasmas. Son aventure sera tourmentée entre la lutte de ses idéaux et de la réalité.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/pruinae_enneis.html">
+						<div class="index-codex-image">
+							<img src="pictures/_PruinaeEnneisLivre4_Wallpaper_LaGuerreDeLHeresie.png" alt="Pruinae Enneis" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Pruinae Enneis</strong>
+							<small>Second Blanc</small>
+							<p class="index-codex-description">Pruinae est une combattante Sienne de l'ordre de l'Apocalypsia. Second du Chevalier Blanc, <span="">Pruinae Enneis</span>, aussi connue sous le nom de sylphide du lac Azur, manie les arts astraux. Elle se bat pour protéger son père et réaliser son rêve de vivre une vie simple.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/irilla.html">
+						<div class="index-codex-image">
+							<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Irilla" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Irilla</strong>
+							<p class="index-codex-description"><span="">Irilla</span> est connue sous le nom d'enchanteresse de saphir. Irilla est une mystérieuse jeune femme aux longs cheveux noirs et aux yeux sombres avec des reflets de saphir qui possède un certain caractère. Elle cherche à tout prix un trésor plus précieux que sa vie elle-même.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/ryvin_hydrs.html">
+						<div class="index-codex-image">
+							<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Ryvin Hydrs" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Ryvin Hydrs</strong>
+							<small>Prime Major</small>
+							<p class="index-codex-description">Prime Major des armées impériales, <span="">Ryvin Hydrs</span> est le chef de l'armée Streik. Il dirige la 1er Squada, la plus puissante des escouades d'élite. Malgré ses origines modestes dans les bas-quartiers de Gleam, il est respecté par ses hommes grâce à sa maîtrise de l'espace.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/faint_desabel.html">
+						<div class="index-codex-image">
+							<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Faint Desabel" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Faint Desabel</strong>
+							<small>Chevalier Noir</small>
+							<p class="index-codex-description">Chevalier Noir de l'Apocalypsia, <span="">Faint Desabel</span> est le manieur de Statora, la Balance de Midrash. Droit et noble, le Sienne, reconnu pour sa robustesse, manie la gravité.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/aizon_lowdel.html">
+						<div class="index-codex-image">
+							<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Aizon Lowdel" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Aizon Lowdel</strong>
+							<small>Chef des Starriest</small>
+							<p class="index-codex-description"><span="">Aizon Lowdel</span> est le chef des révolutionnaires, meneur des Starriest. Cet homme est le plus grand ennemi de l'Impératice Urteil et de l'Empire de la Sagesse. Malgré son passé lié à l'Empire et son jeune âge, Aizon Lowdel est respecté par les membres de la révolution et représente l'espoir ainsi que l'embrasement du peuple Urteil.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/mila.html">
+						<div class="index-codex-image">
+							<img src="img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG" alt="Milobellia Vi Urteil" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Milobellia Vi Urteil</strong>
+							<small>Princesse de Kroyven</small>
+							<p class="index-codex-description"><span="">Milobellia Vi Urteil</span>, surnommée Mila par ses proches, est la Princesse de Kroyven et la fille de Noctalia Vi Urteil. Mila est liée à Aizon Lowdel qui a été son garde personnel depuis son enfance lorsque le Starriest était au service de l'Impératrice.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/aree_lazima.html">
+						<div class="index-codex-image">
+							<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Arée Lazima" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Arée Lazima</strong>
+							<small>Princep de la 4e Squada</small>
+							<p class="index-codex-description"><span="">Arée Lazima</span> , nouveau Princep de la 4ème Squada, servira avec dévotion Nate Ansicht dans les rangs de la 4e Squada. Surnommée l'héritière des roses, cette Streik est un espoir dans les rangs des Princeps. Cependant, son caractère timide et réservé l'expose aux moqueries de certains de ses camarades.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/rayza.html">
+						<div class="index-codex-image">
+							<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Rayza" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Rayza</strong>
+							<small>Roi du Vent</small>
+							<p class="index-codex-description">Roi du Vent et souverain des Dragons, <span="">Rayza</span> règne sur les cieux. Son âme est liée aux Ansichts depuis leur accord originel.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/alazia_hora.html">
+						<div class="index-codex-image">
+							<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Alazia Hora" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Alazia Hora</strong>
+							<small>Reine du Temps</small>
+							<p class="index-codex-description"><span="">Alazia Hora</span> est la Reine du Temps, souveraine des Elfes. Elle dirige l'Union Royale, une union créée pour lutter contre les Dieux.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/ceaze.html">
+						<div class="index-codex-image">
+							<img src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png" alt="Ceaze" loading="lazy" />
+						</div>
+						<div class="index-codex-text">
+							<strong>Ceaze</strong>
+							<small>Reine des Plantes</small>
+							<p class="index-codex-description">Reine des Plantes et souveraine des Fées, <span="">Ceaze</span> est la plus belle des Fées et donc une des femmes les plus belles que les mondes ont portées. Son regard semble porté sur le Prince Maudit, Nate Ansicht.</p>
+						</div>
+					</a>
+					<a class="index-codex-card" href="page/omia.html">
+					 <div class="index-codex-image">
+					  <img alt="Omia" loading="lazy" src="img/LaGuerreDeLHeresie_QuentinNater_Cover.png">
+					  </img>
+					 </div>
+					 <div class="index-codex-text">
+					  <strong>
+					   Omia
+					  </strong>
+					  <small>
+					   Dieu de la R&eacute;alit&eacute;
+					  </small>
+					  <p class="index-codex-description">
+					   <span="">
+					    Omia
+					    est le Roi des Dieux, souverain des Realtins et ma&icirc;tre de la R&eacute;alit&eacute;. H&eacute;ritier des desseins de N&eacute;cro, il dirige les Escouades Divines dans sa lutte contre l'Union Royale
+					   </span="">
+					  </p>
+					 </div>
+					</a>
 				</div>
-				<table>
-					<tr>
-						<td colspan="2" ><h1 #Vastums #='Vastums' class='main_race' >Vastums</h1></td>
-					</tr>
-						<tr>
-							<td colspan="2" ><h1 #Ansicht #='Ansicht' class='race'  >Ansicht</h1></td>
-						</tr>
-							<tr>
-								<td><a href='page/nate_ansicht.html' class='a_alpha' ><h1 #NateAnsicht #='Nate Ansicht' class='name_left' >Nate Ansicht</h1></a></td>
-								<td><p><span #="Nate Ansicht la guerre de l'hérésie" #NateAnsicht >Nate Ansicht</span>, l'épéiste aux yeux d'argent, est le personnage principal de l'histoire. Dernier héritier de la lignée des Ansichts, il est considéré comme étant le Prince Maudit à la suite des événements qui sont arrivés à sa race. Il prendra les armes sous les bannières de l'armée Streik pour défier les Fantasmas. Son aventure sera tourmentée entre la lutte de ses idéaux et de la réalité.</p></td>
-							</tr>
-						<tr>
-							<td colspan="2" ><h1 #Streik #='Streik' class='race' >Streik</h1></td>
-						</tr>
-							<tr>
-								<td><h1 #SlicerStreik #='Slicer Streik' class='name_left' >Slicer Streik</h1></td>
-								<td><p>Fils de l'Empereur Streik, <span #="Slicer Streik la guerre de l'hérésie" #SlicerStreik >Slicer</span> est un sabreur de la 4e Squada dans les rangs de l'armée impériale Streik. Princep sous les ordres de Prow Lear, il cherche à se débarasser de ses démons pour prouver sa valeur à son père.</p></td>
-							</tr>
-							<tr>
-								<td><p>Prime Major des armées impériales, <span #="Ryvin Hydrs la guerre de l'hérésie" #RyvinHydrs >Ryvin Hydrs</span> est le chef de l'armée Streik. Il dirige la 1er Squada, la plus puissante des escouades d'élite. Malgré ses origines modestes dans les bas-quartiers de Gleam, il est respecté par ses hommes grâce à sa maîtrise de l'espace.</p></td>
-								<td><a href='page/ryvin_hydrs.html' class='a_alpha' ><h1 #RyvinHydrs #='Ryvin Hydrs' class='name_right' >Ryvin Hydrs</h1></a></td>
-							</tr>
-                            <!--
-							<tr>
-								<td><h1 #DawnDulcis #='Dawn Dulcis' class='name_left'  >Dawn Dulcis</h1></td>
-								<td><p>Archère de la 4e Squada sous les ordres de <span #="Prow Lear la guerre de l'hérésie" #ProwLear >Prow Lear</span>. Originaire des terres Ansichts, la Princep se bat sous les couleurs de l'armée Streik.</p></td>
-							</tr>
-							<tr>
-								<td><p>Empereur de la race de la Haine, <span #="Utteros Streik la guerre de l'hérésie" #UtterosStreik >Utteros Streik</span> est le descendant de l'Ancêtre Originel des Streiks. Il règne sur l'intégralité des terres d'Ylluf depuis le massacre des Ansichts en l'an 4'999.</p></td>
-								<td><h1 #UtterosStreik #='Utteros Streik' class='name_right' >Utteros Streik</h1></td>
-							</tr>-->
-							<tr>
-                                <td><a href="./page/aree_lazima.html" class='a_alpha' ><h1 #AréeLazima #='Arée Lazima' class='name_left' >Arée Lazima</h1></a></td>
-                                <td><p><span #="Arée Lazima la guerre de l'hérésie" #AréeLazima >Arée Lazima</span> , nouveau Princep de la 4ème Squada, servira avec dévotion Nate Ansicht dans les rangs de la 4e Squada. Surnommée l'héritière des roses, cette Streik est un espoir dans les rangs des Princeps. Cependant, son caractère timide et réservé l'expose aux moqueries de certains de ses camarades.</p></td>
-                            </tr>
-						<tr>
-							<td colspan="2" ><h1 #Sienne #='Sienne' class='race' >Sienne</h1></td>
-						</tr>
-							<tr>
-								<td><a href='page/pruinae_enneis.html' class='a_alpha' ><h1 #PruinaeEnneis #='Pruinae Enneis' class='name_left' >Pruinae Enneis</h1></a></td>
-								<td><p>Pruinae est une combattante Sienne de l'ordre de l'Apocalypsia. Second du Chevalier Blanc, <span #="Pruinae Enneis la guerre de l'hérésie" #PruinaeEnneis >Pruinae Enneis</span>, aussi connue sous le nom de sylphide du lac Azur, manie les arts astraux. Elle se bat pour protéger son père et réaliser son rêve de vivre une vie simple.</p></td>
-							</tr>
-							<tr>
-								<td><p><span #="Nix Sieg la guerre de l'hérésie" #NixSieg >Nix Sieg</span> est le Chevalier Blanc de la Conquête de l'Apocalypsia. Soldat Sienne, il est le manieur de Nebilis, l'Arc de Midrash. Le guerrier de glace suit une mission capitale qui mettra en péril la société Sienne.</p></td>
-								<td><h1 #NixSieg #='Nix Sieg' class='name_right'  >Nix Sieg</h1></td>
-							</tr>
-                            <tr>
-								<td><a href='page/faint_desabel.html' class='a_alpha' ><h1 #FaintDesabel #='Faint Desabel' class='name_left' >Faint Desabel</h1></a></td>
-								<td><p>Chevalier Noir de l'Apocalypsia, <span #="Faint Desabel la guerre de l'hérésie" #FaintDesabel >Faint Desabel</span> est le manieur de Statora, la Balance de Midrash. Droit et noble, le Sienne, reconnu pour sa robustesse, manie la gravité.</p></td>
-							</tr>
-                            <!--
-							<tr>
-								<td><h1 #ZekiaBlut #='Zekia Blut' class='name_left' >Zekia Blut</h1></td>
-								<td><p><span #="Zekia Blut la guerre de l'hérésie" #ZekiaBlut >Zekia Blut</span> est le Chevalier Rouge de l'Apocalypsia. Fils adoptif de l'Empereur Sienne, il dirige les armées de l'Apocalypsia d'une main de fer. Il mettra sa carrière en jeu pour sa lutte contre les Streiks. Le Prince Sienne manie Gladius l'épée de Midrash.</p></td>
-							</tr>-->
-						<tr>
-							<td colspan="2" ><h1 #Urteil #='Urteil' class='race' >Urteil</h1></td>
-						</tr>
-							<tr>
-								<td><a href='page/aizon_lowdel.html' class='a_alpha' ><h1 #AizonLowdel #='Aizon Lowdel' class='name_left' >Aizon Lowdel</h1></a></td>
-								<td><p><span #="Aizon Lowdel la guerre de l'hérésie" #AizonLowdel >Aizon Lowdel</span> est le chef des révolutionnaires, meneur des Starriest. Cet homme est le plus grand ennemi de l'Impératice Urteil et de l'Empire de la Sagesse. Malgré son passé lié à l'Empire et son jeune âge, Aizon Lowdel est respecté par les membres de la révolution et représente l'espoir ainsi que l'embrasement du peuple Urteil.</p></td>
-							</tr>
-							<tr>
-								<td><p><span #="Milobellia Vi Urteil la guerre de l'hérésie" #MilobelliaViUrteil >Milobellia Vi Urteil</span>, surnommée Mila par ses proches, est la Princesse de Kroyven et la fille de Noctalia Vi Urteil. Mila est liée à Aizon Lowdel qui a été son garde personnel depuis son enfance lorsque le Starriest était au service de l'Impératrice.</p></td>
-								<td><a href='page/mila.html' class='a_alpha' ><h1 #MilobelliaViUrteil #='Milobellia Vi Urteil' class='name_right' >Milobellia Vi Urteil</h1></a></td>
-							</tr>
-							<tr>
-								<td><a href='page/celarian.html' class='a_alpha' ><h1 #Celarian #='Celarian' class='name_left'  >Celarian</h1></></td>
-								<td><p><span #="Celarian la guerre de l'hérésie" #Celarian >Celarian</span> est la commandante du Cercle des Urteils. Cette guerrière est une jeune femme tourmentée aux longs cheveux bruns, détentrice d’Erebus, une des deux sphères de pouvoir originelles qui est née du Chaos.</p></td>
-							</tr>
-						<tr>
-							<td colspan="2" ><h1 #UnionRoyale #='Union Royale' class='main_race' >Union Royale</h1></td>
-						</tr>
-							<tr>
-								<td><a href='page/alazia_hora.html' class='a_alpha' ><h1 #AlaziaHora #='Alazia Hora' class='name_left'  >Alazia Hora</h1></a></td>
-								<td><p><span #="Alazia Hora la guerre de l'hérésie" #AlaziaHora >Alazia Hora</span> est la Reine du Temps, souveraine des Elfes. Elle dirige l'Union Royale, une union créée pour lutter contre les Dieux.</p></td>
-							</tr>
-							<tr>
-								<td><p>Roi du Vent et souverain des Dragons, <span #="Rayza la guerre de l'hérésie" #Rayza >Rayza</span> règne sur les cieux. Son âme est liée aux Ansichts depuis leur accord originel.</p></td>
-								<td><h1 #Rayza #='Rayza' class='name_right' >Rayza</h1></td>
-							</tr><!--
-							<tr>
-								<td><h1 #Tenebris #='Tenebris' class='name_left'  >Tenebris</h1></td>
-								<td><p><span #="Tenebris la guerre de l'hérésie" #Tenebris >Tenebris</span> est le Roi de l'Ombre, souverain des Hybrines. Il lia son destin à celui des Streiks.</p></td>
-							</tr>-->
-							<tr>
-                                <td><h1 #Ceaze #='Ceaze' class='name_left' >Ceaze</h1></td>
-								<td><p>Reine des Plantes et souveraine des Fées, <span #="Ceaze la guerre de l'hérésie" #Ceaze >Ceaze</span> est la plus belle des Fées et donc une des femmes les plus belles que les mondes ont portées. Son regard semble porté sur le Prince Maudit, Nate Ansicht.</p></td>
-							</tr>
-						<tr>
-							<td colspan="2"><h1 #EscouadesDivines #='Escouades Divines' class='main_race' >Escouades Divines</h1></td>
-						</tr>
-							<tr>
-								<td><h1 #Omia #='Omia' class='name_left'  >Omia</h1></td>
-								<td><p><span #="Omia la guerre de l'hérésie" #Omia >Omia</span> est le Roi des Dieux, souverain des Realtins et maître de la Réalité. Héritier des desseins de Nécro, il dirige les Escouades Divines dans sa lutte contre l'Union Royale</p></td>
-							</tr>
-							<tr>
-								<td><p>Le <span #="Vespertilio la guerre de l'hérésie" #Vespertilio >Vespertilio</span> est le Dieu de la Nuit, souverain des Vesps. Il est le Dieu responsable du massacre des Ansichts. Le Vespertilio est le seul Dieu à avoir été capable de s'échapper de l'illusion d'Omia et le seul à s'être retourné contre lui.</p></td>
-								<td><h1 #Vespertilio #='Vespertilio' class='name_right' >Vespertilio</h1></td>
-							</tr><!--
-							<tr>
-								<td><h1 #Despair #='Despair' class='name_left'  >Despair</h1></td>
-								<td><p>Le <span #="Despair la guerre de l'hérésie" #Despair >Despair</span> est un Demi-Dieu, fils d'Omia, le Roi des Dieux. Il dirige les hordes des ténèbres, en tant qu'héritier des Realtins.</p></td>
-							</tr>-->
-							<tr>
-                                <td><h1 #Sillia #='Sillia' class='name_left' >Sillia</h1></td>
-								<td><p><span #="Sillia la guerre de l'hérésie" #Sillia >Sillia</span> est la Déesse de la Foudre, souveraine des Zoltres.</p></td>
-							</tr>
-						<tr>
-							<td colspan="2"><h1 #Irilla #='Irilla' class='main_race' ></h1></td>
-							<tr>
-								<td><a href='page/irilla.html' class='a_alpha' ><h1 #Irilla #="Irilla La Guerre de l'Hérésie" class='name_left'  >Irilla</h1></a></td>
-								<td><p><span #="Irilla la guerre de l'hérésie" #Irilla >Irilla</span> est connue sous le nom d'enchanteresse de saphir. Irilla est une mystérieuse jeune femme aux longs cheveux noirs et aux yeux sombres avec des reflets de saphir qui possède un certain caractère. Elle cherche à tout prix un trésor plus précieux que sa vie elle-même.</p></td>
-							</tr>
-						</tr>
-				</table><br></br>
 
-				<br></br><h1 class="characters-more-desktop">Plus de détails ? Plongez dans la <a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" >fandom</a></h1>
+				<h1 class="characters-more-desktop">Plus de détails ? Plongez dans la <a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" >fandom</a></h1>
 				<h1 class="characters-more-mobile" style="display:none">Retrouvez tous les personnages: <a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms">fandom</a></h1>
-				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" ><img src="pictures/Wiki_LaGuerreDeLHeresie_QR.PNG" alt="La guerre de l'hérésie - wiki" #WikiLaGuerreDeLHeresie width="27%" /></a>
+				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" ><img src="pictures/Wiki_LaGuerreDeLHeresie_QR.PNG" alt="La guerre de l'hérésie - wiki" #WikiLaGuerreDeLHeresie width="14%" /></a>
 
 			</div><br></br>
 
@@ -1815,8 +1847,8 @@
 			<h2 class="invisible" #ParutionSuisse #="Parution Suisse" >La guerre de l'hérésie 4 : Commande</h2>
 			<h2 class="invisible" #ParutionSuisse #="Parution Suisse" >La guerre de l'hérésie 4 pruinae</h2>
 		</article>
-		<h4 class="invisible" #RomanQuentinNater id='end' >Mise à jour : 07.10.2026</h4>
-		
+		<h4 class="invisible" #RomanQuentinNater id='end' >Mise à jour : 08.10.2026</h4>
+
 
 
         <img src="pictures/LaGuerredelHeresie_b_logo.PNG" alt="la guerre de l'hérésie" class="hes" width="160px" />
