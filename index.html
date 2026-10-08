@@ -782,6 +782,23 @@
             article .mobile-character-card small { opacity: 1 !important; }
         }
 </style>
+
+        /* Featured book launch event */
+        <style>
+          .vernissage-feature { width:min(1100px, calc(100% - 32px)); margin:250px auto 360px; box-sizing:border-box; padding:12px; border:1px solid #a98347; border-radius:14px; background:linear-gradient(135deg,#c9a968,#f4e8ca 18%,#e8d3a6 82%,#b99153); box-shadow:0 14px 38px rgba(36,22,12,.2); }
+          .vernissage-feature__inner { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:40px; align-items:center; min-height:570px; padding:42px; border:1px solid rgba(98,65,28,.45); border-radius:8px; background:linear-gradient(130deg,rgba(255,253,242,.8),rgba(244,226,189,.68)); }
+          .vernissage-feature__eyebrow { color:#79552c; font:700 .78rem Georgia,serif; letter-spacing:.19em; text-transform:uppercase; }
+          .vernissage-feature__title { color:#392418 !important; font:normal clamp(2rem,4vw,3.3rem)/1.12 Georgia,serif !important; margin:14px 0 !important; text-align:left !important; }
+          .vernissage-feature__subtitle { color:#513521 !important; font:normal clamp(1.05rem,2vw,1.35rem)/1.5 Georgia,serif !important; margin:0 0 24px !important; text-align:left !important; }
+          .vernissage-feature__details { color:#553b26 !important; font:normal 1rem/1.8 Georgia,serif !important; margin:0 0 22px !important; text-align:left !important; }
+          .vernissage-feature__registration { color:#553b26 !important; font:normal 1rem/1.6 Georgia,serif !important; margin:0 0 24px !important; }
+          .vernissage-feature__registration a { color:#613d21 !important; font-weight:bold; text-decoration:underline; }
+          .vernissage-feature__link { display:inline-block; padding:12px 22px; border-radius:5px; background:#493020; color:#000000 !important; text-decoration:none !important; font:700 .95rem Georgia,serif; transition:background .2s,transform .2s; }
+          .vernissage-feature__link:hover { background:#74502d; transform:translateY(-2px); }
+          .vernissage-feature__poster { display:block; text-align:center; }
+          .vernissage-feature__poster img { display:block; width:100%; max-width:480px; height:auto; margin:auto; border:5px solid #f8eed8; box-shadow:0 12px 30px rgba(37,23,13,.3); box-sizing:border-box; }
+          @media(max-width:700px) { .vernissage-feature { width:calc(100% - 32px); margin:55px auto 65px; padding:7px; } .vernissage-feature__inner { grid-template-columns:1fr; gap:22px; min-height:0; padding:28px 17px; } .vernissage-feature__title,.vernissage-feature__subtitle,.vernissage-feature__details { text-align:center !important; } .vernissage-feature__copy { text-align:center; } .vernissage-feature__poster img { max-width:390px; } }
+        </style>
 </head>
 
 	<!--
@@ -821,10 +838,29 @@
 
 
 
+
+
 		<article #="S'estomper vers les Ténèbres" #LaGuerreDeLHérésie #="la guerre de l'heresie" >
 
 			<div class='core' >
 			<!--<h1 style="padding-top:20%; padding-bottom:35%; text-align:center; font-size:250%; color:#66329a;" >L'Illusion d'un Souhait est enfin sorti !!! <a href="#lids3" > Commander !</a> &#9876;&#65039; &#128009; </h1>--><br></br>
+        <!-- Featured event: Vernissage Livre 4 -->
+        <section class="vernissage-feature" id="vernissage" aria-labelledby="vernissage-title">
+          <div class="vernissage-feature__inner">
+            <div class="vernissage-feature__copy">
+              <span class="vernissage-feature__eyebrow">✦ Événement exceptionnel ✦</span>
+              <h2 class="vernissage-feature__title" id="vernissage-title">Le Vernissage</h2>
+              <p class="vernissage-feature__subtitle">Vernissage du Livre 4 de <em>La Guerre de l'Hérésie</em> !</p>
+              <p class="vernissage-feature__details"><strong>7 novembre 2026</strong><br><a href="https://maps.app.goo.gl/o4ejuFzTRHVKNm7t7" target="_blank" rel="noopener" style="color:#553b26;text-decoration:underline;">Rte du Chavalard 88, Fully, Valais, Suisse ↗</a></p>
+              <h2 class="vernissage-feature__subtitle">Pour être certain de recevoir votre livre, merci de vous inscrire: <a href="https://forms.gle/qZdHuz9J4vpWUMHu8" target="_blank" rel="noopener">formulaire</a>. <i>(entrée libre)</i></h2>
+              <a class="vernissage-feature__link" href="./pictures/LaGuerreDeLHeresie_L4_Vernissage_Flyer.png" target="_blank" rel="noopener">Découvrir l'affiche ↗</a>
+            </div>
+            <a class="vernissage-feature__poster" href="./pictures/LaGuerreDeLHeresie_L4_Vernissage_Flyer.png" target="_blank" rel="noopener" aria-label="Agrandir l'affiche du vernissage">
+              <img src="./pictures/LaGuerreDeLHeresie_L4_Vernissage_Flyer.png" alt="Affiche du vernissage du Livre 4 de La Guerre de l'Hérésie, le 7 novembre 2026 à Fully" loading="lazy">
+            </a>
+          </div>
+        </section>
+
 				<div class="cor_tab_right" >
                     <table>
                         <tr>
@@ -1266,12 +1302,12 @@
 				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" ><img src="pictures/Wiki_LaGuerreDeLHeresie_QR.PNG" alt="La guerre de l'hérésie - wiki" #WikiLaGuerreDeLHeresie width="27%" /></a>
 
 			</div><br></br>
-			
-			<hr>
-			
-					
 
-			
+			<hr>
+
+
+
+
 			<div class='core' >
 				<h1 #="La Guerre de l'heresie : Les Cartes" #LaGuerreDeLHeresieLesCartes id='carte' >Les Cartes</h1>
 				<table>
@@ -1299,7 +1335,7 @@
 				</table><br></br>
 
 			</div>
-			
+
 			<hr>
 
 
@@ -1593,11 +1629,11 @@
 
 
 			<hr>
-			
-			
-			<div class='core' >	
+
+
+			<div class='core' >
 				<h1 #="La Guerre de l'heresie : Auteur" #LaGuerreDeLHeresieLesAuteur class='title_character' id='auteur' >L'Auteur</h1>
-			
+
 				<table>
 					<tr>
 						<td class='td_book' ><p class='center' ><img src='pictures/QuentinNater_Auteur_LaGuerreDeLHeresie.PNG' alt="La Guerre De l'Heresie Auteur Quentin Nater" #LaGuerredelHeresieAuteurQuentinNater class='auteur inv_mob' /></p></td>
@@ -1605,7 +1641,7 @@
 
 						<h2>Quentin Nater est titulaire d'une licence en Informatique de l'Université de Science Appliquée de l'Ouest de la Suisse et suit des études de neurosciences à l'Université de Fribourg.
 							<br />Quand il n'est pas plongé dans ses recherches, l'écriture lui permet de se plonger dans un rêve merveilleux. Il vit en Valais, en Suisse, aux portes de la nature et des montagnes.</h2>
-							
+
 						<br></br>
 						<h1 #="La Guerre de l'heresie : Interview" #LaGuerreDeLHeresieInterview class='title_character' id='interview' >Interview</h1>
 
@@ -1636,39 +1672,39 @@
 				</table>
 				<p class='center' ><img src='pictures/QuentinNater_Auteur_LaGuerreDeLHeresie.PNG' alt="La Guerre De l'Heresie Auteur Quentin Nater" #LaGuerredelHeresieAuteurQuentinNater class='inv_web' /></p>
 			</div>
-			
+
 			<hr>
-			
-			
-			<div class='core' >	
+
+
+			<div class='core' >
 				<h1 #="La Guerre de l'heresie : Journal" #LaGuerreDeLHeresieJournal class='title_character' id='journal' >Journal</h1>
 						<h4 #JournalFullyQuentinNater #='Quentin Nater Fully Journal' id='fully' >Journal de Fully 2023 - Livre 1</h4>
 						<a href='https://www.journaldefully.ch/wp-content/uploads/2023/02/Journal-317.pdf' >Lien de l'article</a><br></br>
 						<br></br>
 						<h4 #JournalFullyQuentinNater #='Quentin Nater Fully Journal' id='fully' >Journal de Fully 2024 - Livre 2</h4>
 						<a href='https://www.journaldefully.ch/wp-content/uploads/2024/06/Journal-329.pdf' >Lien de l'article</a><br></br>
-						<a href='pictures/journal_fully_quentin_nater_laguerredelheresie.PNG' ><img src='pictures/journal_fully_quentin_nater_laguerredelheresie.JPG' alt="Journal de Fully La Guerre de l'Hérésie livre 2 - Quentin Nater" #="Quentin Nater Fully La Guerre de l'Hérésie journal" class='book_cover' width="50%" /></a>						
+						<a href='pictures/journal_fully_quentin_nater_laguerredelheresie.PNG' ><img src='pictures/journal_fully_quentin_nater_laguerredelheresie.JPG' alt="Journal de Fully La Guerre de l'Hérésie livre 2 - Quentin Nater" #="Quentin Nater Fully La Guerre de l'Hérésie journal" class='book_cover' width="50%" /></a>
 			</div>
-			
+
 			<hr>
-						
+
 			<div class='core'>
 				<h1 #="La Guerre de l'heresie : Les avis" #LaGuerreDeLHeresieAvis class='title_character' >Les Avis</h1><br></br>
 				<a href='https://www.babelio.com/livres/Nater-La-guerre-de-lheresie-tome-1--Sestomper-vers-le/1451669/critiques' ><img src='pictures/babelio.PNG' alt='instagram' width='250px' height='70px' class='img_center' /></a>
 				<a href='https://booknode.com/la_guerre_de_lheresie_livre_1_sestomper_vers_les_tenebres_03470683/commentaires' ><img src='pictures/booknode.PNG' alt='instagram' width='250px' height='60px' class='img_center' /></a><br></br>
-				
+
 				<div class='center_insta' >
 					<blockquote class="instagram-media center_insta" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CrX8jvVq0Sa/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:360px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CrX8jvVq0Sa/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CrX8jvVq0Sa/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Julie Agnello (@le_petit_atelier_de_julie)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
-				</div>	
+				</div>
 				<br></br>
-				
+
 			</div>
 
 
 
 			<hr>
-			
-			
+
+
 			<div class='core'>
 				<h1 #="La Guerre de l'heresie : Contact" #LaGuerreDeLHeresieContact class='title_character' >Votre Contribution</h1><br></br>
 				<p>Soyez la prochaine personne à contribuer à la visibilité de la Guerre de l'Hérésie en donnant votre avis sur les plateformes en ligne, un grand merci !<p><br />
@@ -1676,18 +1712,18 @@
 				<a href='https://booknode.com/auteur/quentin-nater/commentaires-sur-ses-livres' ><img src='pictures/booknode.PNG' alt='instagram' width='250px' height='60px' class='img_center' style="margin-right : 30px;" /></a>
 				<a href='https://www.fnac.com/ia10677023/Quentin-Nater' ><img src='pictures/fnac.png' class='img_center' alt="FNAC : La guerre de l'heresie" #FNACLaGuerreDeLHeresie width='60px' height='60px' style="margin-right : 30px;" ></a>
 				<a href='https://www.amazon.fr/Quentin-NATER/e/B0BNGCJZWJ?ref=sr_ntt_srch_lnk_1&qid=1691572981&sr=1-1' ><img src='pictures/amazon_orange.png' class='img_center' alt="amazon : La guerre de l'heresie" #AmazonLaGuerreDeLHeresie width='60px' height='60px' ></a><br></br><br></br>
-				
+
 				<br></br>
-				
+
 			</div>
-			
-			
+
+
 			<hr>
-			
+
 			<h2>ISBN-13 : 9791028419165</h2>
 			<h2>ASIN : B0B6N3QT27</h2><br></br>
 			<a href='https://www.instagram.com/quentin_nater/' ><img src='pictures/logo_instagram.PNG' alt='instagram' width='70px' height='70px' class='img_center' /></a><br></br>
-			
+
 			<hr>
 
              <section>
@@ -1720,7 +1756,7 @@
 			<h2 class="invisible" #QuentinNaterLivre #='Fully Livre' >Fully Livre</h2>
 			<h2 class="invisible" #ValaisLivre #='Valais Livre' >Valais Livre</h2>
 			<h2 class="invisible" #auteursuisse #='Auteur Suisse' >Auteur Suisse</h2>
-			
+
 			<h1 class="invisible" #NateAnsicht #="Nate Ansicht" >Nate Ansicht</h1>
 			<h1 class="invisible" #PruinaeEnneis #='Pruinae Enneis' >Pruinae Enneis</h1>
 			<h1 class="invisible" #Pruinae #='Pruinae' >Pruinae</h1>
