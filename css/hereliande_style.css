@@ -276,3 +276,25 @@
     width: 66%;
   }
 }
+/* Affichage compact du lexique sur smartphone uniquement. */
+@media screen and (max-width: 700px) {
+  .lexicon-article .lexicon .table-wrap table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+  }
+  .lexicon-article .lexicon .table-wrap th,
+  .lexicon-article .lexicon .table-wrap td {
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+    letter-spacing: normal !important;
+    padding: 4px 3px !important;
+    overflow-wrap: anywhere;
+  }
+  .lexicon-article .lexicon .table-wrap th:first-child,
+  .lexicon-article .lexicon .table-wrap td:first-child { width: 35%; }
+  .lexicon-article .lexicon .table-wrap th:last-child,
+  .lexicon-article .lexicon .table-wrap td:last-child { width: 65%; }
+  .lexicon-article .lexicon .group-title { font-size: 0.8rem; }
+  .lexicon-article .lexicon .badge { font-size: 0.65rem; }
+}
