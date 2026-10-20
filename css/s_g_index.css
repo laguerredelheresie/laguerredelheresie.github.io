@@ -998,3 +998,20 @@
     padding-top: 0 !important;
   }
 }
+
+/* Compact author block on mobile: remove the portrait cell and its space. */
+@media (max-width:700px) {
+ .author-section { padding-top:0 !important; }
+ .author-section > #auteur { margin:0 !important; padding:0 !important; }
+ .author-section > #auteur + table { display:block !important; margin:0 !important; padding:0 !important; border-spacing:0 !important; height:auto !important; }
+ .author-section > #auteur + table tbody, .author-section > #auteur + table tr { display:block !important; height:auto !important; margin:0 !important; padding:0 !important; }
+ .author-section > #auteur + table .td_book { display:none !important; }
+ .author-section > #auteur + table .td_txt { display:block !important; margin:0 !important; padding:0 !important; height:auto !important; }
+ .author-section #quentin-nater { margin:0 0 8px !important; padding:0 !important; }
+}
+/* Journal and Avis: equal columns on desktop, original stacking on mobile. */
+@media (min-width:701px) {
+ .press-reviews-layout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px; align-items:start; }
+ .press-reviews-layout > .journal-section, .press-reviews-layout > .reviews-section { min-width:0; width:100%; box-sizing:border-box; }
+ .press-reviews-layout > hr { display:none; }
+}
