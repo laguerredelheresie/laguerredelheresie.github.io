@@ -930,3 +930,10 @@
   article #Hereliande .lexicon .table-wrap th:last-child,
   article #Hereliande .lexicon .table-wrap td:last-child { width:68% !important; }
 }
+
+/* Mobile: tighten the space between L’Auteur and Biographie only. */
+@media screen and (max-width: 700px) {
+  article #auteur.title_character { margin-bottom: 4px !important; }
+  article #auteur.title_character + table { margin-top: 0 !important; }
+  article #quentin-nater { margin-top: 2px !important; }
+}
