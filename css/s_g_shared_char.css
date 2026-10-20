@@ -747,3 +747,16 @@ h1.character-name-force {
 @media(max-width:1100px){.characters-simple .codex-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;}}
 @media(max-width:800px){.characters-simple .codex-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important;}}
 @media(max-width:560px){.characters-simple .codex-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;}.characters-simple .codex-card-text{padding:10px 5px 12px!important;}.characters-simple .codex-card-text strong{font-size:.89rem!important;}}
+
+/* Mobile reading improvements: chapter prose and roman numeral column only. */
+@media screen and (max-width: 700px) {
+  .lore:not(.portal) > div:last-child > p,
+  .lore:not(.portal) > div:last-child > blockquote {
+    text-align: justify; text-justify: inter-word; hyphens: auto;
+  }
+  .lore > .chapter-mark {
+    margin-right: 0 !important; padding-right: 0 !important;
+    letter-spacing: 0 !important;
+  }
+  .lore { column-gap: 8px !important; }
+}

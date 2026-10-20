@@ -58,493 +58,10 @@
         <link rel="stylesheet" href="css/hereliande_style.css" />
 
 
+        <link rel="stylesheet" href="css/s_g_index.css">
+
         <!-- Mobile-only homepage refinement. Desktop styles are intentionally untouched. -->
-        <style>
-        @media screen and (max-width: 1000px) {
-            html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
 
-            body {
-                background-image: none !important;
-                background-color: #f6f1e7;
-            }
-
-            body > header {
-                position: relative;
-                width: 100%;
-                min-height: 100svh;
-                box-sizing: border-box;
-                margin: 0 !important;
-                padding: 0 18px 28px;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                align-items: center;
-                overflow: hidden;
-                isolation: isolate;
-            }
-
-            body > header::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                z-index: -2;
-                background: url("pictures/LaGuerredelHeresie_Wallpaper_PruinaeEnneis.PNG") center top / cover no-repeat;
-            }
-
-            body > header::after {
-                content: "";
-                position: absolute;
-                inset: 0;
-                z-index: -1;
-                background: linear-gradient(to bottom, transparent 54%, rgba(0,0,0,.18) 72%, rgba(0,0,0,.72) 100%);
-                pointer-events: none;
-            }
-
-            body > header .shop {
-                width: min(94vw, 560px);
-                margin: 0 !important;
-                padding: 14px 12px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-                gap: 10px 14px;
-                border: 1px solid rgba(255,255,255,.24);
-                border-radius: 18px;
-                background: rgba(10,10,12,.38);
-                box-shadow: 0 12px 36px rgba(0,0,0,.28);
-                backdrop-filter: blur(8px);
-                -webkit-backdrop-filter: blur(8px);
-            }
-
-            body > header .shop a {
-                display: grid;
-                place-items: center;
-                width: 56px;
-                height: 56px;
-            }
-
-            body > header .shop_img {
-                width: 50px !important;
-                height: 50px !important;
-                min-width: 0 !important;
-                max-width: 50px;
-                margin: 0 !important;
-                object-fit: contain;
-                filter: drop-shadow(0 3px 7px rgba(0,0,0,.35));
-            }
-
-            article {
-                width: 100%;
-                box-sizing: border-box;
-                margin: 0 !important;
-                padding: 34px 16px 48px;
-                background: linear-gradient(#f6f1e7, #fffdf8 22%, #f6f1e7);
-            }
-
-            article .core,
-            article .core_table {
-                width: min(100%, 720px) !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-            }
-
-            article .cor_tab_right { margin-left: 0 !important; }
-
-            article table:not(.calendar),
-            article table:not(.calendar) tbody,
-            article table:not(.calendar) tr {
-                display: block;
-                width: 100%;
-            }
-
-            article .td_book,
-            article .td_txt {
-                display: block;
-                width: 100% !important;
-                min-width: 0 !important;
-                margin: 0 !important;
-                padding: 0 !important;
-            }
-
-            article .td_book {
-                padding: 26px 0 20px !important;
-                text-align: center;
-            }
-
-            article .book_cover {
-                display: block;
-                width: min(72vw, 300px) !important;
-                min-width: 0 !important;
-                max-width: 300px;
-                margin: 0 auto !important;
-                border-radius: 4px;
-                box-shadow: 0 15px 34px rgba(28,19,10,.24);
-            }
-
-            article .book_cover:hover,
-            article .book_logo:hover { transform: none !important; }
-
-            article .td_txt {
-                padding: 0 4px 34px !important;
-            }
-
-            article h1,
-            article h1.white {
-                margin: 12px 0 18px;
-                font-size: clamp(1.45rem, 6.5vw, 2rem) !important;
-                line-height: 1.25;
-                text-align: center !important;
-            }
-
-            article h2 { font-size: 1.05rem !important; line-height: 1.45; }
-            article h3 { font-size: .95rem !important; line-height: 1.45; }
-            article p {
-                font-size: 1rem !important;
-                line-height: 1.72;
-                text-align: left !important;
-            }
-
-            article .book_shop_img {
-                width: 38px !important;
-                min-width: 0 !important;
-                max-width: 38px;
-                margin: 8px 7px !important;
-            }
-
-            article hr {
-                width: 56px;
-                margin: 14px auto 24px;
-                border: 0;
-                border-top: 1px solid rgba(83,56,31,.35);
-            }
-
-            article .core + .core { margin-top: 24px !important; }
-
-            article .year-toggle {
-                margin: 0 0 14px;
-                border: 1px solid rgba(89,61,34,.2);
-                border-radius: 12px;
-                background: rgba(255,255,255,.58);
-                overflow: hidden;
-            }
-
-            article .year-toggle__summary {
-                margin: 0 !important;
-                padding: 15px 16px;
-                font-size: .95rem;
-                text-align: left;
-                cursor: pointer;
-            }
-
-            article .year-toggle[open] .year-toggle__summary { margin-bottom: 0 !important; }
-
-            article table.calendar {
-                width: 100%;
-                display: table;
-                font-size: .60rem;
-                line-height: 1.25;
-                border-collapse: collapse;
-            }
-
-            article table.calendar td,
-            article table.calendar th {
-                padding: 5px 3px !important;
-                overflow-wrap: normal;
-                word-break: normal;
-            }
-
-            article .mobile-character-card:hover {
-                border-color: rgba(212,179,108,.68);
-                background: linear-gradient(145deg, rgba(20,28,48,.98), rgba(7,11,27,.96));
-            }
-
-            .invisible { display: none !important; visibility: hidden !important; }
-
-            body > header .shop a[href*="booknode.com"] { display: none !important; }
-
-            article table.calendar h1, article table.calendar h2, article table.calendar h3, article table.calendar p {
-                font-size: .60rem !important; line-height: 1.2 !important; margin-left: 0 !important;
-            }
-
-            article .carte {
-                display: block; width: 100% !important; max-width: 100% !important; min-width: 0 !important; height: auto !important; margin: 0 auto !important; box-sizing: border-box;
-            }
-
-            article .core > table:has(.carte) { width: 100% !important; max-width: 100% !important; box-sizing: border-box; }
-
-            /* Normalize every main mobile section to the same left/right edge. */
-            article > .core,
-            article > .core_table,
-            article > .core_character,
-            article > hr,
-            article > section,
-            article > .lexicon-article {
-                box-sizing: border-box !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-            }
-
-            article .core_character {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-
-            /* Character table: one full-width cell after another, never squeezed columns. */
-            article .core_character > table,
-            article .core_character > table > tbody,
-            article .core_character > table > tbody > tr,
-            article .core_character > table > tr {
-                display: block !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                box-sizing: border-box !important;
-            }
-
-            article .core_character > table td {
-                display: block !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                min-width: 0 !important;
-                box-sizing: border-box !important;
-                margin: 0 !important;
-                padding: 5px 0 12px !important;
-                text-align: left !important;
-            }
-
-            article .core_character .name_left,
-            article .core_character .name_right,
-            article .core_character .race,
-            article .core_character .main_race {
-                width: 100% !important;
-                max-width: 100% !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                text-align: left !important;
-                box-sizing: border-box !important;
-            }
-
-            article .core_character td p {
-                width: 100% !important;
-                max-width: 100% !important;
-                margin: 0 !important;
-                padding: 0 !important;
-            }
-
-            /* Map table: each map and its description occupy the full mobile width. */
-            article .core > table:has(.carte),
-            article .core > table:has(.carte) > tbody,
-            article .core > table:has(.carte) > tbody > tr,
-            article .core > table:has(.carte) > tr {
-                display: block !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                min-width: 0 !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                box-sizing: border-box !important;
-            }
-
-            article .core > table:has(.carte) td {
-                display: block !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                min-width: 0 !important;
-                margin: 0 !important;
-                padding: 0 0 14px !important;
-                box-sizing: border-box !important;
-                text-align: left !important;
-            }
-
-            article .core > table:has(.carte) .td_book {
-                padding: 20px 0 10px !important;
-            }
-
-            article .core > table:has(.carte) .inv_mob {
-                display: block !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                margin: 6px 0 10px !important;
-                padding: 0 !important;
-                text-align: left !important;
-                box-sizing: border-box !important;
-            }
-
-            article .carte {
-                width: 100% !important;
-                max-width: 100% !important;
-                height: auto !important;
-            }
-
-            /* Latest mobile fixes: keep all previous v3 behavior intact. */
-            article .core_character > table > tbody > tr:has(.name_right),
-            article .core_character > table > tr:has(.name_right) {
-                display: flex !important;
-                flex-direction: column !important;
-            }
-
-            article .core_character > table > tbody > tr:has(.name_right) > td:has(.name_right),
-            article .core_character > table > tr:has(.name_right) > td:has(.name_right) {
-                order: 1;
-            }
-
-            article .core_character > table > tbody > tr:has(.name_right) > td:has(p),
-            article .core_character > table > tr:has(.name_right) > td:has(p) {
-                order: 2;
-            }
-
-            article .core > .center_insta {
-                display: flex !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                justify-content: center !important;
-                box-sizing: border-box !important;
-            }
-
-            article .core > .center_insta > blockquote.instagram-media.center_insta {
-                display: block !important;
-                width: min(100%, 540px) !important;
-                min-width: 0 !important;
-                max-width: 540px !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                box-sizing: border-box !important;
-            }
-
-            footer { margin: 0 !important; padding: 28px 16px !important; }
-        }
-
-        @media screen and (max-width: 480px) {
-            body > header { padding-inline: 12px; }
-            body > header .shop { gap: 8px; padding: 11px 8px; }
-            body > header .shop a { width: 48px; height: 48px; }
-            body > header .shop_img { width: 44px !important; height: 44px !important; max-width: 44px; }
-            article { padding-inline: 16px; }
-        }
-
-
-        @media screen and (max-width: 1000px) {
-            article .mobile-character-card strong,
-            article .mobile-character-card small {
-                color: #000 !important;
-            }
-
-            article .characters-more-desktop {
-                display: none !important;
-            }
-
-            article .characters-more-mobile {
-                display: block !important;
-            }
-        }
-
-        /* Calendrier 2026 : un seul panneau illustré, façon parchemin. */
-        .calendar-2026-scene {
-            position: relative; isolation: isolate; max-width: 1120px;
-            margin: 44px auto 38px; padding: 32px 20px 22px;
-            border: 2px solid #947047; border-radius: 20px;
-            background: linear-gradient(145deg, #fff9eb 0%, #f4e8ce 100%);
-            box-shadow: 0 14px 32px rgba(65,43,22,.14), inset 0 0 0 5px rgba(255,255,255,.42);
-        }
-        .calendar-2026-scene::before {
-            content: "✦  ✧  ✦"; position: absolute; top: 12px; left: 24px;
-            color: #ad8150; font-size: 14px; letter-spacing: 8px;
-        }
-        .calendar-2026-scene .calendar-chibi-heading {
-            position: relative; display: flex; align-items: center; min-height: 160px;
-            padding: 10px 180px 16px 20px; margin: 0; text-align: left;
-        }
-        .calendar-2026-scene .calendar-chibi-heading h1 {
-            margin: 0; max-width: 750px; font-size: clamp(1.65rem, 3vw, 2.8rem);
-            line-height: 1.18; color: #56391f;
-        }
-        .calendar-2026-scene .calendar-chibi-heading img {
-            position: absolute; z-index: 3; width: clamp(145px, 20%, 215px);
-            height: auto; right: 0; bottom: -43px; object-fit: contain;
-            transform: rotate(5deg); transform-origin: 50% 90%;
-            filter: drop-shadow(0 10px 7px rgba(60,36,18,.20));
-            transition: transform .25s ease;
-        }
-        .calendar-2026-scene:hover .calendar-chibi-heading img { transform: rotate(0deg) translateY(-5px); }
-        .calendar-2026-scene > table.calendar {
-            width: 100%; margin: 0 auto; position: relative; z-index: 1;
-            border-collapse: separate; border-spacing: 0; overflow: hidden;
-            border: 1px solid #bb9870; border-radius: 12px;
-            background: #fffaf0; box-shadow: 0 5px 18px rgba(68,45,21,.09);
-        }
-        .calendar-2026-scene > table.calendar th {
-            background: #705034; color: #fff9ed; border-color: #947554;
-        }
-        .calendar-2026-scene > table.calendar th h2 { color: #fff9ed !important; }
-        .calendar-2026-scene > table.calendar td { border-color: #e6d6bb; }
-        .calendar-2026-scene > table.calendar tr:not(:first-child):nth-child(odd) td { background-color: rgba(221,194,148,.12); }
-        .calendar-2026-scene > table.calendar tr:not(:first-child):hover td { background-color: #f8ebd3; }
-        .calendar-2026-scene > table.calendar td a { color: #815322; }
-        .calendar-2026-scene .calendar-footnote { margin: 14px 10px 0; text-align: center; color: #705034; }
-        @media (max-width: 700px) {
-            .calendar-2026-scene { margin: 28px auto; padding: 14px 8px 16px; border-radius: 14px; }
-            .calendar-2026-scene .calendar-chibi-heading { min-height: 125px; padding: 12px 108px 12px 10px; }
-            .calendar-2026-scene .calendar-chibi-heading h1 { font-size: clamp(1.2rem, 4.6vw, 1.7rem) !important; }
-            .calendar-2026-scene .calendar-chibi-heading img { width: 120px; right: -3px; bottom: -15px; }
-            .calendar-2026-scene > table.calendar th h2 { margin-left: 0 !important; }
-        }
-        @media (max-width: 430px) {
-            .calendar-2026-scene .calendar-chibi-heading { min-height: 100px; padding-right: 92px; }
-            .calendar-2026-scene .calendar-chibi-heading img { width: 102px; bottom: -9px; }
-            .calendar-2026-scene .calendar-chibi-heading h1 { font-size: 1.1rem !important; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .calendar-2026-scene .calendar-chibi-heading img { transition: none; }
-        }
-
-
-        .mobile-month { display: none; }
-        @media screen and (max-width: 1000px) { .desktop-month { display: none; } .mobile-month { display: inline; } }
-        /* Mobile refinements only: preserve the original calendar and chibi design. */
-        @media screen and (max-width: 1000px) {
-            .calendar-2026-scene > table.calendar,
-            .calendar-2026-scene > table.calendar th,
-            .calendar-2026-scene > table.calendar td,
-            .calendar-2026-scene > table.calendar h2,
-            .calendar-2026-scene > table.calendar h3 {
-                text-align: left !important;
-            }
-            article .calendar-2026-scene > table.calendar {
-                table-layout: fixed;
-                border-collapse: separate;
-                border-spacing: 3px 7px;
-            }
-            article .calendar-2026-scene > table.calendar td,
-            article .calendar-2026-scene > table.calendar th {
-                padding: 9px 5px !important;
-                vertical-align: top;
-                overflow-wrap: anywhere;
-            }
-            article .calendar-2026-scene > table.calendar td:last-child,
-            article .calendar-2026-scene > table.calendar td:last-child h3,
-            article .calendar-2026-scene > table.calendar th:last-child h2 {
-                font-size: .52rem !important;
-                line-height: 1.35 !important;
-            }
-            /* Justify the prose of book chapters, not tables, headings or cards. */
-            article .td_txt > h2 { text-align: justify !important; text-justify: inter-word; }
-            /* The lexicon keeps its two columns readable on narrow screens. */
-            #Hereliande .table-wrap { max-width: 100%; overflow-x: auto; }
-            #Hereliande .table-wrap table { width: 100%; table-layout: fixed; }
-            #Hereliande .table-wrap th { font-size: .72rem !important; padding: 7px 5px !important; }
-            #Hereliande .table-wrap td { font-size: .78rem !important; padding: 7px 5px !important; overflow-wrap: anywhere; }
-            #Hereliande .table-wrap th:first-child,
-            #Hereliande .table-wrap td:first-child { width: 39%; }
-            #Hereliande .table-wrap th:last-child,
-            #Hereliande .table-wrap td:last-child { width: 61%; }
-        }
-</style>
 
         <script type="application/ld+json">
 {
@@ -728,235 +245,10 @@
 }
         </script>
 
-    <style>
 
-        /* Mobile character directory: same compact cards as personnages.html. */
-        @media screen and (max-width: 1000px) {
-            article .core_character > table { display: none !important; }
-            article .core_character > a[href*="Lexiques_des_noms"] { display: none !important; }
-            article .core_character > br { display: none !important; }
 
-            article .mobile-character-grid {
-                display: grid !important;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: .85rem;
-                width: 100% !important;
-                max-width: 100% !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                box-sizing: border-box !important;
-            }
 
-            article .mobile-character-card {
-                display: flex !important;
-                flex-direction: column;
-                align-items: stretch;
-                justify-content: flex-start;
-                gap: .55rem;
-                min-width: 0;
-                min-height: 0;
-                padding: .55rem .55rem .75rem;
-                border-radius: 10px;
-                color: #eee4cf !important;
-                text-decoration: none !important;
-                text-align: left !important;
-                border: 1px solid rgba(212,179,108,.28);
-                background: linear-gradient(145deg, rgba(12,18,35,.96), rgba(5,9,24,.92));
-                box-shadow: 0 8px 20px rgba(0,0,0,.22), inset 0 0 18px rgba(212,179,108,.04);
-                box-sizing: border-box;
-            }
 
-            article .mobile-character-card > img {
-                flex: none;
-                display: block;
-                width: 100% !important;
-                height: auto !important;
-                aspect-ratio: 4 / 5;
-                min-width: 0 !important;
-                max-width: 100% !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                object-fit: cover;
-                object-position: center top;
-                transform: none !important;
-                border: 1px solid rgba(212,179,108,.48);
-                border-radius: 6px;
-            }
-
-            article .mobile-character-card > span {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                min-width: 0;
-                text-align: center;
-            }
-            article .mobile-character-card strong {
-                display: contents;
-            }
-            article .mobile-character-card .character-first,
-            article .mobile-character-card .character-surname {
-                display: block;
-                width: 100%;
-                color: #eee4cf;
-                font-family: Georgia, 'Times New Roman', serif;
-                line-height: 1.1;
-                overflow-wrap: anywhere;
-            }
-            article .mobile-character-card .character-first {
-                font-size: clamp(.92rem, 3.8vw, 1.12rem);
-                font-weight: 700;
-            }
-            article .mobile-character-card .character-surname {
-                margin-top: .18rem;
-                color: #d8b46a;
-                font-size: clamp(.76rem, 3.1vw, .94rem);
-                font-weight: 400;
-            }
-        }
-
-        @media screen and (max-width: 430px) {
-            article .mobile-character-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: .55rem;
-            }
-            article .mobile-character-card {
-                min-height: 0;
-                gap: .45rem;
-                padding: .45rem .45rem .65rem;
-            }
-            article .mobile-character-card > img {
-                width: 100% !important;
-                min-width: 0 !important;
-                max-width: 100% !important;
-                height: auto !important;
-                aspect-ratio: 4 / 5;
-            }
-            article .mobile-character-card .character-first { font-size: clamp(.82rem, 4vw, 1rem); }
-            article .mobile-character-card .character-surname { font-size: clamp(.7rem, 3.3vw, .86rem); }
-        }
-
-        @media screen and (max-width: 1000px) {
-            article .mobile-character-card {
-                background: transparent !important;
-                box-shadow: none !important;
-                border-color: rgba(128, 97, 50, .62) !important;
-            }
-            article .mobile-character-card > span { gap: .18rem; }
-            article .mobile-character-card strong {
-                display: block !important;
-                width: 100%;
-                color: inherit !important;
-                font-family: Georgia, 'Times New Roman', serif;
-                font-size: clamp(.82rem, 3.35vw, 1rem);
-                font-weight: 600;
-                line-height: 1.15;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            article .mobile-character-card small {
-                display: block;
-                width: 100%;
-                margin: 0;
-                color: inherit !important;
-                opacity: .68;
-                font-family: Georgia, 'Times New Roman', serif;
-                font-size: clamp(.58rem, 2.45vw, .72rem);
-                font-weight: 400;
-                line-height: 1.2;
-                text-align: center;
-            }
-
-            /* Force all visible card typography to true black on mobile. */
-            article a.mobile-character-card,
-            article a.mobile-character-card:link,
-            article a.mobile-character-card:visited,
-            article a.mobile-character-card:hover,
-            article a.mobile-character-card:active,
-            article .mobile-character-card > span,
-            article .mobile-character-card strong,
-            article .mobile-character-card small {
-                color: #000 !important;
-                -webkit-text-fill-color: #000 !important;
-                text-shadow: none !important;
-            }
-            article .mobile-character-card small { opacity: 1 !important; }
-        }
-</style>
-        <style>
-          .vernissage-feature { width:min(1100px, calc(100% - 32px)); margin:250px auto 360px; box-sizing:border-box; padding:12px; border:1px solid #a98347; border-radius:14px; background:linear-gradient(135deg,#c9a968,#f4e8ca 18%,#e8d3a6 82%,#b99153); box-shadow:0 14px 38px rgba(36,22,12,.2); }
-          .vernissage-feature__inner { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:40px; align-items:center; min-height:570px; padding:42px; border:1px solid rgba(98,65,28,.45); border-radius:8px; background:linear-gradient(130deg,rgba(255,253,242,.8),rgba(244,226,189,.68)); }
-          .vernissage-feature__eyebrow { color:#79552c; font:700 .78rem Georgia,serif; letter-spacing:.19em; text-transform:uppercase; }
-          .vernissage-feature__title { color:#392418 !important; font:normal clamp(2rem,4vw,3.3rem)/1.12 Georgia,serif !important; margin:14px 0 !important; text-align:left !important; }
-          .vernissage-feature__subtitle { color:#513521 !important; font:normal clamp(1.05rem,2vw,1.35rem)/1.5 Georgia,serif !important; margin:0 0 24px !important; text-align:left !important; }
-          .vernissage-feature__details { color:#553b26 !important; font:normal 1rem/1.8 Georgia,serif !important; margin:0 0 22px !important; text-align:left !important; }
-          .vernissage-feature__registration { color:#553b26 !important; font:normal 1rem/1.6 Georgia,serif !important; margin:0 0 24px !important; }
-          .vernissage-feature__registration a { color:#613d21 !important; font-weight:bold; text-decoration:underline; }
-          .vernissage-feature__link { display:inline-block; padding:12px 22px; border-radius:5px; background:#493020; color:#000000 !important; text-decoration:none !important; font:700 .95rem Georgia,serif; transition:background .2s,transform .2s; }
-          .vernissage-feature__link:hover { background:#74502d; transform:translateY(-2px); }
-          .vernissage-feature__poster { display:block; text-align:center; }
-          .vernissage-feature__poster img { display:block; width:100%; max-width:480px; height:auto; margin:auto; border:5px solid #f8eed8; box-shadow:0 12px 30px rgba(37,23,13,.3); box-sizing:border-box; }
-          /* Mobile only: compact, legible and fully visible flyer without cropping. */
-          @media(max-width:700px) {
-            .vernissage-feature { width:calc(100% - 24px); max-width:480px; margin:48px auto 56px; padding:5px; border-radius:10px; }
-            .vernissage-feature__inner { display:flex; flex-direction:column; gap:15px; min-height:0; padding:20px 12px 15px; }
-            .vernissage-feature__copy { width:100%; min-width:0; text-align:center; }
-            .vernissage-feature__eyebrow { font-size:.66rem; letter-spacing:.12em; }
-            .vernissage-feature__title { font-size:clamp(1.65rem,7vw,2.2rem) !important; line-height:1.12 !important; margin:8px 0 !important; text-align:center !important; }
-            .vernissage-feature__subtitle { font-size:clamp(.92rem,3.7vw,1.08rem) !important; line-height:1.35 !important; margin:0 0 12px !important; text-align:center !important; }
-            .vernissage-feature__details { font-size:.92rem !important; line-height:1.5 !important; margin:0 0 10px !important; text-align:center !important; }
-            .vernissage-feature__registration { font-size:.9rem !important; line-height:1.45 !important; margin:0 0 12px !important; text-align:center !important; }
-            .vernissage-feature__link { font-size:.86rem; padding:10px 16px; }
-            .vernissage-feature__poster { width:100%; min-width:0; }
-            .vernissage-feature__poster img { width:auto; max-width:100%; height:auto; max-height:58svh; object-fit:contain; border-width:3px; box-shadow:0 6px 18px rgba(37,23,13,.24); }
-          }
-          @media(max-width:380px) {
-            .vernissage-feature { width:calc(100% - 16px); }
-            .vernissage-feature__inner { padding:16px 9px 12px; gap:12px; }
-            .vernissage-feature__poster img { max-height:52svh; }
-          }
-        </style>
-	<style id="index-character-cards">
-		/* Unified character codex cards on the main index, desktop and mobile */
-		article .core_character .index-codex-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));gap:1rem;max-width:1440px;margin:1.8rem auto 3rem;padding:0 .75rem;box-sizing:border-box}
-		article .core_character .index-codex-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;padding:0;border:1px solid rgba(139,104,53,.68);border-radius:9px;background:transparent;box-shadow:0 1px 3px rgba(42,30,17,.08);text-decoration:none!important;color:#30251d!important;transition:transform .2s,border-color .2s,box-shadow .2s}
-		article .core_character a.index-codex-card:hover{transform:translateY(-3px);border-color:#a77d43;box-shadow:0 5px 14px rgba(42,30,17,.12)}
-		article .core_character .index-codex-image{width:100%;aspect-ratio:4/4.3;overflow:hidden;border:0;border-bottom:1px solid rgba(139,104,53,.5);border-radius:0}
-		article .core_character .index-codex-image img{display:block;width:100%!important;height:100%!important;object-fit:cover;object-position:center top;margin:0!important;max-width:none!important;transform:none!important}
-		article .core_character .index-codex-text{text-align:center;padding:.7rem .55rem .8rem;min-width:0}
-		article .core_character .index-codex-text strong{display:block;font:600 clamp(.95rem,1.35vw,1.22rem)/1.22 Georgia,serif;color:#30251d;overflow-wrap:break-word}
-		article .core_character .index-codex-text small{display:block;margin-top:.4rem;font-size:.78rem;color:#795a31;line-height:1.3}
-		article .core_character .index-codex-description{margin:.75rem 0 0!important;font-size:.78rem!important;line-height:1.55!important;color:#392e24!important;text-align:left!important;overflow-wrap:anywhere}
-		article .core_character .index-codex-description span{color:inherit}
-		@media(max-width:1250px){article .core_character .index-codex-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
-		@media(max-width:850px){article .core_character .index-codex-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-		@media(max-width:850px){article .core_character .index-codex-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem;padding:0 .35rem}article .core_character .index-codex-card{padding:0}article .core_character .index-codex-text strong{font-size:1rem}article .core_character .index-codex-description{font-size:.73rem!important}}
-
-		/* Mobile cards: portrait, name and title only; desktop descriptions remain intact. */
-		@media screen and (max-width: 850px) {
-			article .core_character .index-codex-card .index-codex-description { display: none !important; }
-		}
-
-		/* Remove decorative outlines/shadows from all character card text. */
-		article .core_character .index-codex-card .index-codex-text,
-		article .core_character .index-codex-card .index-codex-text *,
-		article .core_character .mobile-character-card span,
-		article .core_character .mobile-character-card span * {
-		  -webkit-text-stroke: 0 transparent !important;
-		  -webkit-text-stroke-width: 0 !important;
-		  text-stroke: 0 transparent !important;
-		  text-shadow: none !important;
-		  filter: none !important;
-		}
-		@media screen and (max-width: 700px) {
-		  /* Previously 56px: double the gap after the vernissage on phones. */
-		  .vernissage-feature { margin-bottom: 112px !important; }
-		}
-
-		/* The same card grid is used on desktop and mobile. */
-		article .core_character .index-codex-grid { display: grid !important; }
-	</style>
-<style id="map-title-link-style">.map-title-link, .map-title-link:link, .map-title-link:visited { color: inherit !important; text-decoration: none !important; } .map-title-link:hover { color: inherit !important; text-decoration: underline !important; }</style>
 </head>
 
 	<!--
@@ -1001,7 +293,7 @@
 		<article #="S'estomper vers les Ténèbres" #LaGuerreDeLHérésie #="la guerre de l'heresie" >
 
 			<div class='core' >
-			<!--<h1 style="padding-top:20%; padding-bottom:35%; text-align:center; font-size:250%; color:#66329a;" >L'Illusion d'un Souhait est enfin sorti !!! <a href="#lids3" > Commander !</a> &#9876;&#65039; &#128009; </h1>--><br></br>
+			<!--<h1 class="s-g-index-inline-1" >L'Illusion d'un Souhait est enfin sorti !!! <a href="#lids3" > Commander !</a> &#9876;&#65039; &#128009; </h1>--><br></br>
         <!-- Featured event: Vernissage Livre 4 -->
         <section class="vernissage-feature" id="vernissage" aria-labelledby="vernissage-title">
           <div class="vernissage-feature__inner">
@@ -1009,7 +301,7 @@
               <span class="vernissage-feature__eyebrow">✦ Événement exceptionnel ✦</span>
               <h2 class="vernissage-feature__title" id="vernissage-title">Le Vernissage</h2>
               <p class="vernissage-feature__subtitle">Vernissage du Livre 4 de <em>La Guerre de l'Hérésie</em> !</p>
-              <p class="vernissage-feature__details"><strong>7 novembre 2026</strong><br><a href="https://maps.app.goo.gl/o4ejuFzTRHVKNm7t7" target="_blank" rel="noopener" style="color:#553b26;text-decoration:underline;">Rte du Chavalard 88, Fully, Valais, Suisse ↗</a></p>
+              <p class="vernissage-feature__details"><strong>7 novembre 2026</strong><br><a href="https://maps.app.goo.gl/o4ejuFzTRHVKNm7t7" target="_blank" rel="noopener" class="s-g-index-inline-2">Rte du Chavalard 88, Fully, Valais, Suisse ↗</a></p>
               <h2 class="vernissage-feature__subtitle">Pour être certain de recevoir votre livre, merci de vous inscrire: <a href="https://forms.gle/qZdHuz9J4vpWUMHu8" target="_blank" rel="noopener">formulaire</a>. <i>(entrée libre)</i></h2>
               <a class="vernissage-feature__link" href="./pictures/LaGuerreDeLHeresie_L4_Vernissage_Flyer.png" target="_blank" rel="noopener">Découvrir l'affiche ↗</a>
             </div>
@@ -1132,10 +424,10 @@
             <table class="center calendar">
               <tr>
                 <th colspan="2" class="table-header-dates">
-                  <h2 id="LaGuerreDeLHeresieLesEvenements" style="margin-left : 15px;">Dates</h2>
+                  <h2 id="LaGuerreDeLHeresieLesEvenements" class="s-g-index-inline-3">Dates</h2>
                 </th>
                 <th class="table-header-events">
-                  <h2 id="LaGuerreDeLHeresieCalendrier" style="margin-left : 15px;">Événements</h2>
+                  <h2 id="LaGuerreDeLHeresieCalendrier" class="s-g-index-inline-4">Événements</h2>
                 </th>
               </tr>
 
@@ -1201,10 +493,10 @@
             <table class="center calendar">
               <tr>
                 <th colspan="2" class="table-header-dates">
-                  <h2 id="LaGuerreDeLHeresieLesEvenements" style="margin-left : 15px;">Dates</h2>
+                  <h2 id="LaGuerreDeLHeresieLesEvenements" class="s-g-index-inline-5">Dates</h2>
                 </th>
                 <th class="table-header-events">
-                  <h2 id="LaGuerreDeLHeresieCalendrier" style="margin-left : 15px;">Événements</h2>
+                  <h2 id="LaGuerreDeLHeresieCalendrier" class="s-g-index-inline-6">Événements</h2>
                 </th>
               </tr>
 
@@ -1254,16 +546,16 @@
           <table class="center calendar">
             <tr>
               <th colspan="2" class="table-header-dates">
-                <h2 id="LaGuerreDeLHeresieLesEvenements2026" style="margin-left : 15px;">Date</h2>
+                <h2 id="LaGuerreDeLHeresieLesEvenements2026" class="s-g-index-inline-7">Date</h2>
               </th>
               <th class="table-header-events">
-                <h2 id="LaGuerreDeLHeresieCalendrier2026" style="margin-left : 15px;">Salon/Conv.</h2>
+                <h2 id="LaGuerreDeLHeresieCalendrier2026" class="s-g-index-inline-8">Salon/Conv.</h2>
               </th>
               <th class="table-header-link">
-                <h2 id="LaGuerreDeLHeresieCalendrier2026" style="margin-left : 15px;">Lien</h2>
+                <h2 id="LaGuerreDeLHeresieCalendrier2026" class="s-g-index-inline-9">Lien</h2>
               </th>
               <th class="table-header-location">
-                <h2 id="LaGuerreDeLHeresieCalendrier2026" style="margin-left : 15px;">Location</h2>
+                <h2 id="LaGuerreDeLHeresieCalendrier2026" class="s-g-index-inline-10">Location</h2>
               </th>
             </tr>
 
@@ -1478,7 +770,7 @@
 
                 <h1 class="characters-more-desktop">Découvrez le grimoire secret tenu par Ceaze, la Reine des Fées... <a href="page/grimoire.html" > Ouvrir le Grimoire</a></h1>
                 <br>
-				<h1 class="characters-more-mobile" style="display:none">... <a href="page/grimoire.html">ouvrir le grimoire</a></h1>
+				<h1 class="characters-more-mobile s-g-index-inline-11">... <a href="page/grimoire.html">ouvrir le grimoire</a></h1>
 				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" ><img src="pictures/Wiki_LaGuerreDeLHeresie_QR.PNG" alt="La guerre de l'hérésie - wiki" #WikiLaGuerreDeLHeresie width="14%" /></a>
 
 			</div><br></br>
@@ -1832,10 +1124,9 @@
 						<h1 #="La Guerre de l'heresie : Interview" #LaGuerreDeLHeresieInterview class='title_character' id='interview' >Interview</h1>
 
                         <h4 #RTSQuentinNater #="Quentin Nater RTS La Guerre de l'Hérésie" id='rts' >RTS</h4>
-                        <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; /* 16:9 aspect ratio */">
+                        <div class="s-g-index-inline-12">
                           <iframe
-                            src="https://www.rts.ch/play/embed?urn=urn:rts:video:15214380&subdivisions=false"
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                            src="https://www.rts.ch/play/embed?urn=urn:rts:video:15214380&subdivisions=false" class="s-g-index-inline-13"
                             frameborder="0" allowfullscreen allow="geolocation *; autoplay; encrypted-media">
                           </iframe>
                         </div>
@@ -1880,7 +1171,7 @@
 				<a href='https://booknode.com/la_guerre_de_lheresie_livre_1_sestomper_vers_les_tenebres_03470683/commentaires' ><img src='pictures/booknode.PNG' alt='instagram' width='250px' height='60px' class='img_center' /></a><br></br>
 
 				<div class='center_insta' >
-					<blockquote class="instagram-media center_insta" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CrX8jvVq0Sa/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:360px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CrX8jvVq0Sa/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/CrX8jvVq0Sa/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Julie Agnello (@le_petit_atelier_de_julie)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+					<blockquote class="instagram-media center_insta s-g-index-inline-14" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CrX8jvVq0Sa/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14"><div class="s-g-index-inline-15"> <a href="https://www.instagram.com/p/CrX8jvVq0Sa/?utm_source=ig_embed&amp;utm_campaign=loading" class="s-g-index-inline-16" target="_blank"> <div class="s-g-index-inline-17"> <div class="s-g-index-inline-18"></div> <div class="s-g-index-inline-19"> <div class="s-g-index-inline-20"></div> <div class="s-g-index-inline-21"></div></div></div><div class="s-g-index-inline-22"></div> <div class="s-g-index-inline-23"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div class="s-g-index-inline-24"> <div class="s-g-index-inline-25">View this post on Instagram</div></div><div class="s-g-index-inline-26"></div> <div class="s-g-index-inline-27"><div> <div class="s-g-index-inline-28"></div> <div class="s-g-index-inline-29"></div> <div class="s-g-index-inline-30"></div></div><div class="s-g-index-inline-31"> <div class="s-g-index-inline-32"></div> <div class="s-g-index-inline-33"></div></div><div class="s-g-index-inline-34"> <div class="s-g-index-inline-35"></div> <div class="s-g-index-inline-36"></div> <div class="s-g-index-inline-37"></div></div></div> <div class="s-g-index-inline-38"> <div class="s-g-index-inline-39"></div> <div class="s-g-index-inline-40"></div></div></a><p class="s-g-index-inline-41"><a href="https://www.instagram.com/p/CrX8jvVq0Sa/?utm_source=ig_embed&amp;utm_campaign=loading" class="s-g-index-inline-42" target="_blank">A post shared by Julie Agnello (@le_petit_atelier_de_julie)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
 				</div>
 				<br></br>
 
@@ -1895,8 +1186,8 @@
 				<h1 #="La Guerre de l'heresie : Contact" #LaGuerreDeLHeresieContact class='title_character' >Votre Contribution</h1><br></br>
 				<p>Soyez la prochaine personne à contribuer à la visibilité de la Guerre de l'Hérésie en donnant votre avis sur les plateformes en ligne, un grand merci !<p><br />
 				<a href='https://www.babelio.com/auteur/Quentin-Nater/628198/critiques' ><img src='pictures/babelio.PNG' alt='instagram' width='250px' height='70px' class='img_center' /></a>
-				<a href='https://booknode.com/auteur/quentin-nater/commentaires-sur-ses-livres' ><img src='pictures/booknode.PNG' alt='instagram' width='250px' height='60px' class='img_center' style="margin-right : 30px;" /></a>
-				<a href='https://www.fnac.com/ia10677023/Quentin-Nater' ><img src='pictures/fnac.png' class='img_center' alt="FNAC : La guerre de l'heresie" #FNACLaGuerreDeLHeresie width='60px' height='60px' style="margin-right : 30px;" ></a>
+				<a href='https://booknode.com/auteur/quentin-nater/commentaires-sur-ses-livres' ><img src='pictures/booknode.PNG' alt='instagram' width='250px' height='60px' class='img_center s-g-index-inline-43' /></a>
+				<a href='https://www.fnac.com/ia10677023/Quentin-Nater' ><img src='pictures/fnac.png' class='img_center s-g-index-inline-44' alt="FNAC : La guerre de l'heresie" #FNACLaGuerreDeLHeresie width='60px' height='60px' ></a>
 				<a href='https://www.amazon.fr/Quentin-NATER/e/B0BNGCJZWJ?ref=sr_ntt_srch_lnk_1&qid=1691572981&sr=1-1' ><img src='pictures/amazon_orange.png' class='img_center' alt="amazon : La guerre de l'heresie" #AmazonLaGuerreDeLHeresie width='60px' height='60px' ></a><br></br><br></br>
 
 				<br></br>
@@ -1919,8 +1210,7 @@
                         src="pictures/PruinaeEnneis_QuentinNater_LaGuerreDeLHeresie.png"
                         alt="Pruinae Enneis, personnage de La Guerre de l'Hérésie par Quentin Nater"
                         title="Pruinae Enneis - La Guerre de l'Hérésie"
-                        loading="lazy"
-                        style="width: 24%; min-width:216px; max-width: 50%;"
+                        loading="lazy" class="s-g-index-inline-45"
                     />
 
                     <figcaption class="invisible">
