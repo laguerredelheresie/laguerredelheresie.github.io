@@ -301,3 +301,58 @@
   .lexicon-article .lexicon .group-title { font-size: 0.8rem; }
   .lexicon-article .lexicon .badge { font-size: 0.65rem; }
 }
+
+/* Mobile: full-width, equal columns in every Héréliande category. */
+@media screen and (max-width: 700px) {
+  article.lexicon-article,
+  article.lexicon-article .lexicon,
+  article.lexicon-article .groups,
+  article.lexicon-article .group,
+  article.lexicon-article .table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  article.lexicon-article .table-wrap {
+    overflow-x: hidden !important;
+  }
+
+  article.lexicon-article .lexicon table {
+    display: table !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+  }
+
+  article.lexicon-article .lexicon thead { display: table-header-group !important; }
+  article.lexicon-article .lexicon tbody { display: table-row-group !important; }
+  article.lexicon-article .lexicon tr {
+    display: table-row !important;
+    width: auto !important;
+  }
+
+  article.lexicon-article .lexicon th,
+  article.lexicon-article .lexicon td {
+    display: table-cell !important;
+    box-sizing: border-box !important;
+    width: 50% !important;
+    max-width: 50% !important;
+    padding: 8px 9px !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    vertical-align: top !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+  }
+
+  article.lexicon-article .lexicon th:first-child,
+  article.lexicon-article .lexicon td:first-child,
+  article.lexicon-article .lexicon th:last-child,
+  article.lexicon-article .lexicon td:last-child {
+    width: 50% !important;
+  }
+}

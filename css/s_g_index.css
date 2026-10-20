@@ -937,3 +937,23 @@
   article #auteur.title_character + table { margin-top: 0 !important; }
   article #quentin-nater { margin-top: 2px !important; }
 }
+
+/* Mobile: remove the empty author-image cell above Biographie. */
+@media screen and (max-width: 700px) {
+  article #auteur.title_character {
+    margin-bottom: 0 !important;
+  }
+  article #auteur.title_character + table {
+    margin-top: 0 !important;
+  }
+  article #auteur.title_character + table .td_book {
+    display: none !important;
+  }
+  article #auteur.title_character + table .td_txt {
+    padding-top: 0 !important;
+  }
+  article #auteur.title_character + table #quentin-nater {
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+  }
+}
