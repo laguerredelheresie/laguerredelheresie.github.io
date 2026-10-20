@@ -356,3 +356,10 @@
     width: 50% !important;
   }
 }
+
+/* Preserve search and sorting visibility on mobile. */
+@media screen and (max-width: 700px) {
+  article.lexicon-article .lexicon tr.hidden {
+    display: none !important;
+  }
+}
