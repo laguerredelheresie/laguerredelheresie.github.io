@@ -503,6 +503,47 @@
             .calendar-2026-scene .calendar-chibi-heading img { transition: none; }
         }
 
+
+        .mobile-month { display: none; }
+        @media screen and (max-width: 1000px) { .desktop-month { display: none; } .mobile-month { display: inline; } }
+        /* Mobile refinements only: preserve the original calendar and chibi design. */
+        @media screen and (max-width: 1000px) {
+            .calendar-2026-scene > table.calendar,
+            .calendar-2026-scene > table.calendar th,
+            .calendar-2026-scene > table.calendar td,
+            .calendar-2026-scene > table.calendar h2,
+            .calendar-2026-scene > table.calendar h3 {
+                text-align: left !important;
+            }
+            article .calendar-2026-scene > table.calendar {
+                table-layout: fixed;
+                border-collapse: separate;
+                border-spacing: 3px 7px;
+            }
+            article .calendar-2026-scene > table.calendar td,
+            article .calendar-2026-scene > table.calendar th {
+                padding: 9px 5px !important;
+                vertical-align: top;
+                overflow-wrap: anywhere;
+            }
+            article .calendar-2026-scene > table.calendar td:last-child,
+            article .calendar-2026-scene > table.calendar td:last-child h3,
+            article .calendar-2026-scene > table.calendar th:last-child h2 {
+                font-size: .52rem !important;
+                line-height: 1.35 !important;
+            }
+            /* Justify the prose of book chapters, not tables, headings or cards. */
+            article .td_txt > h2 { text-align: justify !important; text-justify: inter-word; }
+            /* The lexicon keeps its two columns readable on narrow screens. */
+            #Hereliande .table-wrap { max-width: 100%; overflow-x: auto; }
+            #Hereliande .table-wrap table { width: 100%; table-layout: fixed; }
+            #Hereliande .table-wrap th { font-size: .72rem !important; padding: 7px 5px !important; }
+            #Hereliande .table-wrap td { font-size: .78rem !important; padding: 7px 5px !important; overflow-wrap: anywhere; }
+            #Hereliande .table-wrap th:first-child,
+            #Hereliande .table-wrap td:first-child { width: 39%; }
+            #Hereliande .table-wrap th:last-child,
+            #Hereliande .table-wrap td:last-child { width: 61%; }
+        }
 </style>
 
         <script type="application/ld+json">
@@ -916,30 +957,6 @@
 		article .core_character .index-codex-grid { display: grid !important; }
 	</style>
 <style id="map-title-link-style">.map-title-link, .map-title-link:link, .map-title-link:visited { color: inherit !important; text-decoration: none !important; } .map-title-link:hover { color: inherit !important; text-decoration: underline !important; }</style>
-        <!-- Référencement de l’illustration Chibi-Pruinae -->
-        <script type="application/ld+json">
-{
-          "@context": "https://schema.org",
-          "@type": "ImageObject",
-          "@id": "https://laguerredelheresie.com/pictures/pruinaeenneis_chibi_laguerredelheresie_quentinnater.png#image",
-          "contentUrl": "https://laguerredelheresie.com/pictures/pruinaeenneis_chibi_laguerredelheresie_quentinnater.png",
-          "url": "https://laguerredelheresie.com/pictures/pruinaeenneis_chibi_laguerredelheresie_quentinnater.png",
-          "name": "Pruinae Enneis en version chibi",
-          "description": "Illustration chibi de Pruinae Enneis, personnage de La Guerre de l’Hérésie, accompagnant le calendrier des événements 2026.",
-          "inLanguage": "fr-FR",
-          "creator": {
-                    "@type": "Person",
-                    "name": "Quentin Nater"
-          },
-          "copyrightHolder": {
-                    "@type": "Person",
-                    "name": "Quentin Nater"
-          },
-          "isPartOf": {
-                    "@id": "https://laguerredelheresie.com/#website"
-          }
-}
-        </script>
 </head>
 
 	<!--
@@ -1086,6 +1103,13 @@
                                         <br />Porté par l’avènement de la guerre, l’ordre de la Reine du Temps résonne encore dans le coeur de Pruinae Enneis, la sylphide du lac Azur. Ses choix, dictés par le poids de son épée, pourraient bien sceller le destin des mortels. Des déserts brûlants aux plaines glacées, des forêts enchantées aux cités merveilleuses, Pruinae devra affronter son passé et percer les mystères des divinités. Entre romance et secrets, l’Ordre de l’Hérésie s’engage dans un périple empreint de magie, promis à entrer dans la légende… ou à sombrer dans l’oubli.
                                 </h2>
                                 <br /><h2>Date de sortie: 24 Octobre 2026 !</h2><h2> Date du vernissage: 07 novembre 2026!</h2>
+
+                                <a href="https://www.fnac.com/a23743250/Quentin-Nater-La-guerre-de-l-heresie-Livre-4-L-Ordre-de-l-Heresie" aria-label="Acheter le Livre 4 chez FNAC"><img src="pictures/fnac.png" class="book_shop_img" alt="FNAC : L’Ordre de l’Hérésie" loading="lazy"></a>
+                                <a href="https://amzn.eu/d/0gcqpX38" aria-label="Acheter le Livre 4 chez Amazon"><img src="pictures/amazon_orange.png" class="book_shop_img" alt="Amazon : L’Ordre de l’Hérésie" loading="lazy"></a>
+                                <a href="https://www.cultura.com/p-la-guerre-de-l-heresie-livre-4-l-ordre-de-l-heresie-9791042315542.html" aria-label="Acheter le Livre 4 chez Cultura"><img src="pictures/cultura.png" class="book_shop_img" alt="Cultura : L’Ordre de l’Hérésie" loading="lazy"></a>
+                                <a href="https://www.decitre.fr/livre-pod/la-guerre-de-l-heresie-livre-4-l-ordre-de-l-heresie-9791042315542.html" aria-label="Acheter le Livre 4 chez Decitre"><img src="pictures/decitre_logo.png" class="book_shop_img" alt="Decitre : L’Ordre de l’Hérésie" loading="lazy"></a>
+                                <a href="https://www.furet.com/livre-pod/la-guerre-de-l-heresie-livre-4-l-ordre-de-l-heresie-quentin-nater-9791042315542.html" aria-label="Acheter le Livre 4 chez Furet du Nord"><img src="pictures/furetdunord.png" class="book_shop_img" alt="Furet du Nord : L’Ordre de l’Hérésie" loading="lazy"></a>
+                            </td>
                         </tr>
 
                     </table>
@@ -1224,7 +1248,7 @@
           <section class="calendar-2026-scene" id="evenements">
           <div class="calendar-chibi-heading">
             <h1 class="title_character">Calendrier 2026 de la Guerre de l'Hérésie</h1>
-            <img src="./pictures/pruinaeenneis_chibi_laguerredelheresie_quentinnater.png" alt="Pruinae Enneis en version chibi, personnage de La Guerre de l’Hérésie de Quentin Nater, calendrier des événements 2026" title="Chibi Pruinae Enneis | La Guerre de l’Hérésie" loading="lazy" decoding="async">
+            <img src="./pictures/pruinaeenneis_chibi_laguerredelheresie_quentinnater.png" alt="Chibi Pruinae vous accompagne dans les événements de 2026" loading="lazy">
           </div>
 
           <table class="center calendar">
@@ -1286,13 +1310,13 @@
               <td><h3>Fully, Valais, Suisse</h3></a></td>
             </tr>
 			<tr>
-              <td colspan="2" ><h2>07 Novembre 2026</h2></td>
+              <td colspan="2" ><h2>07 <span class="desktop-month">Novembre</span><span class="mobile-month">Nov.</span> 2026</h2></td>
               <td><h2>Vernissage Livre 4</h2></td>
               <td><a href="https://laguerredelheresie.com/pictures/LaGuerreDeLHeresie_L4_Vernissage_Flyer.png"><h3>lien</h3></a></td>
               <td><h3>Fully, Valais, Suisse</h3></a></td>
             </tr>
             <tr>
-              <td colspan="2" ><h2>28 Novembre 2026</h2></td>
+              <td colspan="2" ><h2>28 <span class="desktop-month">Novembre</span><span class="mobile-month">Nov.</span> 2026</h2></td>
               <td><h2>Marché de Noël</h2></td>
               <td><a href="https://www.localcities.ch/fr/evenements/sembrancher/7925/4615293"><h3>lien</h3></a></td>
               <td><h3>Sembrancher, Valais, Suisse</h3></a></td>
@@ -1454,7 +1478,7 @@
 
                 <h1 class="characters-more-desktop">Découvrez le grimoire secret tenu par Ceaze, la Reine des Fées... <a href="page/grimoire.html" > Ouvrir le Grimoire</a></h1>
                 <br>
-				<h1 class="characters-more-mobile" style="display:none">Retrouvez tous les personnages: <a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms">fandom</a></h1>
+				<h1 class="characters-more-mobile" style="display:none">... <a href="page/grimoire.html">ouvrir le grimoire</a></h1>
 				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" ><img src="pictures/Wiki_LaGuerreDeLHeresie_QR.PNG" alt="La guerre de l'hérésie - wiki" #WikiLaGuerreDeLHeresie width="14%" /></a>
 
 			</div><br></br>
