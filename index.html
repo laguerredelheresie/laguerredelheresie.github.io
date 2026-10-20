@@ -443,6 +443,66 @@
                 display: block !important;
             }
         }
+
+        /* Calendrier 2026 : un seul panneau illustré, façon parchemin. */
+        .calendar-2026-scene {
+            position: relative; isolation: isolate; max-width: 1120px;
+            margin: 44px auto 38px; padding: 32px 20px 22px;
+            border: 2px solid #947047; border-radius: 20px;
+            background: linear-gradient(145deg, #fff9eb 0%, #f4e8ce 100%);
+            box-shadow: 0 14px 32px rgba(65,43,22,.14), inset 0 0 0 5px rgba(255,255,255,.42);
+        }
+        .calendar-2026-scene::before {
+            content: "✦  ✧  ✦"; position: absolute; top: 12px; left: 24px;
+            color: #ad8150; font-size: 14px; letter-spacing: 8px;
+        }
+        .calendar-2026-scene .calendar-chibi-heading {
+            position: relative; display: flex; align-items: center; min-height: 160px;
+            padding: 10px 180px 16px 20px; margin: 0; text-align: left;
+        }
+        .calendar-2026-scene .calendar-chibi-heading h1 {
+            margin: 0; max-width: 750px; font-size: clamp(1.65rem, 3vw, 2.8rem);
+            line-height: 1.18; color: #56391f;
+        }
+        .calendar-2026-scene .calendar-chibi-heading img {
+            position: absolute; z-index: 3; width: clamp(145px, 20%, 215px);
+            height: auto; right: 0; bottom: -43px; object-fit: contain;
+            transform: rotate(5deg); transform-origin: 50% 90%;
+            filter: drop-shadow(0 10px 7px rgba(60,36,18,.20));
+            transition: transform .25s ease;
+        }
+        .calendar-2026-scene:hover .calendar-chibi-heading img { transform: rotate(0deg) translateY(-5px); }
+        .calendar-2026-scene > table.calendar {
+            width: 100%; margin: 0 auto; position: relative; z-index: 1;
+            border-collapse: separate; border-spacing: 0; overflow: hidden;
+            border: 1px solid #bb9870; border-radius: 12px;
+            background: #fffaf0; box-shadow: 0 5px 18px rgba(68,45,21,.09);
+        }
+        .calendar-2026-scene > table.calendar th {
+            background: #705034; color: #fff9ed; border-color: #947554;
+        }
+        .calendar-2026-scene > table.calendar th h2 { color: #fff9ed !important; }
+        .calendar-2026-scene > table.calendar td { border-color: #e6d6bb; }
+        .calendar-2026-scene > table.calendar tr:not(:first-child):nth-child(odd) td { background-color: rgba(221,194,148,.12); }
+        .calendar-2026-scene > table.calendar tr:not(:first-child):hover td { background-color: #f8ebd3; }
+        .calendar-2026-scene > table.calendar td a { color: #815322; }
+        .calendar-2026-scene .calendar-footnote { margin: 14px 10px 0; text-align: center; color: #705034; }
+        @media (max-width: 700px) {
+            .calendar-2026-scene { margin: 28px auto; padding: 14px 8px 16px; border-radius: 14px; }
+            .calendar-2026-scene .calendar-chibi-heading { min-height: 125px; padding: 12px 108px 12px 10px; }
+            .calendar-2026-scene .calendar-chibi-heading h1 { font-size: clamp(1.2rem, 4.6vw, 1.7rem) !important; }
+            .calendar-2026-scene .calendar-chibi-heading img { width: 120px; right: -3px; bottom: -15px; }
+            .calendar-2026-scene > table.calendar th h2 { margin-left: 0 !important; }
+        }
+        @media (max-width: 430px) {
+            .calendar-2026-scene .calendar-chibi-heading { min-height: 100px; padding-right: 92px; }
+            .calendar-2026-scene .calendar-chibi-heading img { width: 102px; bottom: -9px; }
+            .calendar-2026-scene .calendar-chibi-heading h1 { font-size: 1.1rem !important; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .calendar-2026-scene .calendar-chibi-heading img { transition: none; }
+        }
+
 </style>
 
         <script type="application/ld+json">
@@ -856,6 +916,30 @@
 		article .core_character .index-codex-grid { display: grid !important; }
 	</style>
 <style id="map-title-link-style">.map-title-link, .map-title-link:link, .map-title-link:visited { color: inherit !important; text-decoration: none !important; } .map-title-link:hover { color: inherit !important; text-decoration: underline !important; }</style>
+        <!-- Référencement de l’illustration Chibi-Pruinae -->
+        <script type="application/ld+json">
+{
+          "@context": "https://schema.org",
+          "@type": "ImageObject",
+          "@id": "https://laguerredelheresie.com/pictures/pruinaeenneis_chibi_laguerredelheresie_quentinnater.png#image",
+          "contentUrl": "https://laguerredelheresie.com/pictures/pruinaeenneis_chibi_laguerredelheresie_quentinnater.png",
+          "url": "https://laguerredelheresie.com/pictures/pruinaeenneis_chibi_laguerredelheresie_quentinnater.png",
+          "name": "Pruinae Enneis en version chibi",
+          "description": "Illustration chibi de Pruinae Enneis, personnage de La Guerre de l’Hérésie, accompagnant le calendrier des événements 2026.",
+          "inLanguage": "fr-FR",
+          "creator": {
+                    "@type": "Person",
+                    "name": "Quentin Nater"
+          },
+          "copyrightHolder": {
+                    "@type": "Person",
+                    "name": "Quentin Nater"
+          },
+          "isPartOf": {
+                    "@id": "https://laguerredelheresie.com/#website"
+          }
+}
+        </script>
 </head>
 
 	<!--
@@ -994,7 +1078,7 @@
                     <table>
                         <tr>
                             <td class='td_book' >
-                                <a href='pictures/LaGuerredelHeresie_Livre4_PruinaeEnneis_QuentinNater.PNG' ><img src='pictures/LaGuerredelHeresie_Livre4_PruinaeEnneis_QuentinNater.JPG' alt="La Guerre De l'Heresie Livre 4 L'Ordre de l'Hérésie Pruinae Enneis Verone Editions" #LaGuerredelHeresieLivre4LOrdreDeLHeresie class='book_cover' id="lids4" /></a>
+                                <a href='page/lordre_de_lheresie.html' ><img src='pictures/LaGuerredelHeresie_Livre4_PruinaeEnneis_QuentinNater.JPG' alt="La Guerre De l'Heresie Livre 4 L'Ordre de l'Hérésie Pruinae Enneis Verone Editions" #LaGuerredelHeresieLivre4LOrdreDeLHeresie class='book_cover' id="lids4" /></a>
                             </td>
 
                             <td class='td_txt' ><h1 #="La Guerre de l'Heresie livre 4" id='livre-4' >La guerre de l'hérésie - Livre 4 : L'Ordre de l'Hérésie</h1>
@@ -1137,7 +1221,11 @@
           </details>
 
           <!-- 2026 (affiché directement, inchangé) -->
-          <h1 #="La Guerre de l'heresie : Calendrier 2026" #LaGuerreDeLHeresieCalendrier2026 class='title_character' id='evenements' >Calendrier 2026 de la Guerre de l'Hérésie</h1>
+          <section class="calendar-2026-scene" id="evenements">
+          <div class="calendar-chibi-heading">
+            <h1 class="title_character">Calendrier 2026 de la Guerre de l'Hérésie</h1>
+            <img src="./pictures/pruinaeenneis_chibi_laguerredelheresie_quentinnater.png" alt="Pruinae Enneis en version chibi, personnage de La Guerre de l’Hérésie de Quentin Nater, calendrier des événements 2026" title="Chibi Pruinae Enneis | La Guerre de l’Hérésie" loading="lazy" decoding="async">
+          </div>
 
           <table class="center calendar">
             <tr>
@@ -1191,7 +1279,7 @@
               <td><a href='https://www.arcanafestival.ch/' ><h3>lien</h3></a></td>
               <td><h3>Lausanne, Vaud, Suisse</h3></a></td>
             </tr>
-            <tr>
+            <tr class="small_past" >
               <td colspan="2" ><h2>17-18 Octobre 2026</h2></td>
               <td><h2>Fête de la Châtaigne</h2></td>
               <td><a href='https://www.fetedelachataigne.ch/fr/' ><h3>lien</h3></a></td>
@@ -1203,10 +1291,23 @@
               <td><a href="https://laguerredelheresie.com/pictures/LaGuerreDeLHeresie_L4_Vernissage_Flyer.png"><h3>lien</h3></a></td>
               <td><h3>Fully, Valais, Suisse</h3></a></td>
             </tr>
+            <tr>
+              <td colspan="2" ><h2>28 Novembre 2026</h2></td>
+              <td><h2>Marché de Noël</h2></td>
+              <td><a href="https://www.localcities.ch/fr/evenements/sembrancher/7925/4615293"><h3>lien</h3></a></td>
+              <td><h3>Sembrancher, Valais, Suisse</h3></a></td>
+            </tr>
+            <tr>
+              <td colspan="2" ><h2>5-6 Décembre 2026</h2></td>
+              <td><h2>Marché artisanal de Noël</h2></td>
+              <td><a href="https://www.valdebagnes.ch/evenements/7579744"><h3>lien</h3></a></td>
+              <td><h3>Le Châble, Valais, Suisse</h3></a></td>
+            </tr>
 
 
-            <i>le reste est à venir, restez connectés sur <a href='https://www.instagram.com/quentin_nater/' >instagram</a></i><br></br>
           </table>
+          <p class="calendar-footnote"><i>Le reste est à venir, restez connectés sur <a href="https://www.instagram.com/quentin_nater/">Instagram</a>.</i></p>
+          </section>
 
         </div>
 
@@ -1351,7 +1452,8 @@
 					</a>
 				</div>
 
-				<h1 class="characters-more-desktop">Plus de détails ? Plongez dans la <a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" >fandom</a></h1>
+                <h1 class="characters-more-desktop">Découvrez le grimoire secret tenu par Ceaze, la Reine des Fées... <a href="page/grimoire.html" > Ouvrir le Grimoire</a></h1>
+                <br>
 				<h1 class="characters-more-mobile" style="display:none">Retrouvez tous les personnages: <a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms">fandom</a></h1>
 				<a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" ><img src="pictures/Wiki_LaGuerreDeLHeresie_QR.PNG" alt="La guerre de l'hérésie - wiki" #WikiLaGuerreDeLHeresie width="14%" /></a>
 
@@ -1860,7 +1962,7 @@
 			<h2 class="invisible" #ParutionSuisse #="Parution Suisse" >La guerre de l'hérésie 4 pruinae</h2>
 			<h2 class="invisible" #ParutionSuisse #="Parution Suisse" >La guerre de l'hérésie 4 Doimh Neacht</h2>
 		</article>
-		<h4 class="invisible" #RomanQuentinNater id='end' >Mise à jour : 12.10.2026</h4>
+		<h4 class="invisible" #RomanQuentinNater id='end' >Mise à jour : 20.10.2026</h4>
 
         <img src="pictures/LaGuerredelHeresie_b_logo.PNG" alt="la guerre de l'hérésie" class="hes" width="160px" />
 	</body>
