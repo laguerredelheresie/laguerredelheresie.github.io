@@ -29,7 +29,7 @@
                 position: absolute;
                 inset: 0;
                 z-index: -2;
-                background: url("pictures/LaGuerredelHeresie_Wallpaper_PruinaeEnneis.PNG") center top / cover no-repeat;
+                background: url("../pictures/LaGuerredelHeresie_Wallpaper_PruinaeEnneis.PNG") center top / cover no-repeat;
             }
 
             body > header::after {
@@ -836,4 +836,97 @@
   #Hereliande .table-wrap td:first-child { width: 34%; }
   #Hereliande .table-wrap th:last-child,
   #Hereliande .table-wrap td:last-child { width: 66%; }
+}
+
+/* Mobile fixes: preserve original visual design and Chibi. */
+@media screen and (max-width: 700px) {
+  /* Keep calendar columns predictable: date, event, link, location. */
+  article .calendar-2026-scene > table.calendar { width:100% !important; table-layout:fixed !important; border-spacing:2px 7px !important; }
+  article .calendar-2026-scene > table.calendar col.calendar-date-col { width:12%; }
+  article .calendar-2026-scene > table.calendar col.calendar-event-col { width:43%; }
+  article .calendar-2026-scene > table.calendar col.calendar-link-col { width:13%; }
+  article .calendar-2026-scene > table.calendar col.calendar-location-col { width:20%; }
+  article .calendar-2026-scene > table.calendar td,
+  article .calendar-2026-scene > table.calendar th { padding:8px 3px !important; overflow-wrap:break-word; }
+  article .calendar-2026-scene > table.calendar td:nth-last-child(2),
+  article .calendar-2026-scene > table.calendar th.table-header-link { white-space:nowrap !important; text-align:center !important; }
+  article .calendar-2026-scene > table.calendar td:nth-last-child(2) h3,
+  article .calendar-2026-scene > table.calendar th.table-header-link h2 { white-space:nowrap !important; font-size:clamp(.55rem,2.2vw,.72rem) !important; }
+  article .calendar-2026-scene > table.calendar td:last-child,
+  article .calendar-2026-scene > table.calendar td:last-child h3,
+  article .calendar-2026-scene > table.calendar th.table-header-location h2 { font-size:clamp(.47rem,1.9vw,.60rem) !important; line-height:1.35 !important; }
+  /* Restore actual table layout in Héréliande: global article rules turn rows into blocks. */
+  article #Hereliande .lexicon .table-wrap { width:100%; max-width:100%; overflow-x:auto; }
+  article #Hereliande .lexicon .table-wrap table { display:table !important; width:100% !important; min-width:0 !important; table-layout:fixed !important; }
+  article #Hereliande .lexicon .table-wrap thead { display:table-header-group !important; }
+  article #Hereliande .lexicon .table-wrap tbody { display:table-row-group !important; }
+  article #Hereliande .lexicon .table-wrap tr { display:table-row !important; width:auto !important; }
+  article #Hereliande .lexicon .table-wrap th,
+  article #Hereliande .lexicon .table-wrap td { display:table-cell !important; box-sizing:border-box; padding:5px 3px !important; font-size:.66rem !important; line-height:1.25 !important; letter-spacing:normal !important; overflow-wrap:anywhere; }
+  article #Hereliande .lexicon .table-wrap th:first-child,
+  article #Hereliande .lexicon .table-wrap td:first-child { width:32% !important; }
+  article #Hereliande .lexicon .table-wrap th:last-child,
+  article #Hereliande .lexicon .table-wrap td:last-child { width:68% !important; }
+}
+
+/* Mobile fixes: preserve original visual design and Chibi. */
+@media screen and (max-width: 700px) {
+  /* Keep calendar columns predictable: date, event, link, location. */
+  article .calendar-2026-scene > table.calendar { width:100% !important; table-layout:fixed !important; border-spacing:2px 7px !important; }
+  article .calendar-2026-scene > table.calendar col.calendar-date-col { width:12%; }
+  article .calendar-2026-scene > table.calendar col.calendar-event-col { width:43%; }
+  article .calendar-2026-scene > table.calendar col.calendar-link-col { width:13%; }
+  article .calendar-2026-scene > table.calendar col.calendar-location-col { width:20%; }
+  article .calendar-2026-scene > table.calendar td,
+  article .calendar-2026-scene > table.calendar th { padding:8px 3px !important; overflow-wrap:break-word; }
+  article .calendar-2026-scene > table.calendar td:nth-last-child(2),
+  article .calendar-2026-scene > table.calendar th.table-header-link { white-space:nowrap !important; text-align:center !important; }
+  article .calendar-2026-scene > table.calendar td:nth-last-child(2) h3,
+  article .calendar-2026-scene > table.calendar th.table-header-link h2 { white-space:nowrap !important; font-size:clamp(.55rem,2.2vw,.72rem) !important; }
+  article .calendar-2026-scene > table.calendar td:last-child,
+  article .calendar-2026-scene > table.calendar td:last-child h3,
+  article .calendar-2026-scene > table.calendar th.table-header-location h2 { font-size:clamp(.47rem,1.9vw,.60rem) !important; line-height:1.35 !important; }
+  /* Restore actual table layout in Héréliande: global article rules turn rows into blocks. */
+  article #Hereliande .lexicon .table-wrap { width:100%; max-width:100%; overflow-x:auto; }
+  article #Hereliande .lexicon .table-wrap table { display:table !important; width:100% !important; min-width:0 !important; table-layout:fixed !important; }
+  article #Hereliande .lexicon .table-wrap thead { display:table-header-group !important; }
+  article #Hereliande .lexicon .table-wrap tbody { display:table-row-group !important; }
+  article #Hereliande .lexicon .table-wrap tr { display:table-row !important; width:auto !important; }
+  article #Hereliande .lexicon .table-wrap th,
+  article #Hereliande .lexicon .table-wrap td { display:table-cell !important; box-sizing:border-box; padding:5px 3px !important; font-size:.66rem !important; line-height:1.25 !important; letter-spacing:normal !important; overflow-wrap:anywhere; }
+  article #Hereliande .lexicon .table-wrap th:first-child,
+  article #Hereliande .lexicon .table-wrap td:first-child { width:32% !important; }
+  article #Hereliande .lexicon .table-wrap th:last-child,
+  article #Hereliande .lexicon .table-wrap td:last-child { width:68% !important; }
+}
+
+/* Mobile fixes: preserve original visual design and Chibi. */
+@media screen and (max-width: 700px) {
+  /* Keep calendar columns predictable: date, event, link, location. */
+  article .calendar-2026-scene > table.calendar { width:100% !important; table-layout:fixed !important; border-spacing:2px 7px !important; }
+  article .calendar-2026-scene > table.calendar col.calendar-date-col { width:12%; }
+  article .calendar-2026-scene > table.calendar col.calendar-event-col { width:43%; }
+  article .calendar-2026-scene > table.calendar col.calendar-link-col { width:13%; }
+  article .calendar-2026-scene > table.calendar col.calendar-location-col { width:20%; }
+  article .calendar-2026-scene > table.calendar td,
+  article .calendar-2026-scene > table.calendar th { padding:8px 3px !important; overflow-wrap:break-word; }
+  article .calendar-2026-scene > table.calendar td:nth-last-child(2),
+  article .calendar-2026-scene > table.calendar th.table-header-link { white-space:nowrap !important; text-align:center !important; }
+  article .calendar-2026-scene > table.calendar td:nth-last-child(2) h3,
+  article .calendar-2026-scene > table.calendar th.table-header-link h2 { white-space:nowrap !important; font-size:clamp(.55rem,2.2vw,.72rem) !important; }
+  article .calendar-2026-scene > table.calendar td:last-child,
+  article .calendar-2026-scene > table.calendar td:last-child h3,
+  article .calendar-2026-scene > table.calendar th.table-header-location h2 { font-size:clamp(.47rem,1.9vw,.60rem) !important; line-height:1.35 !important; }
+  /* Restore actual table layout in Héréliande: global article rules turn rows into blocks. */
+  article #Hereliande .lexicon .table-wrap { width:100%; max-width:100%; overflow-x:auto; }
+  article #Hereliande .lexicon .table-wrap table { display:table !important; width:100% !important; min-width:0 !important; table-layout:fixed !important; }
+  article #Hereliande .lexicon .table-wrap thead { display:table-header-group !important; }
+  article #Hereliande .lexicon .table-wrap tbody { display:table-row-group !important; }
+  article #Hereliande .lexicon .table-wrap tr { display:table-row !important; width:auto !important; }
+  article #Hereliande .lexicon .table-wrap th,
+  article #Hereliande .lexicon .table-wrap td { display:table-cell !important; box-sizing:border-box; padding:5px 3px !important; font-size:.66rem !important; line-height:1.25 !important; letter-spacing:normal !important; overflow-wrap:anywhere; }
+  article #Hereliande .lexicon .table-wrap th:first-child,
+  article #Hereliande .lexicon .table-wrap td:first-child { width:32% !important; }
+  article #Hereliande .lexicon .table-wrap th:last-child,
+  article #Hereliande .lexicon .table-wrap td:last-child { width:68% !important; }
 }
