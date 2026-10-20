@@ -957,3 +957,44 @@
     margin-bottom: 8px !important;
   }
 }
+
+/* Author section: precise mobile override. The hidden portrait's table cell
+   must not reserve its original 70px margins/padding. */
+@media screen and (max-width: 700px) {
+  article .core > h1#auteur.title_character {
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  article .core > h1#auteur + table {
+    display: block !important;
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  article .core > h1#auteur + table > tbody,
+  article .core > h1#auteur + table > tbody > tr {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  article .core > h1#auteur + table tr > td.td_book {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  article .core > h1#auteur + table tr > td.td_txt {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 4px !important;
+  }
+  article .core > h1#auteur + table #quentin-nater {
+    margin: 0 0 10px !important;
+    padding-top: 0 !important;
+  }
+}
