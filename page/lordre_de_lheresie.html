@@ -1,452 +1,472 @@
 <!DOCTYPE html>
+
 <html lang="fr">
- <!-- SEO AND SOCIAL METADATA -->
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width,initial-scale=1" name="viewport"/>
-  <title>L’Ordre de l’Hérésie | Livre 4 | La Guerre de l’Hérésie</title>
-  <meta content="Découvrez L’Ordre de l’Hérésie, quatrième tome de La Guerre de l’Hérésie de Quentin Nater : fantasy, romance, mythologie et magie." name="description"/>
-  <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
-  <meta content="Quentin Nater" name="author"/>
-  <link href="https://laguerredelheresie.com/page/lordre_de_lheresie.html" rel="canonical"/>
-  <link href="../css/s_g_shared_char.css" rel="stylesheet"/>
-  <meta content="fr_FR" property="og:locale"/>
-  <meta content="profile" property="og:type"/>
-  <meta content="La Guerre de l’Hérésie" property="og:site_name"/>
-  <meta content="L’Ordre de l’Hérésie | Livre 4" property="og:title"/>
-  <meta content="Le quatrième roman de La Guerre de l’Hérésie par Quentin Nater." property="og:description"/>
-  <meta content="https://laguerredelheresie.com/page/lordre_de_lheresie.html" property="og:url"/>
-  <meta content="../pictures/LaGuerredelHeresie_Livre4_PruinaeEnneis_QuentinNater.JPG" property="og:image"/>
-  <meta content="Couverture du livre 4, L’Ordre de l’Hérésie" property="og:image:alt"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <meta content="L’Ordre de l’Hérésie | Livre 4" name="twitter:title"/>
-  <meta content="Fantasy, romance, mythologie et secrets." name="twitter:description"/>
-  <meta content="../pictures/LaGuerredelHeresie_Livre4_PruinaeEnneis_QuentinNater.JPG" name="twitter:image"/>
-  <style>
-   /* Book-specific enhancements, built on the existing character-page stylesheet. */
-/* The character and location cards deliberately inherit the Grimoire codex-grid styles. */
-.lore > div:last-child > p + p{margin-top:1.65em}
-.book-author-photo{display:block;width:min(240px,100%);height:auto;max-height:340px;object-fit:cover;border:1px solid rgba(185,153,99,.65);border-radius:8px;margin:8px 0 22px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
-@media(max-width:600px){.book-author-photo{width:min(190px,100%);margin-inline:auto}}
-.codex-card--static{cursor:default}
-.book-social{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
-.book-social a{display:inline-block;border:1px solid rgba(185,153,99,.65);padding:9px 16px;border-radius:6px;color:inherit}
-.hero .portrait{object-fit:contain;background:rgba(0,0,0,.2)}
-.hero .hero-rank{line-height:1.5}
-   /* Book-only layout: keep the chapter heading but give cards the full page width. */
-.lore.book-card-chapter {
-    display: grid;
-    grid-template-columns: 72px minmax(0, 1fr);
-    column-gap: 24px;
-}
-.lore.book-card-chapter > .book-chapter-content { display: contents; }
-.lore.book-card-chapter .chapter-mark { grid-column: 1; grid-row: 1; }
-.lore.book-card-chapter h2 { grid-column: 2; grid-row: 1; align-self: center; }
-.lore.book-card-chapter .codex-grid {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    width: 100%;
-    min-width: 0;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-    margin-top: 24px;
-}
-/* Same card anatomy as grimoire.html: image above, name below. */
-.lore.book-card-chapter .codex-card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    overflow: hidden;
-    text-decoration: none;
-}
-.lore.book-card-chapter .codex-card-image {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-}
-.lore.book-card-chapter .codex-card-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.lore.book-card-chapter .codex-card-text { width: 100%; }
-/* The Doimh Neacht map is deliberately shown in full, like the Grimoire. */
-.lore.book-card-chapter .codex-card[href="doimh_neacht.html"] .codex-card-image {
-    background: #fff !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-.lore.book-card-chapter .codex-card[href="doimh_neacht.html"] .codex-card-image img {
-    object-fit: contain !important;
-    object-position: center !important;
-}
-@media (max-width: 900px) {
-    .lore.book-card-chapter .codex-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-@media (max-width: 650px) {
-    .lore.book-card-chapter { grid-template-columns: 48px minmax(0, 1fr); column-gap: 12px; }
-    .lore.book-card-chapter .codex-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-}
-   /* Keep the long book title inside its column at every viewport width. */
-.hero-copy { min-width: 0; }
-#book-title.character-name-fixed.character-name-force {
-    max-width: 100%;
-    font-size: clamp(1.75rem, 3.3vw, 3.15rem) !important;
-    line-height: 1.12 !important;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
-@media (max-width: 650px) {
-    #book-title.character-name-fixed.character-name-force { font-size: clamp(1.65rem, 7vw, 2.5rem) !important; }
-}
-  </style>
- </head>
- <body>
-  <div aria-hidden="true" class="stars">
-  </div>
-  <!-- MAIN NAVIGATION -->
-  <header class="top">
-   <a aria-label="La Guerre de l’Hérésie" class="brand" href="https://laguerredelheresie.com/">
-    <img alt="La Guerre de l’Hérésie" class="brand-white-logo" src="../pictures/LaGuerredelHeresie_w_logo.PNG"/>
-   </a>
-   <nav aria-label="Navigation principale">
-    <a href="../index.html">Accueil</a>
-    <a href="#presentation">Présentation</a>
-    <a href="#quatrieme">4e de couverture</a>
-    <a href="#personnages">Personnages</a>
-    <a href="#cartes">Cartes</a>
-    <a href="#auteur">Auteur</a>
-    <a href="#resumes">Résumés</a>
-    <a href="grimoire.html">Grimoire</a>
-   </nav>
-  </header>
-  <!-- CHARACTER PAGE CONTENT -->
-  <main class="page">
-   <nav aria-label="Fil d’Ariane" class="breadcrumbs">
-    <a href="../index.html">La Guerre de l’Hérésie</a>
-    <span>✧</span>
-    <strong>Livre 4</strong>
-   </nav>
-   <!-- CHARACTER HERO AND PORTRAIT -->
-   <section aria-labelledby="book-title" class="hero">
-    <div class="portrait-wrap">
-     <div aria-hidden="true" class="arcane-ring r1">
-     </div>
-     <div aria-hidden="true" class="arcane-ring r2">
-     </div>
-     <div aria-hidden="true" class="runes">
-      ✧　✦　✧　✦　✧　✦　✧
-     </div>
-     <img alt="Couverture du livre 4 : L’Ordre de l’Hérésie" class="portrait" decoding="async" fetchpriority="high" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="../pictures/LaGuerredelHeresie_Livre4_PruinaeEnneis_QuentinNater.JPG"/>
-     <div class="fallback">
-      Couverture de L’Ordre de l’Hérésie
-     </div>
+  <!-- SEO AND SOCIAL METADATA -->
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <title>L’Ordre de l’Hérésie | Livre 4 | La Guerre de l’Hérésie</title>
+    <meta content="Découvrez L’Ordre de l’Hérésie, quatrième tome de La Guerre de l’Hérésie de Quentin Nater : fantasy, romance, mythologie et magie." name="description"/>
+    <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+    <meta content="Quentin Nater" name="author"/>
+    <link href="https://laguerredelheresie.com/page/lordre_de_lheresie.html" rel="canonical"/>
+    <link href="../css/s_g_shared_char.css" rel="stylesheet"/>
+    <meta content="fr_FR" property="og:locale"/>
+    <meta content="profile" property="og:type"/>
+    <meta content="La Guerre de l’Hérésie" property="og:site_name"/>
+    <meta content="L’Ordre de l’Hérésie | Livre 4" property="og:title"/>
+    <meta content="Le quatrième roman de La Guerre de l’Hérésie par Quentin Nater." property="og:description"/>
+    <meta content="https://laguerredelheresie.com/page/lordre_de_lheresie.html" property="og:url"/>
+    <meta content="../pictures/LaGuerredelHeresie_Livre4_PruinaeEnneis_QuentinNater.JPG" property="og:image"/>
+    <meta content="Couverture du livre 4, L’Ordre de l’Hérésie" property="og:image:alt"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="L’Ordre de l’Hérésie | Livre 4" name="twitter:title"/>
+    <meta content="Fantasy, romance, mythologie et secrets." name="twitter:description"/>
+    <meta content="../pictures/LaGuerredelHeresie_Livre4_PruinaeEnneis_QuentinNater.JPG" name="twitter:image"/>
+    <style>
+      /* Book-specific enhancements, built on the existing character-page stylesheet. */
+      /* The character and location cards deliberately inherit the Grimoire codex-grid styles. */
+      .lore > div:last-child > p + p{margin-top:1.65em}
+      .book-author-photo{display:block;width:min(240px,100%);height:auto;max-height:340px;object-fit:cover;border:1px solid rgba(185,153,99,.65);border-radius:8px;margin:8px 0 22px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+      @media(max-width:600px){.book-author-photo{width:min(190px,100%);margin-inline:auto}}
+      .codex-card--static{cursor:default}
+      .book-social{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+      .book-social a{display:inline-block;border:1px solid rgba(185,153,99,.65);padding:9px 16px;border-radius:6px;color:inherit}
+      .hero .portrait{object-fit:contain;background:rgba(0,0,0,.2)}
+      .hero .hero-rank{line-height:1.5}
+      /* Book-only layout: keep the chapter heading but give cards the full page width. */
+      .lore.book-card-chapter {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr);
+      column-gap: 24px;
+      }
+      .lore.book-card-chapter > .book-chapter-content { display: contents; }
+      .lore.book-card-chapter .chapter-mark { grid-column: 1; grid-row: 1; }
+      .lore.book-card-chapter h2 { grid-column: 2; grid-row: 1; align-self: center; }
+      .lore.book-card-chapter .codex-grid {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      width: 100%;
+      min-width: 0;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+      }
+      /* Same card anatomy as grimoire.html: image above, name below. */
+      .lore.book-card-chapter .codex-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+      text-decoration: none;
+      }
+      .lore.book-card-chapter .codex-card-image {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      }
+      .lore.book-card-chapter .codex-card-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      }
+      .lore.book-card-chapter .codex-card-text { width: 100%; }
+      /* The Doimh Neacht map is deliberately shown in full, like the Grimoire. */
+      .lore.book-card-chapter .codex-card[href="doimh_neacht.html"] .codex-card-image {
+      background: #fff !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      }
+      .lore.book-card-chapter .codex-card[href="doimh_neacht.html"] .codex-card-image img {
+      object-fit: contain !important;
+      object-position: center !important;
+      }
+      @media (max-width: 900px) {
+      .lore.book-card-chapter .codex-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      }
+      @media (max-width: 650px) {
+      .lore.book-card-chapter { grid-template-columns: 48px minmax(0, 1fr); column-gap: 12px; }
+      .lore.book-card-chapter .codex-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      }
+      /* Keep the long book title inside its column at every viewport width. */
+      .hero-copy { min-width: 0; }
+      #book-title.character-name-fixed.character-name-force {
+      max-width: 100%;
+      font-size: clamp(1.75rem, 3.3vw, 3.15rem) !important;
+      line-height: 1.12 !important;
+      overflow-wrap: break-word;
+      hyphens: auto;
+      }
+      @media (max-width: 650px) {
+      #book-title.character-name-fixed.character-name-force { font-size: clamp(1.65rem, 7vw, 2.5rem) !important; }
+      }
+
+      /* Résumés : mise en page claire, texte d’origine conservé. */
+      #resumes .spoiler-content p { margin: 0 0 1.4em; line-height: 1.85; text-align: justify; hyphens: auto; overflow-wrap: break-word; }
+      #resumes .spoiler-content p:last-child { margin-bottom: 0; }
+      #resumes .previous-books-spoilers { margin-top: 24px; min-width: 0; }
+      #resumes .previous-books-spoilers summary { color: #c5a46d; cursor: pointer; font-weight: 600; line-height: 1.6; padding: 14px 16px; border: 1px solid rgba(185,153,99,.65); border-radius: 8px; background: rgba(125,100,64,.09); }
+      #resumes .previous-books-spoilers summary:hover, #resumes .previous-books-spoilers summary:focus-visible { background: rgba(185,153,99,.16); }
+      #resumes .spoiler-content { padding: 22px 0 4px; }
+      #resumes .camps-figure { margin: 24px 0; text-align: center; }
+      #resumes .camps-zoom-trigger { display: block; width: 100%; padding: 0; cursor: zoom-in; background: transparent; border: none; border-radius: 0; }
+      #resumes .camps-zoom-trigger img { display: block; width: 100%; max-height: 620px; object-fit: contain; }
+      #resumes .camps-figure figcaption { margin-top: 9px; font-size: .85rem; opacity: .8; }
+      .camps-lightbox { position: fixed; inset: 0; width: min(96vw, 1500px); max-width: 96vw; max-height: 94vh; padding: 36px 12px 12px; border: 1px solid #c5a46d; border-radius: 8px; background: #101018; color: white; }
+      .camps-lightbox::backdrop { background: rgba(0,0,0,.88); }
+      .camps-lightbox img { display: block; max-width: 100%; max-height: calc(94vh - 60px); margin: auto; object-fit: contain; }
+      .camps-close { position: absolute; top: 0; right: 10px; background: transparent; border: 0; color: white; font-size: 2rem; cursor: pointer; }
+      @media(max-width:600px) { #resumes .spoiler-content p { line-height: 1.75; } #resumes .previous-books-spoilers summary { padding: 12px; } }
+    </style>
+  </head>
+  <body>
+    <div aria-hidden="true" class="stars">
     </div>
-    <div class="hero-copy">
-     <p class="eyebrow">✦ LA GUERRE DE L’HÉRÉSIE · LIVRE IV ✦</p>
-     <h1 class="character-name-fixed character-name-force" id="book-title">L’Ordre de l’Hérésie</h1>
-     <div aria-hidden="true" class="ornament">
-      ❧ ───── ✦ ───── ❧
-     </div>
-     <p class="hero-subtitle">Fantasy</p>
-     <p class="hero-rank">Romance · Mythologie · Secrets · Magie</p>
-     <div class="registry">
-      <h2>✧ Registre ✧</h2>
-      <dl>
-       <dt>Titre</dt>
-       <dd>L’Ordre de l’Hérésie</dd>
-       <dt>Saga</dt>
-       <dd>Livre 4</dd>
-       <dt>Auteur</dt>
-       <dd>Quentin Nater</dd>
-       <dt>Éditeur</dt>
-       <dd>Éditions Vérone</dd>
-       <dt>Illustrateur</dt>
-       <dd>Judicaël Saint-Genez</dd>
-       <dt>Sortie</dt>
-       <dd>24.10.2026</dd>
-       <dt>Vernissage</dt>
-       <dd>07.11.2026</dd>
-       <dt>Précédent</dt>
-       <dd>L’Illusion d’un Souhait</dd>
-       <dt>Suivant</dt>
-       <dd>À venir...</dd>
-       <dt>ISBN</dt>
-       <dd>979-10-423-1554-2</dd>
-       <dt>Nombre de pages</dt>
-       <dd>666</dd>
-      </dl>
-     </div>
-    </div>
-   </section>
-   <!-- RELATED LINKS -->
-   <section class="lore" id="presentation">
-    <div class="chapter-mark">
-     I
-    </div>
-    <div>
-     <h2>Présentation</h2>
-     <p>La Guerre de l’Hérésie – Livre 4 : L’Ordre de l’Hérésie est un roman qui mêle fantasy, romance et mythologie. Le lecteur est invité à explorer des contrées lointaines, théâtre de confrontations épiques, de secrets, de drames et de réflexions philosophiques.</p>
-     <p>Guidé par Nate Ansicht, le Prince Maudit, un groupe de mortels s’engage dans une quête mystique à travers les mondes, dans l’espoir d’atteindre Alazia Hora, la Reine du Temps, et d’offrir le salut à leur peuple. Des déserts mortels aux plaines immaculées, des forêts enchantées aux cités antiques, les Vastums devront affronter leur passé et percer les mystères des divinités. Entre créatures fantastiques et donjons magiques, leurs idéaux seront mis à l’épreuve par les choix des Dieux et les décisions des Rois.</p>
-     <p>Au fil de ce périple décisif pour l’avenir des mortels, l’amour surgira là où s’entrechoquent les lames et les ennemis. Pruinae Enneis, héritière du trône de Spiegel, devra choisir, l’épée à la main, entre ses sentiments et ses devoirs, entre le bien de son peuple et ses propres rêves.</p>
-     <p>Après S’estomper vers les ténèbres (2022), L’Aube d’un Idéal (2023) et L’Illusion d’un Souhait (2024), laissez-vous emporter par le tome le plus magique de la saga.</p>
-    </div>
-   </section>
-   <section class="lore" id="quatrieme">
-    <div class="chapter-mark">
-     II
-    </div>
-    <div>
-     <h2>Quatrième de couverture</h2>
-     <p>« Réunis les quatre races Vastums, emprunte les Portails d’Aaraxios et traverse les mondes, un à un. Découvre les peuples originels, comprends leur réalité, déchiffre les conséquences de cette guerre et rejoins-moi sur Heara avant la Lune de Docéliande pour sauver ton peuple et t’offrir un futur. »</p>
-     <p>Porté par l’avènement de la guerre, l’ordre de la Reine du Temps résonne encore dans le cœur de Pruinae Enneis, la sylphide du lac Azur. Ses choix, dictés par le poids de son épée, pourraient bien sceller le destin des mortels. Des déserts brûlants aux plaines glacées, des forêts enchantées aux cités merveilleuses, Pruinae devra affronter son passé et percer les mystères des divinités. Entre romance et secrets, l’Ordre de l’Hérésie s’engage dans un périple empreint de magie, promis à entrer dans la légende... ou à sombrer dans l’oubli.</p>
-    </div>
-   </section>
-   <section class="lore characters-simple book-card-chapter" id="personnages">
-    <div class="chapter-mark">
-     III
-    </div>
-    <h2>Personnages principaux</h2>
-    <div class="book-chapter-content">
-     <div class="codex-grid">
-      <a class="codex-card" href="pruinae_enneis.html">
-       <div class="codex-card-image">
-        <img alt="Pruinae Enneis" decoding="async" loading="lazy" src="../pictures/_PruinaeEnneisLivre4_Wallpaper_LaGuerreDeLHeresie.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Pruinae Enneis</strong>
-       </div>
+    <!-- MAIN NAVIGATION -->
+    <header class="top">
+      <a aria-label="La Guerre de l’Hérésie" class="brand" href="https://laguerredelheresie.com/">
+      <img alt="La Guerre de l’Hérésie" class="brand-white-logo" src="../pictures/LaGuerredelHeresie_w_logo.PNG"/>
       </a>
-      <a class="codex-card" href="nate_ansicht.html">
-       <div class="codex-card-image">
-        <img alt="Nate Ansicht" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Nate Ansicht</strong>
-       </div>
-      </a>
-      <a class="codex-card" href="faint_desabel.html">
-       <div class="codex-card-image">
-        <img alt="Faint Desabel" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Faint Desabel</strong>
-       </div>
-      </a>
-      <a class="codex-card" href="aizon_lowdel.html">
-       <div class="codex-card-image">
-        <img alt="Aizon Lowdel" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Aizon Lowdel</strong>
-       </div>
-      </a>
-      <a class="codex-card" href="ryvin_hydrs.html">
-       <div class="codex-card-image">
-        <img alt="Ryvin Hydrs" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Ryvin Hydrs</strong>
-       </div>
-      </a>
-      <a class="codex-card" href="mila.html">
-       <div class="codex-card-image">
-        <img alt="Milobelia Vi Urteil" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Milobelia Vi Urteil</strong>
-       </div>
-      </a>
-      <a class="codex-card" href="aree_lazima.html">
-       <div class="codex-card-image">
-        <img alt="Arée Lazima" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Arée Lazima</strong>
-       </div>
-      </a>
-      <div class="codex-card codex-card--static">
-       <div class="codex-card-image">
-        <img alt="Énora Von Dess" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Énora Von Dess</strong>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section class="lore characters-simple book-card-chapter" id="secondaires">
-    <div class="chapter-mark">
-     IV
-    </div>
-    <h2>Personnages secondaires</h2>
-    <div class="book-chapter-content">
-     <div class="codex-grid">
-      <div class="codex-card codex-card--static">
-       <div class="codex-card-image">
-        <img alt="Asceon" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Asceon</strong>
-       </div>
-      </div>
-      <a class="codex-card" href="rayza.html">
-       <div class="codex-card-image">
-        <img alt="Rayza" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Rayza</strong>
-       </div>
-      </a>
-      <a class="codex-card" href="alazia_hora.html">
-       <div class="codex-card-image">
-        <img alt="Alazia" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Alazia</strong>
-       </div>
-      </a>
-      <div class="codex-card codex-card--static">
-       <div class="codex-card-image">
-        <img alt="Sillia" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Sillia</strong>
-       </div>
-      </div>
-      <a class="codex-card" href="ceaze.html">
-       <div class="codex-card-image">
-        <img alt="Ceaze" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Ceaze</strong>
-       </div>
-      </a>
-      <div class="codex-card codex-card--static">
-       <div class="codex-card-image">
-        <img alt="Rem Sienne" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Rem Sienne</strong>
-       </div>
-      </div>
-      <div class="codex-card codex-card--static">
-       <div class="codex-card-image">
-        <img alt="Lance Laurien" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Lance Laurien</strong>
-       </div>
-      </div>
-      <div class="codex-card codex-card--static">
-       <div class="codex-card-image">
-        <img alt="Gideon" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Gideon</strong>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section class="lore characters-simple book-card-chapter" id="cartes">
-    <div class="chapter-mark">
-     V
-    </div>
-    <h2>Cartes</h2>
-    <div class="book-chapter-content">
-     <div class="codex-grid">
-      <div class="codex-card codex-card--static">
-       <div class="codex-card-image">
-        <img alt="Carte : Ylluf" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Ylluf</strong>
-       </div>
-      </div>
-      <a class="codex-card" href="doimh_neacht.html">
-       <div class="codex-card-image">
-        <img alt="Carte : Doimh Neacht" decoding="async" loading="lazy" src="../pictures/DoimhNeacht_LaGuerreDeLHeresie_QuentinNater.jpg"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Doimh Neacht</strong>
-       </div>
-      </a>
-      <div class="codex-card codex-card--static">
-       <div class="codex-card-image">
-        <img alt="Carte : Ween" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Ween</strong>
-       </div>
-      </div>
-      <div class="codex-card codex-card--static">
-       <div class="codex-card-image">
-        <img alt="Carte : Freea" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Freea</strong>
-       </div>
-      </div>
-      <div class="codex-card codex-card--static">
-       <div class="codex-card-image">
-        <img alt="Carte : Heara" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-       </div>
-       <div class="codex-card-text">
-        <strong>Heara</strong>
-       </div>
-      </div>
-     </div>
-    </div>
-   </section>
-   <section class="lore" id="auteur">
-    <div class="chapter-mark">
-     VI
-    </div>
-    <div>
-     <h2>Quentin Nater</h2>
-     <img alt="Portrait de Quentin Nater" class="book-author-photo" decoding="async" loading="lazy" src="../pictures/quentin_nater_pic.jpg"/>
-     <p>Quentin Nater est un auteur suisse de fantasy. Il s’illustre avec sa série La Guerre de l’Hérésie et ses romans, S’estomper vers les ténèbres (2022), L’Aube d’un Idéal (2023), L’Illusion d’un Souhait (2024) et L’Ordre de l’Hérésie (2026). Ses histoires plongent les lecteurs dans un univers de magie où se mêlent aventures, affrontements épiques, drames, philosophie et romance. Diplômé d’un master en informatique, il poursuit actuellement un doctorat. Quand il n’est pas plongé dans ses recherches, l’écriture lui offre un espace d’évasion.</p>
-     <p class="book-social">
-      <a href="https://www.laguerredelheresie.com/" rel="noopener noreferrer" target="_blank">Site web</a>
-      <a href="https://www.facebook.com/quentin.nater/" rel="noopener noreferrer" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/quentin-nater/" rel="noopener noreferrer" target="_blank">Instagram</a>
-     </p>
-    </div>
-   </section>
-   <section class="lore" id="resumes">
-    <div class="chapter-mark">
-     VII
-    </div>
-    <div>
-     <h2>Résumé des tomes précédents</h2>
-     <p>Pour reprendre le fil de l’aventure avant de découvrir le quatrième tome, les résumés des livres précédents seront bientôt disponibles.</p>
-    </div>
-   </section>
-   <section class="portal">
-    <p class="eyebrow">✦ POURSUIVRE L’EXPLORATION ✦</p>
-    <h2>Explorer La Guerre de l’Hérésie</h2>
-    <div class="portal-links">
-     <a href="grimoire.html">
-      <span>✧</span>
-      <strong>Le Grimoire</strong>
-      <small>Personnages et lieux</small>
-     </a>
-     <a href="../index.html">
-      <span>✧</span>
-      <strong>Page principale</strong>
-      <small>Les livres et l’univers</small>
-     </a>
-    </div>
-   </section>
-  </main>
-  <!-- PAGE FOOTER -->
-  <footer>
-   <a href="https://laguerredelheresie.com/">✦　LA GUERRE DE L'HÉRÉSIE　✦</a>
-  </footer>
- </body>
+      <nav aria-label="Navigation principale">
+        <a href="../index.html">Accueil</a>
+        <a href="#presentation">Présentation</a>
+        <a href="#quatrieme">4e de couverture</a>
+        <a href="#personnages">Personnages</a>
+        <a href="#cartes">Cartes</a>
+        <a href="#auteur">Auteur</a>
+        <a href="#resumes">Résumés</a>
+        <a href="grimoire.html">Grimoire</a>
+      </nav>
+    </header>
+    <!-- CHARACTER PAGE CONTENT -->
+    <main class="page">
+      <nav aria-label="Fil d’Ariane" class="breadcrumbs">
+        <a href="../index.html">La Guerre de l’Hérésie</a>
+        <span>✧</span>
+        <strong>Livre 4</strong>
+      </nav>
+      <!-- CHARACTER HERO AND PORTRAIT -->
+      <section aria-labelledby="book-title" class="hero">
+        <div class="portrait-wrap">
+          <div aria-hidden="true" class="arcane-ring r1">
+          </div>
+          <div aria-hidden="true" class="arcane-ring r2">
+          </div>
+          <div aria-hidden="true" class="runes">
+            ✧　✦　✧　✦　✧　✦　✧
+          </div>
+          <img alt="Couverture du livre 4 : L’Ordre de l’Hérésie" class="portrait" decoding="async" fetchpriority="high" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="../pictures/LaGuerredelHeresie_Livre4_PruinaeEnneis_QuentinNater.JPG"/>
+          <div class="fallback">
+            Couverture de L’Ordre de l’Hérésie
+          </div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">✦ LA GUERRE DE L’HÉRÉSIE · LIVRE IV ✦</p>
+          <h1 class="character-name-fixed character-name-force" id="book-title">L’Ordre de l’Hérésie</h1>
+          <div aria-hidden="true" class="ornament">
+            ❧ ───── ✦ ───── ❧
+          </div>
+          <p class="hero-subtitle">Fantasy</p>
+          <p class="hero-rank">Romance · Mythologie · Secrets · Magie</p>
+          <div class="registry">
+            <h2>✧ Registre ✧</h2>
+            <dl>
+              <dt>Titre</dt>
+              <dd>L’Ordre de l’Hérésie</dd>
+              <dt>Saga</dt>
+              <dd>Livre 4</dd>
+              <dt>Auteur</dt>
+              <dd>Quentin Nater</dd>
+              <dt>Éditeur</dt>
+              <dd>Éditions Vérone</dd>
+              <dt>Illustrateur</dt>
+              <dd>Judicaël Saint-Genez</dd>
+              <dt>Sortie</dt>
+              <dd>24.10.2026</dd>
+              <dt>Vernissage</dt>
+              <dd>07.11.2026</dd>
+              <dt>Précédent</dt>
+              <dd>L’Illusion d’un Souhait</dd>
+              <dt>Suivant</dt>
+              <dd>À venir...</dd>
+              <dt>ISBN</dt>
+              <dd>979-10-423-1554-2</dd>
+              <dt>Nombre de pages</dt>
+              <dd>666</dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+      <!-- RELATED LINKS -->
+      <section class="lore" id="presentation">
+        <div class="chapter-mark">
+          I
+        </div>
+        <div>
+          <h2>Présentation</h2>
+          <p>La Guerre de l’Hérésie – Livre 4 : L’Ordre de l’Hérésie est un roman qui mêle fantasy, romance et mythologie. Le lecteur est invité à explorer des contrées lointaines, théâtre de confrontations épiques, de secrets, de drames et de réflexions philosophiques.</p>
+          <p>Guidé par Nate Ansicht, le Prince Maudit, un groupe de mortels s’engage dans une quête mystique à travers les mondes, dans l’espoir d’atteindre Alazia Hora, la Reine du Temps, et d’offrir le salut à leur peuple. Des déserts mortels aux plaines immaculées, des forêts enchantées aux cités antiques, les Vastums devront affronter leur passé et percer les mystères des divinités. Entre créatures fantastiques et donjons magiques, leurs idéaux seront mis à l’épreuve par les choix des Dieux et les décisions des Rois.</p>
+          <p>Au fil de ce périple décisif pour l’avenir des mortels, l’amour surgira là où s’entrechoquent les lames et les ennemis. Pruinae Enneis, héritière du trône de Spiegel, devra choisir, l’épée à la main, entre ses sentiments et ses devoirs, entre le bien de son peuple et ses propres rêves.</p>
+          <p>Après S’estomper vers les ténèbres (2022), L’Aube d’un Idéal (2023) et L’Illusion d’un Souhait (2024), laissez-vous emporter par le tome le plus magique de la saga.</p>
+        </div>
+      </section>
+      <section class="lore" id="quatrieme">
+        <div class="chapter-mark">
+          II
+        </div>
+        <div>
+          <h2>Quatrième de couverture</h2>
+          <p>« Réunis les quatre races Vastums, emprunte les Portails d’Aaraxios et traverse les mondes, un à un. Découvre les peuples originels, comprends leur réalité, déchiffre les conséquences de cette guerre et rejoins-moi sur Heara avant la Lune de Docéliande pour sauver ton peuple et t’offrir un futur. »</p>
+          <p>Porté par l’avènement de la guerre, l’ordre de la Reine du Temps résonne encore dans le cœur de Pruinae Enneis, la sylphide du lac Azur. Ses choix, dictés par le poids de son épée, pourraient bien sceller le destin des mortels. Des déserts brûlants aux plaines glacées, des forêts enchantées aux cités merveilleuses, Pruinae devra affronter son passé et percer les mystères des divinités. Entre romance et secrets, l’Ordre de l’Hérésie s’engage dans un périple empreint de magie, promis à entrer dans la légende... ou à sombrer dans l’oubli.</p>
+        </div>
+      </section>
+      <section class="lore characters-simple book-card-chapter" id="personnages">
+        <div class="chapter-mark">
+          III
+        </div>
+        <h2>Personnages principaux</h2>
+        <div class="book-chapter-content">
+          <div class="codex-grid">
+            <a class="codex-card" href="pruinae_enneis.html">
+            <div class="codex-card-image">
+              <img alt="Pruinae Enneis" decoding="async" loading="lazy" src="../pictures/_PruinaeEnneisLivre4_Wallpaper_LaGuerreDeLHeresie.png"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Pruinae Enneis</strong>
+            </div>
+            </a>
+            <a class="codex-card" href="nate_ansicht.html">
+            <div class="codex-card-image">
+              <img alt="Nate Ansicht" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Nate Ansicht</strong>
+            </div>
+            </a>
+            <a class="codex-card" href="faint_desabel.html">
+            <div class="codex-card-image">
+              <img alt="Faint Desabel" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Faint Desabel</strong>
+            </div>
+            </a>
+            <a class="codex-card" href="aizon_lowdel.html">
+            <div class="codex-card-image">
+              <img alt="Aizon Lowdel" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Aizon Lowdel</strong>
+            </div>
+            </a>
+            <a class="codex-card" href="ryvin_hydrs.html">
+            <div class="codex-card-image">
+              <img alt="Ryvin Hydrs" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Ryvin Hydrs</strong>
+            </div>
+            </a>
+            <a class="codex-card" href="mila.html">
+            <div class="codex-card-image">
+              <img alt="Milobelia Vi Urteil" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_Livre3_Quentin_Nater_Couverture.PNG"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Milobelia Vi Urteil</strong>
+            </div>
+            </a>
+            <a class="codex-card" href="aree_lazima.html">
+            <div class="codex-card-image">
+              <img alt="Arée Lazima" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Arée Lazima</strong>
+            </div>
+            </a>
+            <div class="codex-card codex-card--static">
+              <div class="codex-card-image">
+                <img alt="Énora Von Dess" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+              </div>
+              <div class="codex-card-text">
+                <strong>Énora Von Dess</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="lore characters-simple book-card-chapter" id="secondaires">
+        <div class="chapter-mark">
+          IV
+        </div>
+        <h2>Personnages secondaires</h2>
+        <div class="book-chapter-content">
+          <div class="codex-grid">
+            <div class="codex-card codex-card--static">
+              <div class="codex-card-image">
+                <img alt="Asceon" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+              </div>
+              <div class="codex-card-text">
+                <strong>Asceon</strong>
+              </div>
+            </div>
+            <a class="codex-card" href="rayza.html">
+            <div class="codex-card-image">
+              <img alt="Rayza" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Rayza</strong>
+            </div>
+            </a>
+            <a class="codex-card" href="alazia_hora.html">
+            <div class="codex-card-image">
+              <img alt="Alazia" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Alazia</strong>
+            </div>
+            </a>
+            <div class="codex-card codex-card--static">
+              <div class="codex-card-image">
+                <img alt="Sillia" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+              </div>
+              <div class="codex-card-text">
+                <strong>Sillia</strong>
+              </div>
+            </div>
+            <a class="codex-card" href="ceaze.html">
+            <div class="codex-card-image">
+              <img alt="Ceaze" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Ceaze</strong>
+            </div>
+            </a>
+            <div class="codex-card codex-card--static">
+              <div class="codex-card-image">
+                <img alt="Rem Sienne" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+              </div>
+              <div class="codex-card-text">
+                <strong>Rem Sienne</strong>
+              </div>
+            </div>
+            <div class="codex-card codex-card--static">
+              <div class="codex-card-image">
+                <img alt="Lance Laurien" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+              </div>
+              <div class="codex-card-text">
+                <strong>Lance Laurien</strong>
+              </div>
+            </div>
+            <div class="codex-card codex-card--static">
+              <div class="codex-card-image">
+                <img alt="Gideon" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+              </div>
+              <div class="codex-card-text">
+                <strong>Gideon</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="lore characters-simple book-card-chapter" id="cartes">
+        <div class="chapter-mark">
+          V
+        </div>
+        <h2>Cartes</h2>
+        <div class="book-chapter-content">
+          <div class="codex-grid">
+            <div class="codex-card codex-card--static">
+              <div class="codex-card-image">
+                <img alt="Carte : Ylluf" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+              </div>
+              <div class="codex-card-text">
+                <strong>Ylluf</strong>
+              </div>
+            </div>
+            <a class="codex-card" href="doimh_neacht.html">
+            <div class="codex-card-image">
+              <img alt="Carte : Doimh Neacht" decoding="async" loading="lazy" src="../pictures/DoimhNeacht_LaGuerreDeLHeresie_QuentinNater.jpg"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Doimh Neacht</strong>
+            </div>
+            </a>
+            <div class="codex-card codex-card--static">
+              <div class="codex-card-image">
+                <img alt="Carte : Ween" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+              </div>
+              <div class="codex-card-text">
+                <strong>Ween</strong>
+              </div>
+            </div>
+            <div class="codex-card codex-card--static">
+              <div class="codex-card-image">
+                <img alt="Carte : Freea" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+              </div>
+              <div class="codex-card-text">
+                <strong>Freea</strong>
+              </div>
+            </div>
+            <div class="codex-card codex-card--static">
+              <div class="codex-card-image">
+                <img alt="Carte : Heara" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+              </div>
+              <div class="codex-card-text">
+                <strong>Heara</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="lore" id="auteur">
+        <div class="chapter-mark">
+          VI
+        </div>
+        <div>
+          <h2>Quentin Nater</h2>
+          <img alt="Portrait de Quentin Nater" class="book-author-photo" decoding="async" loading="lazy" src="../pictures/quentin_nater_pic.jpg"/>
+          <p>Quentin Nater est un auteur suisse de fantasy. Il s’illustre avec sa série La Guerre de l’Hérésie et ses romans, S’estomper vers les ténèbres (2022), L’Aube d’un Idéal (2023), L’Illusion d’un Souhait (2024) et L’Ordre de l’Hérésie (2026). Ses histoires plongent les lecteurs dans un univers de magie où se mêlent aventures, affrontements épiques, drames, philosophie et romance. Diplômé d’un master en informatique, il poursuit actuellement un doctorat. Quand il n’est pas plongé dans ses recherches, l’écriture lui offre un espace d’évasion.</p>
+          <p class="book-social">
+          <a href="https://www.laguerredelheresie.com/" rel="noopener noreferrer" target="_blank">Site web</a>
+          <a href="https://www.facebook.com/quentin.nater/" rel="noopener noreferrer" target="_blank">Facebook</a>
+          <a href="https://www.instagram.com/quentin-nater/" rel="noopener noreferrer" target="_blank">Instagram</a>
+          </p>
+        </div>
+      </section>
+      <section class="lore" id="resumes">
+        <div class="chapter-mark">
+          VII
+        </div>
+        <div>
+          <h2>Résumé des tomes précédents</h2>
+
+          <figure class="camps-figure"><button aria-label="Agrandir le récapitulatif des camps" class="camps-zoom-trigger" onclick='document.getElementById("camps-zoom").showModal()' type="button"><img alt="Récapitulatif des camps de La Guerre de l’Hérésie" loading="lazy" src="../pictures/laguerredelheresie_personnages_resume_livre4.jpg"/></button><figcaption>Récapitulatif des camps · Cliquer sur l’image pour l’agrandir</figcaption></figure>
+          <p>Pour reprendre le fil de l’aventure avant de découvrir le 4e tome de La Guerre de l'Hérésie - L'Ordre de l'Hérésie:</p>
+          <details class="previous-books-spoilers"><summary>Afficher le résumé des livres 1 à 3 de La Guerre de l’Hérésie (Attention : SPOILERS)</summary><div class="spoiler-content"><p>Depuis des siècles, l’Empire Ansicht imposait autorité et moralité au cœur d’Ylluf. Fort de cet héritage, sa domination se traduisait par stabilité et paix, maintenant un équilibre nécessaire au sein des quatre forces Vastums. Pourtant, au-delà des frontières impériales, à travers les mondes, tous ne reconnaissaient pas la légitimité de cette lignée.</p><p>Lors de la dernière nuit de l’an 4’999, l’équilibre s’effondra. L’Empereur de la Peine, Xignus Ansicht, préparait la venue de la nouvelle année, ignorant le funeste destin qui l’attendait. Alors que sonnait la dernière heure du millénaire, le souverain de la Nuit, le Vespertilio, membre éminent de l’Union Royale, lança le massacre du peuple Ansicht. Le jugement divin avait été prononcé et l’Empereur fut exécuté. Le trône de la Peine resta vacant. De la dynastie déchue ne subsistait qu’un héritier, Nate Ansicht, le Prince Maudit, qui sera connu sous le nom d’Elwen Riem, l’épéiste d’argent.</p><p>La mort de l’Empereur provoqua une crise politique majeure. Les conséquences de sa disparition se propagèrent d’Upperia aux quatre coins des Empires. En quelques jours, les alliances forgées au cours des siècles furent balayées. Les frontières furent contestées et les armées se mirent en marche. Au sud, Utteros Streik, Empereur de la Haine, profita de l’effondrement de l’autorité Ansicht. Il lança ses armées vers le nord, annexant les territoires de l’Empire de la Peine, jusqu’à s’emparer du trône.</p><p>À l’ouest, Nix Sieg, Chevalier Blanc, entreprit une ultime tentative diplomatique auprès de l’Empereur des Siennes. Son cœur conservait l’espoir d’éviter une effusion de sang. Malgré ses efforts, l’escalade militaire ne pouvait plus être enrayée. La guerre entre les puissances d’Ylluf semblait désormais inévitable.</p><p>Tandis que les Empires mobilisaient leurs forces, Nate Ansicht fut envoyé dans une mission qui s’apparentait à un aller sans retour, aux côtés de son frère d’armes, Slicer Streik. Au terme d’une journée marquée par le sang, le Prince rencontra Nix Sieg et la sylphide du lac Azur, Pruinae Enneis. Nul ne pouvait encore mesurer l’importance de cette rencontre. Pourtant, elle allait changer le cours des conflits.</p><p>Alors que la guerre menaçait d’embraser Ylluf, Rem Sienne, Empereur de l’Amour, refusa toute concession. Nix Sieg, qui s’opposa à ses ordres, fut exécuté par ses frères Chevaliers. Avec sa mort, la dernière voie diplomatique venait de se refermer. Les armées impériales reçurent alors l’ordre de marcher sur Upperia. Mais un ennemi redoutable se présentait déjà devant les murs de la cité.</p><p>Le Despair, Archange de la Réalité, avait déployé ses Fantasmas sur les terres des Ansichts. Son objectif était la Sphère de l’Hérésie, l’artefact tant convoité par les Dieux. Upperia se retrouva ainsi prise entre les armées des Empires et les démons des Escouades Divines.</p><p>Alors commença une des batailles les plus meurtrières de l’histoire d’Ylluf. Les vagues ennemies se succédèrent. Les pertes furent considérables. Mais, au milieu du carnage, une alliance inattendue se forma. Le Prince Ansicht, les Chevaliers Siennes et les Majors Streiks combattirent sous la même bannière. Des forces autrefois opposées unirent leurs armes pour défendre Upperia face aux armées divines. Cependant, dans l’ombre, une autre force grandissait.</p><p>L’Empereur de la Haine sacrifia toute morale afin d’offrir aux mortels une chance d’abattre les Dieux. De ces heures sombres, l’histoire retint néanmoins le nom des soldats qui se levèrent contre sa tyrannie, celui des héritiers de l’Amour, de la Haine et de la Peine. Le Prince Zekia y trouva la mort, mais, contre toute attente, la coalition, menée par l’épéiste d’argent et la sylphide du lac Azur, triompha.</p><p>Upperia avait survécu. Les armées ennemies avaient été vaincues. Mais la Guerre de l’Hérésie était loin d’être terminée. Tandis que les Empires de l’ouest et du sud comptaient leurs morts, une autre guerre se profilait à l’est.</p><p>Sur les terres des Urteils, la colère populaire gagnait chaque jour du terrain. Sous la direction d’Aizon Lowdel, un mouvement révolutionnaire se dressait contre le pouvoir de Noctalia Vi Urteil, Impératrice de la Sagesse.</p><p>Jusqu’alors, l’Impératrice avait maintenu son Empire à l’écart des grands affrontements. Toutefois, le massacre des Ansichts avait changé ses priorités. Redoutant que les Dieux marchent sur Kroyven, Noctalia consacra les ressources de son Empire au développement d’armes fondées sur l’anti-upperium. Les besoins de son peuple furent sacrifiés au profit de cette course à l’armement. La peur justifiait la répression. La répression embrasait la révolte. Rapidement, la révolution se transforma en une guerre ouverte.</p><p>Dans le plus grand secret, Nate Ansicht et Irilla, une mystérieuse enchanteresse, menèrent une opération destinée à renverser le gouvernement impérial. Les premières offensives plongèrent Nobella et Eltia dans les flammes. Les forces révolutionnaires marchèrent sur la capitale, puis lancèrent leur assaut contre le château onirique de l’Impératrice.</p><p>Au même moment, la coalition des armées Streiks et Siennes franchissait les frontières Urteils. Les révolutionnaires étant enclins à rejoindre l’alliance, la coalition engagea une vaste opération pour défaire la tyrannie de l’Impératrice. Acculée, Noctalia se prépara à affronter l’épéiste d’argent, bien décidée à utiliser une arme qu’aucun souverain n’aurait dû brandir.</p><p>L’Impératrice de la Sagesse rappela Xignus Ansicht du royaume des morts et le força à combattre son propre fils. L’homme dont l’assassinat avait provoqué la chute de l’ancien ordre impérial se tenait à nouveau sur le champ de bataille.</p><p>Nate Ansicht dut affronter le héros dont il portait le nom. Pour vaincre son père, le Prince Maudit fut contraint de payer le prix ultime, sacrifier un cœur de saphir. Xignus Ansicht tomba une seconde fois, entraînant Noctalia Vi Urteil dans sa chute. Ainsi s’effondra le dernier pouvoir impérial qui s’opposait à la coalition. La guerre qui avait déchiré Ylluf toucha enfin à sa fin.</p><p>Des dizaines de milliers de Vastums avaient péri au cours des dernières guerres. Dans chaque territoire, les cités portaient les cicatrices des combats. Les alliances millénaires avaient été remplacées par un nouvel ordre politique. Face à la menace des divinités, les puissances décidèrent de conclure un traité de paix. Pour la première fois depuis la dernière nuit de l’an 4’999, la paix semblait à nouveau possible.</p><p>Mais dans l’ombre, les puissances divines poursuivaient l’œuvre entamée par l’Archange de la Réalité. Les batailles des mortels avaient pris fin, mais une menace plus ancienne et plus vaste se préparait à frapper.</p><p>C’est dans ce contexte qu’Alazia Hora, Reine des Elfes, se présenta devant Nate Ansicht. Depuis des temps immémoriaux, Dieux et Rois s’opposaient, comme deux principes irréconciliables. Face à la menace, malgré les actes du Vespertilio, un intérêt commun unissait les mortels et les Rois. Alazia proposa alors qu’Ylluf rejoigne l’Union Royale, une alliance destinée à renverser les Escouades Divines. Le conflit dépassait à présent les frontières des Empires mortels. L’enjeu n’était plus la prise d’une capitale, la reconquête d’un territoire ou la chute d’un empire. Il fallait désormais choisir son camp dans une guerre entre divinités.</p><p>Mais une rumeur se propageait dans l’obscurité… Une rumeur selon laquelle les Dieux n’auraient pas attaqué Ylluf sans raison. Leur volonté de renverser les Rois et de récupérer la Sphère de l’Hérésie dissimulerait une nécessité cachée. Les Dieux ne chercheraient pas à détruire l’univers, mais à le préserver d’une fin que l’Union Royale désirerait précipiter. Les mortels se retrouvèrent donc confrontés à un choix… un choix qui semblait n’offrir aucun espoir de salut…</p></div></details></div>
+      </section><dialog aria-label="Récapitulatif des camps agrandi" class="camps-lightbox" id="camps-zoom"><button aria-label="Fermer" class="camps-close" onclick='this.closest("dialog").close()' type="button">×</button><img alt="Récapitulatif des camps en grand format" src="../pictures/laguerredelheresie_personnages_resume_livre4.jpg"/></dialog>
+      <section class="portal">
+        <p class="eyebrow">✦ POURSUIVRE L’EXPLORATION ✦</p>
+        <h2>Explorer La Guerre de l’Hérésie</h2>
+        <div class="portal-links">
+          <a href="grimoire.html">
+          <span>✧</span>
+          <strong>Le Grimoire</strong>
+          <small>Personnages et lieux</small>
+          </a>
+          <a href="../index.html">
+          <span>✧</span>
+          <strong>Page principale</strong>
+          <small>Les livres et l’univers</small>
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- PAGE FOOTER -->
+    <footer>
+      <a href="https://laguerredelheresie.com/">✦　LA GUERRE DE L'HÉRÉSIE　✦</a>
+    </footer>
+  </body>
 </html>
