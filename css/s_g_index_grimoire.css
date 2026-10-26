@@ -1297,3 +1297,103 @@ body.map-lightbox-open { overflow: hidden; }
         margin-bottom: 0 !important;
     }
 }
+
+/* V12 : corrections exclusivement mobiles. */
+@media (max-width: 600px)
+{
+    /* Bande des boutiques en bas du PREMIER ecran visible, pas au milieu. */
+    body.grimoire-index > header
+    {
+        height: 100svh !important;
+        min-height: 100svh !important;
+        position: relative !important;
+    }
+    body.grimoire-index > header .shop
+    {
+        top: auto !important;
+        bottom: max(18px, env(safe-area-inset-bottom)) !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: min(94%, 440px) !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-evenly !important;
+        padding: 8px 4px !important;
+    }
+    /* Le lexique affiche les resultats de TOUTES les categories en mode reduit. */
+    body.grimoire-index #lexiconGroups.mobile-search-active .group:not([hidden]),
+    body.grimoire-index #lexiconGroups.mobile-search-active .group:not([hidden]) .table-wrap,
+    body.grimoire-index #lexiconGroups.mobile-search-active .group:not([hidden]) table,
+    body.grimoire-index #lexiconGroups.mobile-search-active .group:not([hidden]) tbody
+    {
+        display: block !important;
+        visibility: visible !important;
+        height: auto !important;
+        max-height: none !important;
+        opacity: 1 !important;
+        overflow: visible !important;
+    }
+    body.grimoire-index #lexiconGroups.mobile-search-active .group:not([hidden]) table
+    {
+        display: table !important;
+        width: 100% !important;
+    }
+    body.grimoire-index #lexiconGroups.mobile-search-active .group:not([hidden]) tbody
+    {
+        display: table-row-group !important;
+    }
+    body.grimoire-index #lexiconGroups .group[hidden],
+    body.grimoire-index #lexiconGroups tbody tr[hidden]
+    {
+        display: none !important;
+    }
+    /* Auteur : enlever la place reservee a la photo desktop et l'espace final. */
+    body.grimoire-index > article > .core:has(> #auteur)
+    {
+        min-height: 0 !important;
+        height: auto !important;
+        padding-top: 12px !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    body.grimoire-index > article > .core:has(> #auteur) > table,
+    body.grimoire-index > article > .core:has(> #auteur) > table > tbody,
+    body.grimoire-index > article > .core:has(> #auteur) > table > tbody > tr
+    {
+        display: block !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    body.grimoire-index > article > .core:has(> #auteur) td.td_book
+    {
+        display: none !important;
+    }
+    body.grimoire-index > article > .core:has(> #auteur) td.td_txt
+    {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        padding-top: 0 !important;
+        vertical-align: top !important;
+    }
+    body.grimoire-index > article > .core:has(> #auteur) > p:last-child
+    {
+        margin-top: 8px !important;
+        margin-bottom: 0 !important;
+    }
+    /* Avis : cacher les logos, Contribution : les afficher. */
+    body.grimoire-index .reviews-section .avis-platform-logo
+    {
+        display: none !important;
+    }
+    body.grimoire-index > article > .core:has(> h1.title_character) > a > img.avis-platform-logo
+    {
+        display: block !important;
+        width: min(250px, 85%) !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-inline: auto !important;
+    }
+}
