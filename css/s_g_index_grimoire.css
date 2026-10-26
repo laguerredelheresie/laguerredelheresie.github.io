@@ -1,0 +1,1117 @@
+/* INDEX : refonte visuelle inspiree du Grimoire.
+   Charge apres les feuilles existantes : aucun texte, ordre ou lien ne change.
+   Les tableaux, le lexique et les grilles conservent leur structure. */
+:root
+{
+	--gi-gold: #d8b46a;
+	--gi-paper: #e9dfc7;
+	--gi-line: #806238;
+	--gi-dark: #080b13;
+}
+html
+{
+	scroll-behavior: smooth;
+}
+body.grimoire-index
+{
+	margin: 0;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+	color: var(--gi-paper);
+	font-family: Georgia,"Times New Roman",serif;
+	background: radial-gradient(circle at 15% 12%,#182847 0,transparent 32%),
+             radial-gradient(circle at 82% 25%,#3b1220 0,transparent 28%),
+             linear-gradient(#05070c,#0a0e19 55%,#05070b) !important;
+	background-attachment: fixed !important;
+}
+body.grimoire-index::before
+{
+	content: "";
+	position: fixed;
+	inset: 10px;
+	z-index: 20;
+	pointer-events: none;
+	border: 1px solid #6d522b;
+	box-shadow: inset 0 0 45px #000;
+}
+body.grimoire-index::after
+{
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	opacity: .27;
+	background-image: radial-gradient(#fff 1px,transparent 1px),radial-gradient(#d7b56c 1px,transparent 1px);
+	background-size: 83px 83px,131px 131px;
+	background-position: 0 0,35px 22px;
+	mask-image: linear-gradient(to bottom,#000,transparent 90%);
+}
+.grimoire-index, .grimoire-index *
+{
+	box-sizing: border-box;
+}
+.grimoire-index a
+{
+	color: #d8b46a;
+	font-family: inherit;
+	text-shadow: none;
+}
+.grimoire-index a:hover
+{
+	color: #f1dfb6;
+}
+.grimoire-index p, .grimoire-index h1, .grimoire-index h2,
+.grimoire-index h3, .grimoire-index h4
+{
+	font-family: Georgia,"Times New Roman",serif;
+	text-shadow: none;
+}
+.grimoire-index p
+{
+	color: #d9d5cc;
+	line-height: 1.8;
+}
+.grimoire-index h1,.grimoire-index h1.white
+{
+	color: #e3c17a;
+	text-shadow: none;
+}
+.grimoire-index h2,.grimoire-index h3
+{
+	color: #e5cf9f;
+	text-shadow: none;
+}
+/* Entete et liens commerciaux : meme position, habillage du grimoire. */
+.grimoire-index > header
+{
+	position: relative;
+	isolation: isolate;
+	min-height: clamp(470px,57vw,760px);
+	margin: 0 !important;
+	padding: clamp(35px,5vw,70px) 20px 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+.grimoire-index > header::before
+{
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -2;
+	background: url("../pictures/LaGuerredelHeresie_Wallpaper_PruinaeEnneis.PNG") center top/cover no-repeat;
+	opacity: .8;
+}
+.grimoire-index > header::after
+{
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: linear-gradient(0deg,#05070c 0%,#05070c44 45%,#05070c44 100%);
+}
+.grimoire-index > header .shop
+{
+	margin: 0 !important;
+	width: min(90%,760px);
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+	padding: 18px 24px;
+	border: 1px solid #806238;
+	border-radius: 8px;
+	background: #080b13dc;
+	box-shadow: 0 16px 38px #0009;
+}
+.grimoire-index > header .shop a
+{
+	display: grid;
+	place-items: center;
+}
+.grimoire-index > header .shop_img
+{
+	width: clamp(45px,5vw,65px) !important;
+	height: clamp(45px,5vw,65px) !important;
+	min-width: 0 !important;
+	margin: 0 !important;
+	object-fit: contain;
+}
+/* Conteneur principal : conserve les sections dans leur ordre d'origine. */
+.grimoire-index > article
+{
+	width: min(1260px,94vw);
+	max-width: 1260px;
+	margin: 0 auto !important;
+	padding: 30px clamp(12px,2.8vw,34px) 65px !important;
+	background: transparent !important;
+}
+.grimoire-index > article > .core,
+.grimoire-index > article > .core_table,
+.grimoire-index > article > .core_character,
+.grimoire-index > article > .press-reviews-layout,
+.grimoire-index > article > .lexicon-article
+{
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 28px auto !important;
+	padding: clamp(22px,4vw,48px) !important;
+	position: relative;
+	border: 1px solid #66502e;
+	border-radius: 3px;
+	background: linear-gradient(110deg,#111723ed,#080b11ed) !important;
+	box-shadow: inset 0 0 45px #000,0 18px 40px #0007;
+	color: var(--gi-paper);
+}
+.grimoire-index > article > .core:nth-of-type(even),
+.grimoire-index > article > .core_character:nth-of-type(even)
+{
+	background: linear-gradient(110deg,#161019ed,#080b11ed) !important;
+}
+.grimoire-index > article > .core::before,
+.grimoire-index > article > .core_table::before,
+.grimoire-index > article > .core_character::before,
+.grimoire-index > article > .press-reviews-layout::before
+{
+	content: "✦";
+	position: absolute;
+	right: 20px;
+	top: 13px;
+	color: #d7b367;
+	text-shadow: 0 0 12px #e6c475;
+}
+.grimoire-index > article > hr
+{
+	width: 80%;
+	height: 1px;
+	margin: 25px auto !important;
+	border: 0;
+	background: linear-gradient(90deg,transparent,#806238,transparent);
+}
+.grimoire-index article h1:not(.invisible)
+{
+	font-weight: 400;
+	line-height: 1.2;
+}
+.grimoire-index article .core > h1,
+.grimoire-index article .core_character > h1,
+.grimoire-index article .core_table h1
+{
+	color: #e3c17a !important;
+}
+.grimoire-index article .td_txt h1
+{
+	font-size: clamp(1.55rem,2.5vw,2.5rem) !important;
+}
+.grimoire-index article .td_txt h2
+{
+	color: #d9d5cc;
+	font-size: clamp(1rem,1.35vw,1.2rem);
+	line-height: 1.65;
+}
+.grimoire-index article .book_cover
+{
+	max-width: 100%;
+	min-width: 0;
+	box-shadow: 0 16px 32px #0009;
+	border: 1px solid #806238;
+	border-radius: 3px;
+}
+.grimoire-index article .book_logo
+{
+	max-width: 100%;
+	min-width: 0;
+}
+.grimoire-index article table:not(.calendar)
+{
+	max-width: 100%;
+}
+.grimoire-index article .carte
+{
+	max-width: 100%;
+	min-width: 0;
+}
+/* Le calendrier garde ses colonnes, ses dates et ses interactions. */
+.grimoire-index .year-toggle
+{
+	border: 1px solid #806238;
+	border-radius: 5px;
+	background: #111723;
+	overflow: hidden;
+	margin-bottom: 14px;
+}
+.grimoire-index .year-toggle__summary
+{
+	color: #e3c17a;
+	padding: 15px 18px;
+	margin: 0 !important;
+}
+.grimoire-index table.calendar
+{
+	width: 100%;
+	color: #e9dfc7;
+	background: #0d111b;
+	border-collapse: collapse;
+}
+.grimoire-index table.calendar th
+{
+	background: #352a1f;
+	color: #f3dfb6;
+	border: 1px solid #806238;
+}
+.grimoire-index table.calendar td
+{
+	color: #e9dfc7;
+	border: 1px solid #53422c;
+}
+.grimoire-index table.calendar tr:nth-child(even)
+{
+	background: #171b27;
+}
+.grimoire-index table.calendar tr:hover
+{
+	background: #252536;
+}
+.grimoire-index table.calendar th h2,.grimoire-index table.calendar td h2,.grimoire-index table.calendar td h3
+{
+	color: inherit !important;
+}
+/* Grilles de personnages : conserver le nombre de colonnes, changer seulement le theme. */
+.grimoire-index article .index-codex-card,
+.grimoire-index article .mobile-character-card
+{
+	background: linear-gradient(145deg,#202333,#0b101c) !important;
+	border-color: #8b6d42 !important;
+	box-shadow: 0 10px 24px #0007 !important;
+	color: #eadfc8 !important;
+}
+.grimoire-index article .index-codex-text strong,
+.grimoire-index article .mobile-character-card strong
+{
+	color: #eadfc8 !important;
+	-webkit-text-fill-color: #eadfc8 !important;
+}
+.grimoire-index article .index-codex-text small,
+.grimoire-index article .mobile-character-card small
+{
+	color: #d6ba7f !important;
+	-webkit-text-fill-color: #d6ba7f !important;
+}
+/* Lexique : conserver recherche, tri, tableau et contraste lisible. */
+.grimoire-index .lexicon
+{
+	--lexicon-panel: #111723;
+	--lexicon-panel-soft: #1b2230;
+	--lexicon-panel-hover: #292b38;
+	--lexicon-text: #eee4cf;
+	--lexicon-muted: #c5b38e;
+	--lexicon-line: #66502e;
+	--lexicon-accent: #d8b46a;
+	--lexicon-accent-soft: #d8b46a22;
+	color: #eee4cf;
+}
+.grimoire-index .lexicon .search
+{
+	color: #eee4cf;
+}
+.grimoire-index .lexicon .term
+{
+	color: #f1dfb6;
+}
+.grimoire-index .lexicon .translation
+{
+	color: #ddd1b9;
+}
+.grimoire-index .lexicon .show-all.is-active
+{
+	color: #080b13;
+}
+/* Le bloc vernissage conserve sa disposition a deux colonnes. */
+.grimoire-index .vernissage-feature
+{
+	margin-top: 25px;
+	margin-bottom: 45px;
+	background: linear-gradient(135deg,#5a4327,#b38c4f 18%,#755631 82%,#4d351e);
+}
+.grimoire-index .vernissage-feature__inner
+{
+	background: linear-gradient(130deg,#111723,#15131a);
+	border-color: #806238;
+}
+.grimoire-index .vernissage-feature__eyebrow
+{
+	color: #d8b46a;
+}
+.grimoire-index .vernissage-feature__title
+{
+	color: #e3c17a !important;
+}
+.grimoire-index .vernissage-feature__subtitle,.grimoire-index .vernissage-feature__details,.grimoire-index .vernissage-feature__registration
+{
+	color: #e9dfc7 !important;
+}
+.grimoire-index .vernissage-feature__link
+{
+	background: #d8b46a;
+	color: #080b13 !important;
+}
+.grimoire-index .vernissage-feature__registration a
+{
+	color: #e3c17a !important;
+}
+.grimoire-index .press-reviews-layout a
+{
+	color: #d8b46a;
+}
+@media (max-width:1000px)
+{
+	.grimoire-index > header
+	{
+		min-height: 100svh;
+		padding: 20px 14px 36px;
+	}
+	.grimoire-index > article
+	{
+		width: 100%;
+		padding: 16px 12px 50px !important;
+	}
+	.grimoire-index > article > .core,.grimoire-index > article > .core_table,
+  .grimoire-index > article > .core_character,.grimoire-index > article > .press-reviews-layout,
+  .grimoire-index > article > .lexicon-article
+	{
+		padding: 22px 14px !important;
+		margin: 18px auto !important;
+	}
+	.grimoire-index article p
+	{
+		font-size: 1rem !important;
+		line-height: 1.65;
+		color: #d9d5cc;
+	}
+	.grimoire-index article h1,.grimoire-index article h1.white
+	{
+		color: #e3c17a !important;
+	}
+	.grimoire-index article h2,.grimoire-index article h3
+	{
+		color: #e5cf9f;
+	}
+	.grimoire-index article .td_txt h2
+	{
+		font-size: 1rem !important;
+	}
+	.grimoire-index .calendar-2026-scene
+	{
+		background: linear-gradient(145deg,#151723,#090c14);
+		border-color: #806238;
+	}
+	.grimoire-index .calendar-2026-scene .calendar-chibi-heading h1
+	{
+		color: #e3c17a !important;
+	}
+	.grimoire-index article .calendar-2026-scene > table.calendar td,
+  .grimoire-index article .calendar-2026-scene > table.calendar th
+	{
+		color: #e9dfc7;
+	}
+	.grimoire-index article .mobile-character-card
+	{
+		background: linear-gradient(145deg,#202333,#0b101c) !important;
+	}
+	.grimoire-index article .mobile-character-card strong
+	{
+		white-space: normal;
+		overflow: visible;
+	}
+	.grimoire-index .vernissage-feature
+	{
+		margin: 20px auto 35px;
+	}
+}
+@media (max-width:600px)
+{
+	.grimoire-index > header .shop
+	{
+		width: 100%;
+		gap: 9px;
+		padding: 12px 8px;
+	}
+	.grimoire-index > article > .core,.grimoire-index > article > .core_table,
+  .grimoire-index > article > .core_character,.grimoire-index > article > .press-reviews-layout,
+  .grimoire-index > article > .lexicon-article
+	{
+		padding: 18px 10px !important;
+	}
+	.grimoire-index article table.calendar td,.grimoire-index article table.calendar th
+	{
+		overflow-wrap: anywhere;
+	}
+}
+@media (prefers-reduced-motion:reduce)
+{
+	.grimoire-index *
+	{
+		scroll-behavior: auto !important;
+		transition: none !important;
+	}
+}
+/* ===== Ajustements demandes : base STRICTEMENT refonte 1.0 ===== */
+/* Image initiale sur toute la hauteur, degradé moins couvrant. */
+.grimoire-index > header
+{
+	min-height: 100svh;
+}
+.grimoire-index > header::before
+{
+	opacity: 1;
+	background-size: cover;
+	background-position: center top;
+}
+.grimoire-index > header::after
+{
+	background: linear-gradient(to bottom,rgba(5,7,12,0) 0%,rgba(5,7,12,.04) 45%,rgba(5,7,12,.24) 75%,#05070c 100%);
+}
+/* Encadrement des boutiques sans fond. */
+.grimoire-index > header .shop
+{
+	background: transparent !important;
+	backdrop-filter: none !important;
+}
+/* Espace lateral reduit, en conservant les panneaux de la V1. */
+.grimoire-index > article
+{
+	width: min(1760px,97vw) !important;
+	max-width: 1760px !important;
+	padding-inline: clamp(10px,1.6vw,26px) !important;
+}
+/* Vernissage sorti du panneau du Livre 1, sans changer son contenu. */
+.grimoire-index > article > .vernissage-feature
+{
+	width: min(100%,1560px);
+	max-width: none;
+	margin: 48px auto 125px !important;
+}
+.grimoire-index > article > .vernissage-feature + .core
+{
+	margin-top: 0 !important;
+}
+/* Calendrier : panneau parchemin original, tableau blanc et lisible. */
+.grimoire-index .calendar-2026-scene
+{
+	background: linear-gradient(145deg,#fff9eb,#f4e8ce) !important;
+	border-color: #947047 !important;
+}
+.grimoire-index .calendar-2026-scene .calendar-chibi-heading h1
+{
+	color: #56391f !important;
+}
+.grimoire-index .calendar-2026-scene > table.calendar
+{
+	background: #fff !important;
+	color: #30271e !important;
+}
+.grimoire-index .calendar-2026-scene > table.calendar th
+{
+	background: #705034 !important;
+	color: #fff9ed !important;
+}
+.grimoire-index .calendar-2026-scene > table.calendar td
+{
+	background: #fff !important;
+	color: #30271e !important;
+	border-color: #e6d6bb !important;
+}
+.grimoire-index .calendar-2026-scene > table.calendar tr:nth-child(even) td
+{
+	background: #faf6ee !important;
+}
+.grimoire-index .calendar-2026-scene > table.calendar tr:hover td
+{
+	background: #f8ebd3 !important;
+}
+.grimoire-index .calendar-2026-scene > table.calendar td h2,
+.grimoire-index .calendar-2026-scene > table.calendar td h3,
+.grimoire-index .calendar-2026-scene > table.calendar td p
+{
+	color: #30271e !important;
+}
+.grimoire-index .calendar-2026-scene > table.calendar th h2
+{
+	color: #fff9ed !important;
+}
+.grimoire-index .calendar-2026-scene .calendar-footnote
+{
+	color: #705034 !important;
+}
+/* Cartes de personnages : retirer UNIQUEMENT les changements de style V1. */
+.grimoire-index article .index-codex-card,
+.grimoire-index article .mobile-character-card
+{
+	background: transparent !important;
+	box-shadow: 0 1px 3px rgba(42,30,17,.08) !important;
+	border-color: rgba(139,104,53,.68) !important;
+}
+.grimoire-index article .index-codex-text strong,
+.grimoire-index article .mobile-character-card strong,
+.grimoire-index article .index-codex-text small,
+.grimoire-index article .mobile-character-card small
+{
+	color: inherit !important;
+	-webkit-text-fill-color: currentColor !important;
+}
+/* Cartes geographiques : images plus larges et descriptions plus etroites. */
+@media (min-width:1001px)
+{
+	.grimoire-index article .core table:has(img.carte)
+	{
+		width: 100% !important;
+		table-layout: fixed;
+	}
+	.grimoire-index article .core table:has(img.carte) td.td_book
+	{
+		width: 68% !important;
+	}
+	.grimoire-index article .core table:has(img.carte) td.td_txt
+	{
+		width: 32% !important;
+	}
+	.grimoire-index article .core img.carte
+	{
+		display: block;
+		width: 96% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		margin: auto !important;
+	}
+}
+/* Héréliande et traducteur : un seul panneau commun. */
+.grimoire-index > article > .hereliande-unified
+{
+	width: 100%;
+	margin: 28px auto;
+	padding: clamp(22px,4vw,48px);
+	border: 1px solid #66502e;
+	border-radius: 3px;
+	background: linear-gradient(110deg,#111723ed,#080b11ed);
+	box-shadow: inset 0 0 45px #000,0 18px 40px #0007;
+}
+.grimoire-index .hereliande-unified > #Hereliande,
+.grimoire-index .hereliande-unified > .lexicon-article
+{
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	background: transparent !important;
+	box-shadow: none !important;
+}
+.grimoire-index .hereliande-unified > #Hereliande
+{
+	margin-bottom: 26px !important;
+}
+/* La teinte bleue originale du Grimoire reste intacte. */
+@media (max-width:1000px)
+{
+	.grimoire-index > article
+	{
+		width: 100% !important;
+		padding-inline: 12px !important;
+	}
+	.grimoire-index > article > .vernissage-feature
+	{
+		margin: 28px auto 80px !important;
+	}
+	.grimoire-index > article > .hereliande-unified
+	{
+		padding: 22px 14px !important;
+	}
+}
+/* ===== Ajustements fins de la refonte 1.0 : 26.10.2026 ===== */
+/* Illustration principale plus visible, degrade conserve. */
+.grimoire-index > header::after
+{
+	background: linear-gradient(to bottom, rgba(5,7,12,0) 0%, rgba(5,7,12,.015) 45%, rgba(5,7,12,.12) 78%, rgba(5,7,12,.85) 100%) !important;
+}
+/* Logos des boutiques proches de leur dimension historique. */
+.grimoire-index > header .shop
+{
+	width: min(94%,1100px) !important;
+	gap: clamp(12px,2vw,30px) !important;
+}
+.grimoire-index > header .shop_img
+{
+	width: clamp(100px,8vw,150px) !important;
+	height: clamp(100px,8vw,150px) !important;
+	max-width: none !important;
+}
+/* Tripler les marges verticales du vernissage (48 / 125). */
+.grimoire-index > article > .vernissage-feature
+{
+	margin-top: 144px !important;
+	margin-bottom: 375px !important;
+}
+/* Numerotation des panneaux principaux : repere de chapitre dans une colonne dediee. */
+.grimoire-index > article
+{
+	counter-reset: grimoire-index-chapter;
+}
+.grimoire-index > article > .core,
+.grimoire-index > article > .core_table,
+.grimoire-index > article > .core_character,
+.grimoire-index > article > .press-reviews-layout,
+.grimoire-index > article > .hereliande-unified,
+.grimoire-index > article > .lexicon-article
+{
+	counter-increment: grimoire-index-chapter;
+	padding-left: clamp(112px,10vw,165px) !important;
+}
+.grimoire-index > article > .core::after,
+.grimoire-index > article > .core_table::after,
+.grimoire-index > article > .core_character::after,
+.grimoire-index > article > .press-reviews-layout::after,
+.grimoire-index > article > .hereliande-unified::after,
+.grimoire-index > article > .lexicon-article::after
+{
+	content: counter(grimoire-index-chapter, upper-roman);
+	position: absolute;
+	top: clamp(30px,4vw,58px);
+	left: clamp(16px,2.5vw,40px);
+	width: clamp(72px,6.5vw,104px);
+	padding: 6px 14px 18px 0;
+	border-right: 1px solid #59462c;
+	color: #c9a65e;
+	font: normal clamp(2.3rem,4vw,3.7rem)/1 Georgia,"Times New Roman",serif;
+	text-align: center;
+	text-shadow: 0 0 18px #8fbfff55;
+	pointer-events: none;
+}
+/* Cartes : largeur d'image precedente divisee par 1.5 (68% -> 45.33%). */
+@media (min-width:1001px)
+{
+	.grimoire-index article .core table:has(img.carte) td.td_book
+	{
+		width: 45.33% !important;
+	}
+	.grimoire-index article .core table:has(img.carte) td.td_txt
+	{
+		width: 54.67% !important;
+	}
+	.grimoire-index article .core img.carte
+	{
+		width: 96% !important;
+	}
+}
+/* Fond autour du tableau calendrier transparent, tableau blanc intact. */
+.grimoire-index .calendar-2026-scene
+{
+	background: transparent !important;
+	box-shadow: none !important;
+}
+/* Texte des cartes de personnages contraste sur le fond bleu nuit. */
+.grimoire-index article .index-codex-card,
+.grimoire-index article .mobile-character-card
+{
+	color: #f0e9da !important;
+}
+.grimoire-index article .index-codex-text,
+.grimoire-index article .index-codex-text strong,
+.grimoire-index article .index-codex-text small,
+.grimoire-index article .index-codex-description,
+.grimoire-index article .index-codex-description *,
+.grimoire-index article .mobile-character-card strong,
+.grimoire-index article .mobile-character-card small
+{
+	color: #f0e9da !important;
+	-webkit-text-fill-color: #f0e9da !important;
+	text-shadow: none !important;
+}
+/* Dernier logo du site : respiration sous l'image. */
+.grimoire-index > img[src*="w_logo"],
+.grimoire-index > a:has(> img[src*="w_logo"])
+{
+	margin-bottom: clamp(100px,12vw,220px) !important;
+}
+.grimoire-index > img[src*="w_logo"]
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (max-width:1000px)
+{
+	.grimoire-index > header .shop_img
+	{
+		width: clamp(75px,12vw,115px) !important;
+		height: clamp(75px,12vw,115px) !important;
+	}
+	.grimoire-index > article > .vernissage-feature
+	{
+		margin-top: 84px !important;
+		margin-bottom: 240px !important;
+	}
+	.grimoire-index > article > .core,
+    .grimoire-index > article > .core_table,
+    .grimoire-index > article > .core_character,
+    .grimoire-index > article > .press-reviews-layout,
+    .grimoire-index > article > .hereliande-unified,
+    .grimoire-index > article > .lexicon-article
+	{
+		padding-left: clamp(75px,11vw,115px) !important;
+	}
+	.grimoire-index > article > .core::after,
+    .grimoire-index > article > .core_table::after,
+    .grimoire-index > article > .core_character::after,
+    .grimoire-index > article > .press-reviews-layout::after,
+    .grimoire-index > article > .hereliande-unified::after,
+    .grimoire-index > article > .lexicon-article::after
+	{
+		left: 12px;
+		width: clamp(44px,7vw,70px);
+		font-size: clamp(1.5rem,4vw,2.4rem);
+	}
+}
+@media (max-width:600px)
+{
+	.grimoire-index > header .shop
+	{
+		gap: 8px !important;
+	}
+	.grimoire-index > header .shop_img
+	{
+		width: clamp(66px,17vw,90px) !important;
+		height: clamp(66px,17vw,90px) !important;
+	}
+	.grimoire-index > article > .vernissage-feature
+	{
+		margin-top: 60px !important;
+		margin-bottom: 150px !important;
+	}
+	.grimoire-index > article > .core,
+    .grimoire-index > article > .core_table,
+    .grimoire-index > article > .core_character,
+    .grimoire-index > article > .press-reviews-layout,
+    .grimoire-index > article > .hereliande-unified,
+    .grimoire-index > article > .lexicon-article
+	{
+		padding: 64px 12px 18px !important;
+	}
+	.grimoire-index > article > .core::after,
+    .grimoire-index > article > .core_table::after,
+    .grimoire-index > article > .core_character::after,
+    .grimoire-index > article > .press-reviews-layout::after,
+    .grimoire-index > article > .hereliande-unified::after,
+    .grimoire-index > article > .lexicon-article::after
+	{
+		top: 12px;
+		left: 12px;
+		width: auto;
+		border-right: 0;
+		border-bottom: 1px solid #59462c;
+		padding: 0 14px 5px 0;
+		font-size: 2rem;
+	}
+}
+/* Harmonisation sans modifier la structure HTML d'origine. */
+.grimoire-index > article > #Hereliande
+{
+	margin-bottom: 0 !important;
+	border-bottom: 0 !important;
+	border-radius: 3px 3px 0 0 !important;
+	padding-bottom: 18px !important;
+}
+.grimoire-index > article > #Hereliande + .lexicon-article
+{
+	margin-top: 0 !important;
+	border-top: 0 !important;
+	border-radius: 0 0 3px 3px !important;
+	padding-top: 8px !important;
+}
+/* Les couvertures 1 a 3 restent des liens directs vers leurs images ; le livre 4 conserve sa page. */
+.grimoire-index > header
+{
+	min-height: 100vh;
+}
+/* Le vernissage est a l'interieur du premier .core dans le HTML d'origine. */
+.grimoire-index > article > .core:first-of-type
+{
+	background: transparent !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+}
+.grimoire-index > article > .core:first-of-type::before,.grimoire-index > article > .core:first-of-type::after
+{
+	display: none !important;
+}
+.grimoire-index > article > .core:first-of-type > .vernissage-feature
+{
+	margin: 144px 0 125px !important;
+}
+.grimoire-index > article > .core:first-of-type > .cor_tab_right
+{
+	padding: clamp(22px,4vw,48px) clamp(22px,4vw,48px) clamp(22px,4vw,48px) clamp(112px,10vw,165px) !important;
+	border: 1px solid #66502e;
+	background: linear-gradient(110deg,#111723ed,#080b11ed) !important;
+	position: relative;
+}
+.grimoire-index > article > .core:first-of-type > .cor_tab_right::before
+{
+	content: "I";
+	position: absolute;
+	top: 30px;
+	left: 25px;
+	color: #c9a65e;
+	font: normal 3rem Georgia,serif;
+}
+@media (max-width:600px)
+{
+	.grimoire-index > article > .core:first-of-type > .vernissage-feature
+	{
+		margin: 60px 0 150px !important;
+	}
+	.grimoire-index > article > .core:first-of-type > .cor_tab_right
+	{
+		padding: 64px 12px 18px !important;
+	}
+}
+/* Calendrier: fond autour transparent. */
+.grimoire-index > article > .core_table
+{
+	background: transparent !important;
+}
+/* Ajustements V4, sur la refonte 1.0 sans modifier les donnees. */
+/* Livre I : separateur de chapitre identique aux autres panneaux. */
+.grimoire-index > article > .core:first-of-type > .cor_tab_right
+{
+	border-bottom: 1px solid #806238 !important;
+	box-shadow: inset 0 -1px 0 #806238, 0 18px 40px #0007 !important;
+}
+.grimoire-index > article > .core:first-of-type > .cor_tab_right::before
+{
+	border-right: 1px solid #59462c;
+	width: clamp(72px,6.5vw,104px);
+	padding: 6px 14px 18px 0;
+	text-align: center;
+}
+/* Calendrier : restaurer le fond du panneau, conserver la table claire. */
+.grimoire-index > article > .core_table
+{
+	background: linear-gradient(110deg,#111723ed,#080b11ed) !important;
+	border: 1px solid #66502e !important;
+	box-shadow: inset 0 0 45px #000,0 18px 40px #0007 !important;
+}
+/* Descriptions des cartes personnages. */
+.grimoire-index .index-codex-description,
+.grimoire-index .index-codex-card p,
+.grimoire-index .mobile-character-card p
+{
+	text-align: justify !important;
+	text-justify: inter-word;
+}
+/* Vernissage centre et marge inferieure doublee (125px -> 250px). */
+.grimoire-index > article > .core:first-of-type > .vernissage-feature
+{
+	display: block;
+	width: min(100%,1300px);
+	margin: 144px auto 250px !important;
+}
+/* Hereliande et lexique constituent un seul chapitre, avec un seul numero. */
+.grimoire-index > article > #Hereliande
+{
+	padding-bottom: clamp(22px,4vw,48px) !important;
+}
+.grimoire-index > article > #Hereliande > .lexicon-article
+{
+	display: block;
+	width: 100% !important;
+	max-width: 100% !important;
+	margin: 22px 0 0 !important;
+	padding: 0 !important;
+	background: transparent !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	counter-increment: none !important;
+}
+.grimoire-index > article > #Hereliande > h2
+{
+	text-align: justify !important;
+	text-justify: inter-word;
+}
+@media (max-width:600px)
+{
+	.grimoire-index > article > .core:first-of-type > .vernissage-feature
+	{
+		margin: 60px auto 300px !important;
+	}
+	.grimoire-index > article > .core:first-of-type > .cor_tab_right::before
+	{
+		border-right: 0;
+		border-bottom: 1px solid #59462c;
+		width: auto;
+	}
+}
+/* Lisibilite mobile : conserver les ajustements precedents sans debordement. */
+@media (max-width: 600px)
+{
+	.grimoire-index > article
+	{
+		width: 100% !important;
+		padding-inline: 10px !important;
+	}
+	.grimoire-index > header .shop
+	{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 100%;
+	}
+	.grimoire-index > header .shop_img
+	{
+		width: clamp(54px, 16vw, 78px) !important;
+		height: clamp(54px, 16vw, 78px) !important;
+	}
+	.grimoire-index > article > .core:first-of-type > .cor_tab_right
+	{
+		padding: 64px 12px 18px !important;
+	}
+	.grimoire-index article .cor_tab_right table,
+    .grimoire-index article .core > table
+	{
+		max-width: 100%;
+	}
+	.grimoire-index article img
+	{
+		max-width: 100%;
+		height: auto;
+	}
+	.grimoire-index article .index-codex-card,
+    .grimoire-index article .index-codex-text
+	{
+		min-width: 0;
+		overflow-wrap: break-word;
+	}
+	.grimoire-index article .index-codex-description
+	{
+		text-align: justify !important;
+		hyphens: auto;
+	}
+	.grimoire-index article .calendar-2026-scene
+	{
+		max-width: 100%;
+		overflow-x: auto;
+	}
+	.grimoire-index article .calendar-2026-scene table.calendar
+	{
+		width: 100%;
+		max-width: 100%;
+		table-layout: fixed;
+	}
+	.grimoire-index article table.calendar td,
+    .grimoire-index article table.calendar th
+	{
+		overflow-wrap: anywhere;
+		word-break: normal;
+	}
+	.grimoire-index article #Hereliande > h2
+	{
+		text-align: justify !important;
+		hyphens: auto;
+	}
+	.grimoire-index article .lexicon-article,
+    .grimoire-index article .lexicon,
+    .grimoire-index article .groups
+	{
+		min-width: 0;
+		max-width: 100%;
+	}
+	.grimoire-index article .table-wrap
+	{
+		max-width: 100%;
+		overflow-x: auto;
+	}
+}
+
+/* V6 : panneau calendrier rempli, sans modifier la table blanche. */
+.grimoire-index > article > .core_table
+{
+	background: linear-gradient(110deg, #15243a 0%, #101a2c 58%, #0b1323 100%) !important;
+	border: 1px solid #806238 !important;
+	box-shadow: inset 0 0 45px #0008, 0 18px 40px #0007 !important;
+}
+.grimoire-index > article > .core_table .calendar-2026-scene
+{
+	background: linear-gradient(145deg, #24334b, #142139) !important;
+	border: 1px solid #806238 !important;
+	box-shadow: 0 8px 26px #0005 !important;
+}
+.grimoire-index > article > .core_table .calendar-2026-scene .calendar-chibi-heading h1
+{
+	color: #e3c17a !important;
+}
+/* Cartes geographiques un peu plus petites, tout en gardant le texte lisible. */
+.grimoire-index article .core img.carte
+{
+	width: 86% !important;
+	max-width: 86% !important;
+	height: auto !important;
+}
+/* Cartes de personnages legerement plus compactes. */
+.grimoire-index article .index-codex-card
+{
+	font-size: 0.96em;
+}
+@media (max-width: 600px)
+{
+	.grimoire-index article .core img.carte
+	{
+		width: 94% !important;
+		max-width: 94% !important;
+	}
+	.grimoire-index > article > .core_table .calendar-2026-scene
+	{
+		padding: 12px 8px !important;
+	}
+}
+
+/* V7 : contour orange simple pour les images des cartes geographiques. */
+.grimoire-index article .core img.carte
+{
+    border: 3px solid #d97722 !important;
+    border-radius: 0 !important;
+    box-sizing: border-box;
+}
+
+/* V8 : même encadrement que les couvertures de livres. */
+.grimoire-index article .core img.carte {
+  border: 1px solid #806238 !important;
+  border-radius: 3px !important;
+  box-shadow: 0 16px 32px #0009;
+  box-sizing: border-box;
+}
+.grimoire-index .map-lightbox-trigger { cursor: zoom-in; }
+body.map-lightbox-open { overflow: hidden; }
+.map-lightbox[hidden] { display: none !important; }
+.map-lightbox {
+  position: fixed; inset: 0; z-index: 99999;
+  display: flex; align-items: center; justify-content: center;
+  padding: 56px 18px 24px; background: rgba(0,0,0,.92);
+  box-sizing: border-box; cursor: zoom-out;
+}
+.map-lightbox__image {
+  display: block; max-width: 96%; max-height: 100%;
+  width: auto; height: auto; object-fit: contain;
+  border: 1px solid #806238; border-radius: 3px;
+  box-shadow: 0 16px 32px #0009; cursor: default;
+}
+.map-lightbox__close {
+  position: absolute; top: 8px; right: 16px; border: 0;
+  background: transparent; color: #fff; font-size: 42px;
+  line-height: 1; cursor: pointer; padding: 4px 12px;
+}
+.map-lightbox__close:focus-visible { outline: 2px solid #e3c17a; }
