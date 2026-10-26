@@ -1115,3 +1115,108 @@ body.map-lightbox-open { overflow: hidden; }
   line-height: 1; cursor: pointer; padding: 4px 12px;
 }
 .map-lightbox__close:focus-visible { outline: 2px solid #e3c17a; }
+
+
+/* V9 : ajustements exclusifs aux telephones, sans toucher aux donnees. */
+@media (max-width: 600px) {
+  /* Le logo blanc est presente dans l'image d'accueil, plus au pied de page. */
+  body.grimoire-index > header {
+    position: relative;
+    padding-bottom: 125px !important;
+  }
+  body.grimoire-index > header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(52vw, 190px);
+    height: 100px;
+    background: url("../pictures/LaGuerredelHeresie_w_logo.PNG") center / contain no-repeat;
+    pointer-events: none;
+    z-index: 2;
+  }
+  body.grimoire-index > img.hes[src*="w_logo"] {
+    display: none !important;
+  }
+  /* Numerotation du premier chapitre separee de la couverture. */
+  .grimoire-index > article > .core:first-of-type {
+    padding-top: 100px !important;
+  }
+  .grimoire-index > article > .core:first-of-type::after {
+    top: 16px !important;
+  }
+  .grimoire-index > article > .core:first-of-type .td_book,
+  .grimoire-index > article > .core:first-of-type .cor_tab_right {
+    margin-top: 16px !important;
+  }
+  /* Le champ de recherche du lexique doit rester accessible au toucher. */
+  .grimoire-index #Hereliande .toolbar,
+  .grimoire-index #Hereliande .lexicon,
+  .grimoire-index #Hereliande .lexicon-article {
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    pointer-events: auto;
+  }
+  .grimoire-index #Hereliande .toolbar {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+  }
+  .grimoire-index #Hereliande #searchInput {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    flex: 1 1 100%;
+    pointer-events: auto !important;
+    touch-action: manipulation;
+    -webkit-user-select: text;
+    user-select: text;
+  }
+  .grimoire-index #Hereliande .show-all {
+    min-height: 44px;
+    pointer-events: auto !important;
+  }
+  /* La rubrique Auteur suffit : garder le titre Biographie dans le HTML. */
+  .grimoire-index #quentin-nater { display: none !important; }
+  /* Laisser respirer les references bibliographiques. */
+  .grimoire-index > article h2:has(+ h2) { overflow-wrap: anywhere; }
+  .grimoire-index > article h2.isbn-asin-mobile { margin-inline: 16px !important; }
+  /* Masquer uniquement les logos des plateformes dans la section Avis. */
+  .grimoire-index img.avis-platform-logo { display: none !important; }
+}
+
+/* V10 : les logos des magasins sont integres a l'image d'accueil sur mobile. */
+@media (max-width:600px) {
+  body.grimoire-index > header { padding-bottom: 0 !important; }
+  body.grimoire-index > header::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+    background: linear-gradient(to bottom, transparent 0%, rgba(5,7,12,.05) 45%, rgba(5,7,12,.8) 100%) !important;
+    pointer-events: none;
+    z-index: -1 !important;
+  }
+  body.grimoire-index > img.hes[src*="w_logo"] { display: block !important; }
+  .grimoire-index > header .shop {
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 28px !important;
+    transform: translateX(-50%) !important;
+    z-index: 3 !important;
+    width: min(94%, 480px) !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+  /* Les lignes masquees par le filtre ne doivent pas reapparaitre via les styles externes. */
+  .grimoire-index #lexiconGroups .group[hidden],
+  .grimoire-index #lexiconGroups tbody tr[hidden] { display: none !important; }
+}
