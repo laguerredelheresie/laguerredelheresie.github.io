@@ -80,7 +80,7 @@
       object-fit: cover;
       }
       .lore.book-card-chapter .codex-card-text { width: 100%; }
-      /* The Doimh Neacht map is deliberately shown in full, like the Grimoire. */
+      /* Show the Doimh Neacht and Ween maps in full, like the Grimoire. */
       .lore.book-card-chapter .codex-card[href="doimh_neacht.html"] .codex-card-image {
       background: #fff !important;
       display: flex !important;
@@ -90,6 +90,19 @@
       .lore.book-card-chapter .codex-card[href="doimh_neacht.html"] .codex-card-image img {
       object-fit: contain !important;
       object-position: center !important;
+      }
+      /* Ween: original map, fully visible on a white card background. */
+      .lore.book-card-chapter .codex-card[href="ween.html"] .codex-card-image {
+        background: #fff !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      .lore.book-card-chapter .codex-card[href="ween.html"] .codex-card-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        object-position: center !important;
       }
       @media (max-width: 900px) {
       .lore.book-card-chapter .codex-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -403,14 +416,14 @@
               <strong>Doimh Neacht</strong>
             </div>
             </a>
-            <div class="codex-card codex-card--static">
+            <a class="codex-card" href="ween.html">
               <div class="codex-card-image">
-                <img alt="Carte : Ween" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
+                <img alt="Carte : Ween" decoding="async" loading="lazy" src="../pictures/Ween_LaGuerreDeLHeresie_QuentinNater.jpg"/>
               </div>
               <div class="codex-card-text">
                 <strong>Ween</strong>
               </div>
-            </div>
+            </a>
             <div class="codex-card codex-card--static">
               <div class="codex-card-image">
                 <img alt="Carte : Freea" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
