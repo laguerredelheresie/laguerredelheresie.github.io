@@ -1397,3 +1397,79 @@ body.map-lightbox-open { overflow: hidden; }
         margin-inline: auto !important;
     }
 }
+
+/* V13 : uniquement sur mobile, aucune modification du contenu. */
+@media (max-width: 600px)
+{
+    /* Boutiques : un peu plus grandes, ancrees au bas de la hauteur visible. */
+    body.grimoire-index > header .shop
+    {
+        bottom: max(12px, env(safe-area-inset-bottom)) !important;
+        width: min(96%, 460px) !important;
+        gap: 2px !important;
+        padding: 8px 2px !important;
+    }
+    body.grimoire-index > header .shop a
+    {
+        flex: 0 1 16% !important;
+    }
+    body.grimoire-index > header .shop_img
+    {
+        width: clamp(42px, 12.8vw, 64px) !important;
+        height: clamp(42px, 12.8vw, 64px) !important;
+    }
+    /* Vernissage extrait du premier panneau par le script, avant le chapitre I. */
+    body.grimoire-index > article > .vernissage-feature
+    {
+        display: block !important;
+        width: 100% !important;
+        margin: 28px auto 28px !important;
+        padding: 16px 10px !important;
+        box-sizing: border-box !important;
+    }
+    body.grimoire-index > article > .core:first-of-type > .cor_tab_right
+    {
+        margin-top: 0 !important;
+        padding-top: 90px !important;
+    }
+    /* Espacement coherent entre les panneaux, dont le premier livre. */
+    body.grimoire-index > article > .core,
+    body.grimoire-index > article > .core_table,
+    body.grimoire-index > article > .core_character,
+    body.grimoire-index > article > .press-reviews-layout
+    {
+        margin-top: 28px !important;
+        margin-bottom: 28px !important;
+    }
+    body.grimoire-index > article > hr
+    {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    /* Au repos, aucune table n'est deployee ; recherche sur toutes les categories. */
+    body.grimoire-index #lexiconGroups.mobile-lexicon-idle > .group,
+    body.grimoire-index #lexiconGroups .group[hidden],
+    body.grimoire-index #lexiconGroups tbody tr[hidden]
+    {
+        display: none !important;
+    }
+    body.grimoire-index #lexiconGroups.mobile-search-active .group:not([hidden]) .table-wrap
+    {
+        display: block !important;
+        height: auto !important;
+        max-height: none !important;
+        visibility: visible !important;
+    }
+    /* Avis masques, Contribution visible : meme classe d'image, contexte different. */
+    body.grimoire-index .reviews-section img.avis-platform-logo
+    {
+        display: none !important;
+    }
+    body.grimoire-index > article > .core:has(> h1.title_character) a > img.avis-platform-logo
+    {
+        display: block !important;
+        width: min(250px, 85%) !important;
+        height: auto !important;
+        margin: 10px auto !important;
+    }
+}
