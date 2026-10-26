@@ -1405,5 +1405,54 @@
         filter();
       });
     </script>
+
+    <script>
+      /* V11 : filtrage autonome seulement sur telephone, y compris en vue reduite. */
+      (function () {
+        const mobile = window.matchMedia('(max-width: 600px)');
+        function init() {
+          const input = document.getElementById('searchInput');
+          const container = document.getElementById('lexiconGroups');
+          if (!input || !container) return;
+          const norm = value => (value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase().trim();
+          const apply = () => {
+            if (!mobile.matches) return;
+            const q = norm(input.value);
+            container.querySelectorAll('.group').forEach(group => {
+              const category = norm(group.getAttribute('data-category') || group.querySelector('.group-title')?.textContent);
+              let visible = 0;
+              group.querySelectorAll('tbody tr').forEach(row => {
+                const show = !q || category.includes(q) || norm(row.textContent).includes(q);
+                row.hidden = !show;
+                row.style.setProperty('display', show ? 'table-row' : 'none', 'important');
+                if (show) visible++;
+              });
+              group.hidden = !visible;
+              group.style.setProperty('display', visible ? 'block' : 'none', 'important');
+              if (visible && q) {
+                group.removeAttribute('aria-hidden');
+                const table = group.querySelector('.table-wrap');
+                if (table) { table.hidden = false; table.style.setProperty('display', 'block', 'important'); }
+              }
+            });
+          };
+          ['input', 'search', 'change', 'keyup'].forEach(type => input.addEventListener(type, () => {
+            apply();
+            requestAnimationFrame(apply);
+          }, true));
+          ['showAllLexicon', 'showAllLexiconBottom'].forEach(id => {
+            const button = document.getElementById(id);
+            if (button) button.addEventListener('click', () => {
+              input.value = '';
+              requestAnimationFrame(apply);
+            });
+          });
+          mobile.addEventListener?.('change', apply);
+          apply();
+        }
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+        else init();
+      })();
+    </script>
 </body>
 </html>
