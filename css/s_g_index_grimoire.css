@@ -1862,3 +1862,61 @@ body.map-lightbox-open { overflow: hidden; }
         margin-top: 20px !important;
     }
 }
+
+/* V20 : corrections structurelles des intervalles, mobile exclusivement. */
+@media screen and (max-width: 600px)
+{
+    /* Doubler exactement les marges du vernissage de V19 (78 -> 156). */
+    body.grimoire-index > article > section#vernissage.vernissage-feature
+    {
+        margin-top: 156px !important;
+        margin-bottom: 156px !important;
+    }
+
+    /* Les separateurs HR intercalaires ne doivent pas creer un faux intervalle. */
+    body.grimoire-index > article > div.core_character:has(> h1#personnages) + br,
+    body.grimoire-index > article > div.core_character:has(> h1#personnages) + br + hr,
+    body.grimoire-index > article > div#Hereliande + script + hr,
+    body.grimoire-index > article > div.core:has(> h1#auteur) + hr
+    {
+        display: none !important;
+        margin: 0 !important;
+    }
+
+    /* VI -> VII : la meme distance reelle que les autres chapitres. */
+    body.grimoire-index > article > div.core_character:has(> h1#personnages)
+    {
+        margin-bottom: 32px !important;
+    }
+    body.grimoire-index > article > div.core:has(> h1#carte)
+    {
+        margin-top: 32px !important;
+    }
+
+    /* VIII -> IX : le script est un frere du lexique, pas un enfant. */
+    body.grimoire-index > article > div#Hereliande.core_character
+    {
+        margin-bottom: 32px !important;
+    }
+    body.grimoire-index > article > div.core:has(> h1#auteur)
+    {
+        margin-top: 32px !important;
+        margin-bottom: 32px !important;
+    }
+
+    /* IX -> X : X est un conteneur press-reviews-layout, pas un .core. */
+    body.grimoire-index > article > div.press-reviews-layout
+    {
+        margin-top: 32px !important;
+    }
+
+    /* Note de calendrier : texte normal, plus de rouge, lien conserve. */
+    body.grimoire-index .calendar-2026-scene p.calendar-footnote,
+    body.grimoire-index .calendar-2026-scene p.calendar-footnote i
+    {
+        color: #f0e9da !important;
+        -webkit-text-fill-color: #f0e9da !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+    }
+}
