@@ -1711,3 +1711,89 @@ body.map-lightbox-open { overflow: hidden; }
         height: 60px !important;
     }
 }
+
+/* V18: correctifs de geometrie UNIQUEMENT sur mobile. */
+@media screen and (max-width: 600px)
+{
+    /* Les six boutiques tiennent a l'interieur du bord de l'entete. */
+    body.grimoire-index > header > div.shop
+    {
+        position: absolute !important;
+        top: auto !important;
+        bottom: max(22px, env(safe-area-inset-bottom)) !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: calc(100% - 52px) !important;
+        max-width: 350px !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        padding: 6px 4px !important;
+        margin: 0 !important;
+        gap: 3px !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        overflow: hidden !important;
+    }
+    body.grimoire-index > header > div.shop > a
+    {
+        display: flex !important;
+        flex: 0 1 calc((100% - 15px) / 6) !important;
+        min-width: 0 !important;
+        max-width: calc((100% - 15px) / 6) !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    body.grimoire-index > header > div.shop > a > img.shop_img
+    {
+        display: block !important;
+        width: 100% !important;
+        max-width: 46px !important;
+        height: auto !important;
+        max-height: 46px !important;
+        aspect-ratio: 1 / 1 !important;
+        object-fit: contain !important;
+    }
+    /* Le vernissage est autonome et separe du chapitre I. */
+    body.grimoire-index > article > section#vernissage.vernissage-feature
+    {
+        display: block !important;
+        width: calc(100% - 40px) !important;
+        max-width: 480px !important;
+        margin: 58px auto 58px !important;
+        border: 1px solid #66502e !important;
+        box-sizing: border-box !important;
+        clear: both !important;
+    }
+    body.grimoire-index > article > section#vernissage.vernissage-feature + div.core
+    {
+        margin-top: 0 !important;
+    }
+    /* Le chiffre I reste lisible, avec moins de vide avant la couverture. */
+    body.grimoire-index > article > div.core:first-of-type
+    {
+        padding-top: 46px !important;
+    }
+    body.grimoire-index > article > div.core:first-of-type > div.cor_tab_right
+    {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+    /* Transition VIII -> IX : ecart visible apres le lexique. */
+    body.grimoire-index > article > div#Hereliande.core_character
+    {
+        margin-bottom: 42px !important;
+    }
+    body.grimoire-index > article > div#Hereliande.core_character + hr
+    {
+        display: block !important;
+        margin-top: 18px !important;
+        margin-bottom: 32px !important;
+    }
+    body.grimoire-index > article > div#Hereliande.core_character ~ div.core:has(> h1#auteur)
+    {
+        margin-top: 42px !important;
+    }
+}
