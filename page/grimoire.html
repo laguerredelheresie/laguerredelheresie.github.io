@@ -12,6 +12,9 @@
 /* Preserve the entire map image without cropping; blank space remains white. */
 .codex-card[href="doimh_neacht.html"] .codex-card-image { background: #fff !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: hidden !important; }
 .codex-card[href="doimh_neacht.html"] .codex-card-image img { width: 100% !important; height: 100% !important; max-width: 100% !important; object-fit: contain !important; object-position: center !important; }
+/* Ween: full-width image with white space where the image does not fill the card. */
+.codex-card[href="ween.html"] .codex-card-image { background: #fff !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: hidden !important; }
+.codex-card[href="ween.html"] .codex-card-image img { width: 100% !important; height: 100% !important; max-width: 100% !important; object-fit: contain !important; object-position: center !important; }
 /* Keep the long grimoire heading inside narrow mobile viewports. */
 @media screen and (max-width: 700px) {
   .characters-simple > h1 { white-space:normal !important; overflow-wrap:break-word; max-width:100%; font-size:clamp(1.45rem, 6vw, 2.1rem) !important; line-height:1.15; }
@@ -179,10 +182,20 @@
             </div>
             <div class="codex-card-text">
               <strong>Doimh Neacht</strong>
-              <small>Planète du Tracé des Mondes</small>
+              <small>Planète des Sables Tracé des Mondes</small>
+            </div>
+          </a>
+          <a class="codex-card" href="ween.html">
+            <div class="codex-card-image">
+              <img alt="Ween" loading="lazy" src="../pictures/Ween_LaGuerreDeLHeresie_QuentinNater.jpg"/>
+            </div>
+            <div class="codex-card-text">
+              <strong>Ween</strong>
+              <small>Planète minière du Tracé des Mondes</small>
             </div>
           </a>
         </div>
+
       </section>
       <!-- LIVRES ET CHAPITRES -->
       <section class="characters-simple" id="livres-chapitres">
