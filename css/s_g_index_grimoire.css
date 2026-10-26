@@ -1473,3 +1473,51 @@ body.map-lightbox-open { overflow: hidden; }
         margin: 10px auto !important;
     }
 }
+
+/* V14 : corrections limitees a la presentation mobile. */
+@media (max-width: 600px)
+{
+    /* VI -> VII : retirer les espacements cumules entre personnages et cartes. */
+    body.grimoire-index > article > .core_character:has(.characters-more-desktop)
+    {
+        margin-bottom: 12px !important;
+        padding-bottom: 12px !important;
+    }
+    body.grimoire-index > article > .core_character:has(.characters-more-desktop) + br
+    {
+        display: none !important;
+    }
+    body.grimoire-index > article > .core_character:has(.characters-more-desktop) + br + hr
+    {
+        margin-top: 8px !important;
+        margin-bottom: 8px !important;
+    }
+    body.grimoire-index > article > .core:has(> h1#carte)
+    {
+        margin-top: 12px !important;
+    }
+    /* VIII : afficher uniquement ADJECTIFS au chargement, puis filtrer toutes les categories. */
+    body.grimoire-index #lexiconGroups.mobile-lexicon-idle > .group:first-child
+    {
+        display: block !important;
+        visibility: visible !important;
+    }
+    body.grimoire-index #lexiconGroups.mobile-lexicon-idle > .group:first-child .table-wrap
+    {
+        display: block !important;
+        height: auto !important;
+        max-height: none !important;
+        visibility: visible !important;
+    }
+    /* XI : centrer les liens et les images de contribution sans affecter Avis. */
+    body.grimoire-index > article > .core:has(> a[href*="/auteur/Quentin-Nater/628198/critiques"]) > a,
+    body.grimoire-index > article > .core:has(> a[href*="/auteur/Quentin-Nater/628198/critiques"]) > a > img
+    {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    body.grimoire-index > article > .core:has(> a[href*="/auteur/Quentin-Nater/628198/critiques"]) > a > img
+    {
+        display: block !important;
+    }
+}

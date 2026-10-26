@@ -1398,7 +1398,7 @@
                 row.style.setProperty('display', match ? 'table-row' : 'none', 'important');
                 if (match) count++;
               });
-              const visible = active && count > 0;
+              const visible = (active && count > 0) || (!active && group === groups[0]);
               group.hidden = !visible;
               group.style.setProperty('display', visible ? 'block' : 'none', 'important');
               const wrap = group.querySelector('.table-wrap');
