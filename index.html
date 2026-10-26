@@ -307,6 +307,16 @@
   ]
 }
         </script>
+        <style>
+            /* Calendriers historiques masqués uniquement sur mobile. */
+            @media screen and (max-width: 600px)
+            {
+                body.grimoire-index .core_table > details.year-toggle
+                {
+                    display: none !important;
+                }
+            }
+        </style>
 </head>
 
 	<!--
@@ -820,7 +830,7 @@
             <h1 class="characters-more-mobile s-g-index-inline-11">... <a href="page/grimoire.html">ouvrir le grimoire</a></h1>
             <a href="https://laguerredelheresie.fandom.com/fr/wiki/Lexiques_des_noms" ><img src="pictures/Wiki_LaGuerreDeLHeresie_QR.PNG" alt="La guerre de l'hérésie - wiki" #WikiLaGuerreDeLHeresie width="14%" /></a>
 
-        </div><br></br>
+        </div>
 
         <hr>
 
@@ -852,15 +862,15 @@
                     <td class="td_book"><a href="pictures/DoimhNeacht_LaGuerreDeLHeresie_QuentinNater.jpg" class="map-lightbox-trigger" aria-label="Agrandir la carte" data-map-full="pictures/DoimhNeacht_LaGuerreDeLHeresie_QuentinNater.jpg"><img #="Doimh Neacht La Guerre de l'Hérésie Map" #doimhneachtlaguerredelheresie="" alt="Doimh Neacht La Guerre De l'Heresie Carte" class="carte" src="pictures/DoimhNeacht_LaGuerreDeLHeresie_QuentinNater.jpg"/></a></td>
                     <td><h1 #="Doimh Neacht" class="inv_mob"><a class="map-title-link" href="page/doimh_neacht.html">Doimh Neacht</a></h1>
                         <h2 class="inv_mob">Territoire désertique des doimhiens, <span #="Doimh Neacht la guerre de l'hérésie" #kroyven="">Doimh Neacht,</span> est un monde empli de mystère sous le règne de Dame Sillia.</h2>
-                        <p class="map-page-link"><a href="page/doimh_neacht.html">Découvrir la page de Doimh Neacht</a></p>
-                            <h4>(illustration : <a href="https://saintgenezjudicael.carrd.co/">Judicaël Saint-Genez</a> - <a href="https://www.instagram.com/judas.art/">Instagram</a>)</h4></td>
+                        <p class="map-page-link"><a href="page/doimh_neacht.html">Découvrir Doimh Neacht</a></p>
+                            <h4>(illustration : <a href="https://saintgenezjudicael.carrd.co/">Judicaël Saint-Genez</a>)</h4></td>
                 </tr>
                 <tr>
                     <td class="td_book"><a href="pictures/Ween_LaGuerreDeLHeresie_QuentinNater.jpg" class="map-lightbox-trigger" aria-label="Agrandir la carte" data-map-full="pictures/Ween_LaGuerreDeLHeresie_QuentinNater.jpg"><img alt="Ween, planète minière du Tracé des Mondes" class="carte" src="pictures/Ween_LaGuerreDeLHeresie_QuentinNater.jpg"/></a></td>
                     <td><h1 class="inv_mob"><a class="map-title-link" href="page/ween.html">Ween</a></h1>
                         <h2 class="inv_mob">Planète minière des Ruaals, Ween abrite la Forêt d’Yrabilis, une immense forêt souterraine de champignons luminescents. Sa capitale, Wvil es Ween, est occupée par les armées de la Mort.</h2>
-                            <p class="map-page-link"><a href="page/ween.html">Découvrir la page de Ween</a></p>
-                                <h4>(illustration : <a href="https://saintgenezjudicael.carrd.co/">Judicaël Saint-Genez</a> - <a href="https://www.instagram.com/judas.art/">Instagram</a>)</h4></td>
+                            <p class="map-page-link"><a href="page/ween.html">Découvrir Ween</a></p>
+                                <h4>(illustration : <a href="https://saintgenezjudicael.carrd.co/">Judicaël Saint-Genez</a>)</h4></td>
                     </td>
 
                 </tr>
@@ -1161,7 +1171,7 @@
         <hr>
 
 
-        <div class='core' >
+        <div class='core_character' >
             <h1 #="La Guerre de l'heresie : Auteur" #LaGuerreDeLHeresieLesAuteur class='title_character' id='auteur' >L'Auteur</h1>
 
             <table>
@@ -1205,15 +1215,18 @@
 
         <hr>
 
-        <div class='press-reviews-layout'>
-        <div class='core journal-section' >
-            <h1 #="La Guerre de l'heresie : Journal" #LaGuerreDeLHeresieJournal class='title_character' id='journal' >Journal</h1>
-                    <h4 #JournalFullyQuentinNater #='Quentin Nater Fully Journal' id='fully' >Journal de Fully 2023 - Livre 1</h4>
-                    <a href='https://www.journaldefully.ch/wp-content/uploads/2023/02/Journal-317.pdf' >Lien de l'article</a><br></br>
-                    <br></br>
-                    <h4 #JournalFullyQuentinNater #='Quentin Nater Fully Journal' id='fully' >Journal de Fully 2024 - Livre 2</h4>
-                    <a href='https://www.journaldefully.ch/wp-content/uploads/2024/06/Journal-329.pdf' >Lien de l'article</a><br></br>
-                    <a href='pictures/journal_fully_quentin_nater_laguerredelheresie.PNG' ><img src='pictures/journal_fully_quentin_nater_laguerredelheresie.JPG' alt="Journal de Fully La Guerre de l'Hérésie livre 2 - Quentin Nater" #="Quentin Nater Fully La Guerre de l'Hérésie journal" class='book_cover' width="16%" /></a>
+        <div  class='core_character' >
+            <div class='press-reviews-layout'>
+                <div class='core journal-section' >
+                    <h1 #="La Guerre de l'heresie : Journal" #LaGuerreDeLHeresieJournal class='title_character' id='journal' >Journal</h1>
+                            <h4 #JournalFullyQuentinNater #='Quentin Nater Fully Journal' id='fully' >Journal de Fully 2023 - Livre 1</h4>
+                            <a href='https://www.journaldefully.ch/wp-content/uploads/2023/02/Journal-317.pdf' >Lien de l'article</a><br></br>
+                            <br></br>
+                            <h4 #JournalFullyQuentinNater #='Quentin Nater Fully Journal' id='fully' >Journal de Fully 2024 - Livre 2</h4>
+                            <a href='https://www.journaldefully.ch/wp-content/uploads/2024/06/Journal-329.pdf' >Lien de l'article</a><br></br>
+                            <a href='pictures/journal_fully_quentin_nater_laguerredelheresie.PNG' ><img src='pictures/journal_fully_quentin_nater_laguerredelheresie.JPG' alt="Journal de Fully La Guerre de l'Hérésie livre 2 - Quentin Nater" #="Quentin Nater Fully La Guerre de l'Hérésie journal" class='book_cover' width="16%" /></a>
+                </div>
+            </div>
         </div>
 
         <hr>
@@ -1230,6 +1243,7 @@
 
             </div>
         </div>
+
         <hr>
 
         <div class='core'>
@@ -1243,7 +1257,6 @@
             <br></br>
 
         </div>
-
 
         <hr>
 

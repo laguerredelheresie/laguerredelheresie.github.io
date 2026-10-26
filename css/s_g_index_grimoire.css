@@ -1919,4 +1919,13 @@ body.map-lightbox-open { overflow: hidden; }
         font-style: normal !important;
         font-weight: 400 !important;
     }
+
 }
+
+/* Masquer les calendriers 2024 et 2025 sur mobile uniquement */
+@media screen and (max-width: 600px) {
+    body.grimoire-index .core_table > details.year-toggle {
+        display: none !important;
+    }
+}
+
