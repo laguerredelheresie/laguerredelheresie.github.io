@@ -1571,3 +1571,61 @@ body.map-lightbox-open { overflow: hidden; }
         float: none !important;
     }
 }
+
+/* V16 : corrections de placement exclusivement sur mobile. */
+@media (max-width: 600px)
+{
+    /* Le vernissage est un panneau autonome, moins large que le chapitre I. */
+    body.grimoire-index > article > section.vernissage-feature
+    {
+        display: block !important;
+        position: relative !important;
+        width: 92% !important;
+        max-width: 92% !important;
+        box-sizing: border-box !important;
+        margin: 16px auto 18px !important;
+        padding: 12px 10px !important;
+        float: none !important;
+        clear: both !important;
+    }
+    /* Le premier .core ne dessine pas de cadre autour du vernissage. */
+    body.grimoire-index > article > .core:first-of-type
+    {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 auto 24px !important;
+    }
+    /* Le cadre du livre I commence directement au livre, sans vide artificiel. */
+    body.grimoire-index > article > .core:first-of-type > .cor_tab_right
+    {
+        margin: 0 !important;
+        padding: 64px 12px 18px !important;
+        background: linear-gradient(110deg, #111723ed, #080b11ed) !important;
+        border: 1px solid #66502e !important;
+        box-sizing: border-box !important;
+    }
+    /* Contribution XI : chaque lien est centre, y compris FNAC et Amazon. */
+    body.grimoire-index > article > .core:has(> a[href*="/auteur/Quentin-Nater/628198/critiques"]) > a[href*="fnac.com/ia10677023"],
+    body.grimoire-index > article > .core:has(> a[href*="/auteur/Quentin-Nater/628198/critiques"]) > a[href*="amazon.fr/Quentin-NATER"]
+    {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 8px auto !important;
+        float: none !important;
+        text-align: center !important;
+    }
+    body.grimoire-index > article > .core:has(> a[href*="/auteur/Quentin-Nater/628198/critiques"]) > a[href*="fnac.com/ia10677023"] > img,
+    body.grimoire-index > article > .core:has(> a[href*="/auteur/Quentin-Nater/628198/critiques"]) > a[href*="amazon.fr/Quentin-NATER"] > img
+    {
+        display: block !important;
+        float: none !important;
+        margin: 0 auto !important;
+        width: 60px !important;
+        height: 60px !important;
+        object-fit: contain !important;
+    }
+}
