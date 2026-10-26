@@ -1521,3 +1521,53 @@ body.map-lightbox-open { overflow: hidden; }
         display: block !important;
     }
 }
+
+/* V15 : ajustements exclusivement mobiles, sans alteration du contenu. */
+@media (max-width: 600px)
+{
+    /* Vernissage independant, plus etroit que le panneau du chapitre I. */
+    body.grimoire-index > article > .vernissage-feature
+    {
+        width: calc(100% - 32px) !important;
+        max-width: calc(100% - 32px) !important;
+        margin: 18px auto 22px !important;
+        padding: 12px 10px !important;
+        border-radius: 12px !important;
+    }
+    /* Le premier cadre commence au chapitre I, jamais au vernissage. */
+    body.grimoire-index > article > .core:first-of-type
+    {
+        background: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-top: 0 !important;
+    }
+    body.grimoire-index > article > .core:first-of-type::before,
+    body.grimoire-index > article > .core:first-of-type::after
+    {
+        display: none !important;
+    }
+    body.grimoire-index > article > .core:first-of-type > .cor_tab_right
+    {
+        margin-top: 0 !important;
+        padding-top: 90px !important;
+        border: 1px solid #66502e !important;
+    }
+    /* Contribution XI : centrer individuellement les quatre logos. */
+    body.grimoire-index > article > .core:has(> a[href*="booknode.com/auteur/quentin-nater/commentaires-sur-ses-livres"]) > a[href*="fnac.com/ia10677023"],
+    body.grimoire-index > article > .core:has(> a[href*="booknode.com/auteur/quentin-nater/commentaires-sur-ses-livres"]) > a[href*="amazon.fr/Quentin-NATER"]
+    {
+        display: block !important;
+        width: fit-content !important;
+        margin: 10px auto !important;
+        text-align: center !important;
+    }
+    body.grimoire-index > article > .core:has(> a[href*="booknode.com/auteur/quentin-nater/commentaires-sur-ses-livres"]) > a[href*="fnac.com/ia10677023"] > img,
+    body.grimoire-index > article > .core:has(> a[href*="booknode.com/auteur/quentin-nater/commentaires-sur-ses-livres"]) > a[href*="amazon.fr/Quentin-NATER"] > img
+    {
+        display: block !important;
+        margin: 0 auto !important;
+        float: none !important;
+    }
+}
