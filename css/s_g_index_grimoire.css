@@ -1919,13 +1919,157 @@ body.map-lightbox-open { overflow: hidden; }
         font-style: normal !important;
         font-weight: 400 !important;
     }
-
 }
 
-/* Masquer les calendriers 2024 et 2025 sur mobile uniquement */
-@media screen and (max-width: 600px) {
-    body.grimoire-index .core_table > details.year-toggle {
-        display: none !important;
+/* V21 : ajustements reserves a la version ordinateur. */
+@media screen and (min-width: 601px) {
+    /* Note du calendrier : rouge conserve, typographie reguliere. */
+    body.grimoire-index .calendar-2026-scene p.calendar-footnote,
+    body.grimoire-index .calendar-2026-scene p.calendar-footnote i {
+        font-style: normal !important;
+        font-weight: 400 !important;
+    }
+
+    /* Biographie : justifier le texte, sans modifier les autres rubriques. */
+    body.grimoire-index > article > .core:has(> h1#auteur) #quentin-nater + h2 {
+        text-align: justify !important;
+        text-justify: inter-word;
+    }
+
+    /* Chapitres X et XI : deux panneaux cote a cote, chacun sur 50 %. */
+    body.grimoire-index > article {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+        column-gap: 20px !important;
+        align-items: stretch;
+    }
+    body.grimoire-index > article > * { grid-column: 1 / -1; min-width: 0; }
+    body.grimoire-index > article > .press-reviews-layout {
+        grid-column: 1 !important;
+        grid-row: auto;
+        width: 100% !important;
+        margin-top: 28px !important;
+        margin-bottom: 28px !important;
+        padding-left: 85px !important;
+    }
+    body.grimoire-index > article > .press-reviews-layout + hr { display: none !important; }
+    body.grimoire-index > article > .core:has(> h1.title_character:first-child):has(> a[href*="fnac.com/ia10677023"]) {
+        grid-column: 2 !important;
+        width: 100% !important;
+        margin-top: 28px !important;
+        margin-bottom: 28px !important;
+        padding-left: 85px !important;
+    }
+    body.grimoire-index > article > .press-reviews-layout::after,
+    body.grimoire-index > article > .core:has(> a[href*="fnac.com/ia10677023"])::after {
+        left: 14px !important;
+        width: 52px !important;
+        font-size: 2.5rem !important;
     }
 }
 
+/* V22 : largeur du contenu principal reduite de 20 % sur ordinateur uniquement. */
+@media screen and (min-width: 601px) {
+    body.grimoire-index > article {
+        width: 80% !important;
+        max-width: 1008px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* V23 : corrections ordinateur uniquement, mobile inchange. */
+@media screen and (min-width: 601px) {
+    /* +10 points de largeur par rapport a V22 : 5 % de chaque cote. */
+    body.grimoire-index > article {
+        width: 90% !important;
+        max-width: 1134px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Note du calendrier : couleur normale et lisible, y compris le lien. */
+    body.grimoire-index .calendar-2026-scene p.calendar-footnote,
+    body.grimoire-index .calendar-2026-scene p.calendar-footnote i,
+    body.grimoire-index .calendar-2026-scene p.calendar-footnote a {
+        color: #30271e !important;
+        -webkit-text-fill-color: #30271e !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+    }
+
+    /* Texte de biographie : alignement justifie, sans centrer les lignes. */
+    body.grimoire-index > article > div.core:has(> h1#auteur)
+        td.td_txt > h1#quentin-nater + h2 {
+        text-align: justify !important;
+        text-align-last: left !important;
+        text-justify: inter-word !important;
+    }
+}
+
+/* V24 : ajustements sur ordinateur uniquement (mobile conserve). */
+@media screen and (min-width: 601px) {
+    /* +10 points de largeur : 90 % -> 100 %, avec plafond 1134 -> 1260 px. */
+    body.grimoire-index > article {
+        width: 100% !important;
+        max-width: 1260px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Couleur parchemin du theme, ni rouge ni noir. */
+    body.grimoire-index .calendar-2026-scene p.calendar-footnote,
+    body.grimoire-index .calendar-2026-scene p.calendar-footnote i,
+    body.grimoire-index .calendar-2026-scene p.calendar-footnote a {
+        color: #705034 !important;
+        -webkit-text-fill-color: #705034 !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+    }
+
+    /* X (Journal / Avis) et XI : memes largeur et marges que les autres chapitres. */
+    body.grimoire-index > article > .press-reviews-layout,
+    body.grimoire-index > article > .press-reviews-layout + hr + .core {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 28px auto !important;
+        padding-left: clamp(112px, 10vw, 165px) !important;
+    }
+    body.grimoire-index > article > .press-reviews-layout::after,
+    body.grimoire-index > article > .press-reviews-layout + hr + .core::after {
+        left: clamp(16px, 2.5vw, 40px) !important;
+        width: clamp(72px, 6.5vw, 104px) !important;
+        font-size: clamp(2.3rem, 4vw, 3.7rem) !important;
+    }
+}
+
+/* V25 : +10 % de largeur maximale sur ordinateur, sans debordement horizontal. */
+@media screen and (min-width: 601px) {
+    body.grimoire-index > article {
+        width: 100% !important;
+        max-width: 1386px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* V26 : +10 % de largeur maximale sur ordinateur (1386 -> 1525 px). */
+@media screen and (min-width: 601px) {
+    body.grimoire-index > article {
+        width: 100% !important;
+        max-width: 1525px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* V27 : +10 % de largeur maximale sur ordinateur (1525 -> 1678 px). */
+@media screen and (min-width: 601px) {
+    body.grimoire-index > article {
+        width: 100% !important;
+        max-width: 1678px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
