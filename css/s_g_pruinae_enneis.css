@@ -1,0 +1,23 @@
+
+
+/* Extracted from page/pruinae_enneis.html */
+
+.wallpaper-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px 0}
+.wallpaper-thumb{min-width:0;padding:10px;border:1px solid rgba(185,153,99,.65);border-radius:10px;background:rgba(125,100,64,.08);color:inherit;cursor:pointer;font:inherit;text-align:center;transition:border-color .2s,transform .2s}
+.wallpaper-thumb:hover,.wallpaper-thumb:focus-visible{border-color:#c5a46d;transform:translateY(-2px)}
+.wallpaper-thumb img{display:block;width:100%;height:230px;object-fit:contain;border-radius:5px}
+.wallpaper-thumb span{display:block;margin-top:10px;font-size:.9rem}
+.wallpaper-copyright{font-size:.85rem;opacity:.8;margin-top:15px}
+.wallpaper-lightbox[hidden]{display:none}
+.wallpaper-lightbox{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:55px 18px 20px;background:rgba(5,7,14,.96)}
+.wallpaper-full{max-width:100%;max-height:calc(100dvh - 120px);object-fit:contain}
+.wallpaper-close{position:absolute;top:10px;right:20px;background:none;border:0;color:white;font-size:2.5rem;cursor:pointer}
+.wallpaper-hint{color:#eee;text-align:center;font-size:.8rem}
+@media(max-width:600px){.wallpaper-gallery{gap:10px}.wallpaper-thumb{padding:6px}.wallpaper-thumb img{height:170px}.wallpaper-thumb span{font-size:.75rem}}
+
+/* Pruinae chibi accompanies the archive links without obscuring them. */
+.portal-with-chibi{position:relative;isolation:isolate;padding-bottom:185px}
+.portal-with-chibi .portal-chibi{position:absolute;right:clamp(12px,5%,65px);bottom:-12px;width:clamp(175px,25vw,270px);height:auto;object-fit:contain;pointer-events:none;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25));z-index:1;transition:transform .25s ease}
+.portal-with-chibi:hover .portal-chibi{transform:translateY(-5px) rotate(2deg)}
+@media(max-width:600px){.portal-with-chibi{padding-bottom:155px}.portal-with-chibi .portal-chibi{width:165px;right:12px;bottom:-8px}}
+

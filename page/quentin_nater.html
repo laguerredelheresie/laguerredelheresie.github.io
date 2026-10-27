@@ -1,340 +1,231 @@
 <!DOCTYPE html>
 <html lang="fr">
-<!-- SEO AND SOCIAL METADATA -->
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <title>Quentin Nater, auteur de La Guerre de l’Hérésie</title>
-    <meta content="Découvrez Quentin Nater, auteur suisse de La Guerre de l’Hérésie : biographie, parcours, romans, interviews et liens officiels." name="description">
-    <meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots">
-    <meta content="Quentin Nater" name="author">
-    <link href="https://laguerredelheresie.com/page/quentin_nater.html" rel="canonical">
-    <link href="../css/s_g_shared_char.css" rel="stylesheet">
-    <meta content="fr_FR" property="og:locale">
-    <meta content="profile" property="og:type">
-    <meta content="La Guerre de l’Hérésie" property="og:site_name">
-    <meta content="Quentin Nater | Auteur de La Guerre de l’Hérésie" property="og:title">
-    <meta content="Biographie, parcours et œuvres de Quentin Nater, auteur suisse de fantasy." property="og:description">
-    <meta content="https://laguerredelheresie.com/page/quentin_nater.html" property="og:url">
-    <meta content="https://laguerredelheresie.com/pictures/quentin_nater_pic.jpg" property="og:image">
-    <meta content="Portrait de Quentin Nater, auteur de La Guerre de l’Hérésie" property="og:image:alt">
-    <meta content="summary_large_image" name="twitter:card">
-    <meta content="Quentin Nater | La Guerre de l’Hérésie" name="twitter:title">
-    <meta content="Découvrez le parcours et les romans de Quentin Nater." name="twitter:description">
-    <meta content="https://laguerredelheresie.com/pictures/quentin_nater_pic.jpg" name="twitter:image">
+    <!-- SEO AND SOCIAL METADATA -->
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>Quentin Nater auteur de La Guerre de l'Hérésie</title>
+        <meta name="description" content="Découvrez Quentin Nater, auteur suisse de la saga de fantasy La Guerre de l’Hérésie : biographie, parcours, romans, interviews et réseaux officiels."/>
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"/>
+        <meta name="author" content="Quentin Nater"/>
+        <link rel="canonical" href="https://laguerredelheresie.com/page/quentin_nater.html"/>
+        <link href="../css/s_g_shared_char.css" rel="stylesheet"/>
+        <link href="../css/s_g_quentin_nater.css" rel="stylesheet"/>
+        <meta property="og:locale" content="fr_FR"/>
+        <meta property="og:type" content="profile"/>
+        <meta property="og:site_name" content="La Guerre de l’Hérésie"/>
+        <meta property="og:title" content="Quentin Nater, auteur de La Guerre de l’Hérésie"/>
+        <meta property="og:description" content="Découvrez Quentin Nater, auteur suisse de la saga de fantasy La Guerre de l’Hérésie : biographie, parcours, romans, interviews et réseaux officiels."/>
+        <meta property="og:url" content="https://laguerredelheresie.com/page/quentin_nater.html"/>
+        <meta property="og:image" content="https://laguerredelheresie.com/pictures/quentin_nater_pic.jpg"/>
+        <meta property="og:image:alt" content="Portrait de Quentin Nater, auteur de La Guerre de l’Hérésie"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Quentin Nater, auteur de La Guerre de l’Hérésie"/>
+        <meta name="twitter:description" content="Découvrez Quentin Nater, auteur suisse de la saga de fantasy La Guerre de l’Hérésie : biographie, parcours, romans, interviews et réseaux officiels."/>
+        <meta name="twitter:image" content="https://laguerredelheresie.com/pictures/quentin_nater_pic.jpg"/>
 
-<style>
-.wallpaper-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:22px 0}
-
-.wallpaper-thumb{min-width:0;padding:10px;border:1px solid rgba(185,153,99,.65);border-radius:10px;background:rgba(125,100,64,.08);color:inherit;cursor:pointer;font:inherit;text-align:center;transition:border-color .2s,transform .2s}
-
-.wallpaper-thumb:hover,.wallpaper-thumb:focus-visible{border-color:#c5a46d;transform:translateY(-2px)}
-
-.wallpaper-thumb img{display:block;width:100%;height:230px;object-fit:contain;border-radius:5px}
-
-.wallpaper-thumb span{display:block;margin-top:10px;font-size:.9rem}
-
-.wallpaper-copyright{font-size:.85rem;opacity:.8;margin-top:15px}
-
-.wallpaper-lightbox[hidden]{display:none}
-
-.wallpaper-lightbox{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:55px 18px 20px;background:rgba(5,7,14,.96)}
-
-.wallpaper-full{max-width:100%;max-height:calc(100dvh - 120px);object-fit:contain}
-
-.wallpaper-close{position:absolute;top:10px;right:20px;background:none;border:0;color:white;font-size:2.5rem;cursor:pointer}
-
-.wallpaper-hint{color:#eee;text-align:center;font-size:.8rem}
-
-@media(max-width:600px){.wallpaper-gallery{gap:10px}
-
-.wallpaper-thumb{padding:6px}
-
-.wallpaper-thumb img{height:170px}
-
-.wallpaper-thumb span{font-size:.75rem}}
-
-/* Pruinae chibi accompanies the archive links without obscuring them. */
-.portal-with-chibi{position:relative;isolation:isolate;padding-bottom:185px}
-
-.portal-with-chibi .portal-chibi{position:absolute;right:clamp(12px,5%,65px);bottom:-12px;width:clamp(175px,25vw,270px);height:auto;object-fit:contain;pointer-events:none;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25));z-index:1;transition:transform .25s ease}
-
-.portal-with-chibi:hover .portal-chibi{transform:translateY(-5px) rotate(2deg)}
-
-@media(max-width:600px){.portal-with-chibi{padding-bottom:155px}
-
-.portal-with-chibi .portal-chibi{width:165px;right:12px;bottom:-8px}}
-
-/* Author hero links and consistent warm-gold internal links. */
-.author-hero-links{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 20px}
-
-.author-hero-links a{color:#c5a46d;text-decoration:none;border:1px solid rgba(197,164,109,.65);border-radius:7px;padding:8px 12px;background:rgba(125,100,64,.08)}
-
-.author-hero-links a:hover,.author-hero-links a:focus-visible{text-decoration:underline}
-
-.author-page a.character-link,.author-page .registry dd a{color:#c5a46d !important}
-
-.author-page a.character-link:visited,.author-page .registry dd a:visited{color:#c5a46d !important}
-
-.author-video{max-width:320px;width:100%;margin:14px 0}
-
-.author-video iframe{display:block;width:100%;aspect-ratio:16/9;height:auto;max-width:320px;border:0;border-radius:7px}
-
-@media(max-width:600px){.author-hero-links{gap:8px}
-
-.author-hero-links a{font-size:.9rem;padding:7px 10px}}
-
-/* Keep the author subtitle on two centered lines inside the hero column. */
-.author-page .hero-copy { min-width: 0; }
-.author-page .hero-subtitle.author-subtitle {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    margin-inline: auto;
-    padding-inline: 8px;
-    box-sizing: border-box;
-    text-align: center;
-    white-space: normal !important;
-    letter-spacing: 0.04em;
-    font-size: clamp(0.85rem, 2.7vw, 1.3rem);
-    line-height: 1.45;
-}
-.author-page .author-subtitle span { display: block; overflow-wrap: anywhere; }
-
-/* Mobile-safe author subtitle and sword chibi beside the contact chapter. */
-.author-page .hero-subtitle{max-width:100%;box-sizing:border-box;white-space:normal;overflow-wrap:break-word;word-break:normal;font-size:clamp(1rem,3.7vw,1.5rem);line-height:1.35}
-
-.author-contact-chibi>div:last-child{position:relative;min-width:0;padding-right:clamp(180px,25vw,280px);min-height:245px}
-
-.author-contact-chibi-image{position:absolute;right:0;bottom:0;width:clamp(180px,25vw,280px);max-width:52%;height:auto;object-fit:contain;pointer-events:none;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
-
-@media(max-width:600px){.author-page .hero-subtitle.author-subtitle{font-size:clamp(.82rem,3.5vw,1.05rem);padding-inline:6px}
-
-.author-contact-chibi>div:last-child{padding-right:0;padding-bottom:220px}
-
-.author-contact-chibi-image{width:205px;max-width:65%;bottom:0;right:0}}
-</style>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://laguerredelheresie.com/page/quentin_nater.html#webpage",
-      "url": "https://laguerredelheresie.com/page/quentin_nater.html",
-      "name": "Quentin Nater, auteur de La Guerre de l’Hérésie",
-      "inLanguage": "fr-FR",
-      "about": {
-        "@id": "https://laguerredelheresie.com/page/quentin_nater.html#author"
-      },
-      "isPartOf": {
-        "@id": "https://laguerredelheresie.com/#website"
-      }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://laguerredelheresie.com/page/quentin_nater.html#author",
-      "name": "Quentin Nater",
-      "nationality": "Suisse",
-      "image": "https://laguerredelheresie.com/pictures/quentin_nater_pic.jpg",
-      "url": "https://laguerredelheresie.com/page/quentin_nater.html",
-      "sameAs": [
-        "https://www.instagram.com/quentin_nater/",
-        "https://www.facebook.com/quentin.nater",
-        "https://www.babelio.com/auteur/Quentin-Nater/628198",
-        "https://booknode.com/auteur/quentin-nater"
-      ]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+        <!-- STRUCTURED DATA -->
+        <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Accueil",
-          "item": "https://laguerredelheresie.com/"
+            "@type": "WebPage",
+            "@id": "https://laguerredelheresie.com/page/quentin_nater.html#webpage",
+            "url": "https://laguerredelheresie.com/page/quentin_nater.html",
+            "name": "Quentin Nater, auteur de La Guerre de l’Hérésie",
+            "description": "Découvrez Quentin Nater, auteur suisse de la saga de fantasy La Guerre de l’Hérésie : biographie, parcours, romans, interviews et réseaux officiels.",
+            "inLanguage": "fr-FR",
+            "about": {
+                "@id": "https://laguerredelheresie.com/page/quentin_nater.html#author"
+            },
+            "breadcrumb": {
+                "@id": "https://laguerredelheresie.com/page/quentin_nater.html#breadcrumb"
+            }
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Quentin Nater",
-          "item": "https://laguerredelheresie.com/page/quentin_nater.html"
-        }
-      ]
-    }
-  ]
-}</script><style>
-/* Page auteur : ajouts ciblés, style général hérité de Pruinae. */
-.author-links{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
-
-.author-links a{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border:1px solid rgba(185,153,99,.65);border-radius:8px;color:inherit;text-decoration:none;background:rgba(125,100,64,.08)}
-
-.author-links a:hover,.author-links a:focus-visible{border-color:#c5a46d;background:rgba(185,153,99,.14)}
-
-.author-media{margin:18px 0;max-width:700px}
-
-.author-media img{display:block;width:100%;height:auto;border-radius:9px}
-
-.author-media figcaption{font-style:italic;font-size:.88rem;margin-top:7px;opacity:.85}
-
-.author-media .external-image{display:block}
-
-.author-book-list{padding-left:1.2em;line-height:1.8}
-
-.author-page .hero-copy .registry dl dd a{color:inherit}
-
-.author-page .lore p{text-align:justify}
-
-@media(max-width:600px){.author-links{gap:7px}
-
-.author-links a{padding:9px 11px;font-size:.88rem}
-
-.author-page .lore p{text-align:justify}}
-
-#parcours > div:last-child > p + p { margin-top: 1.5em !important; display: block; }
-</style>
-</head>
-
-<body class="author-page">
-    <div aria-hidden="true" class="stars">
-    </div>
-<!-- MAIN NAVIGATION -->
-    <header class="top"><a aria-label="La Guerre de l’Hérésie" class="brand" href="https://laguerredelheresie.com/"><img alt="La Guerre de l’Hérésie" class="brand-white-logo" src="../pictures/LaGuerredelHeresie_w_logo.PNG"></a>
-    <nav aria-label="Navigation principale"><a href="https://laguerredelheresie.com/">Accueil</a><a href="#biographie">Biographie</a><a href="#parcours">Parcours</a><a href="#oeuvres">Œuvres</a><a href="#interviews">Interviews</a><a href="#reseaux">Réseaux</a></nav>
-    </header>
-<!-- CHARACTER PAGE CONTENT -->
-<main class="page">
-<nav aria-label="Fil d’Ariane" class="breadcrumbs"><a href="https://laguerredelheresie.com/">La Guerre de l’Hérésie</a><span>✧</span><strong>Quentin Nater</strong></nav>
-<section aria-labelledby="author-title" class="hero">
-    <div class="portrait-wrap">
-    <div aria-hidden="true" class="arcane-ring r1"></div>
-    <div aria-hidden="true" class="arcane-ring r2"></div>
-    <div aria-hidden="true" class="runes">✧　✦　✧　✦　✧　✦　✧</div>
-    <img alt="Portrait de Quentin Nater, auteur suisse de La Guerre de l’Hérésie" class="portrait" decoding="async" loading="eager" src="../pictures/quentin_nater_pic.jpg">
-    <div class="fallback">Quentin Nater</div>
-    </div>
-
-    <div class="hero-copy">
-        <p class="eyebrow">✦ L’AUTEUR ✦</p>
-        <h1 class="character-name-fixed character-name-force" id="author-title">Quentin Nater</h1>
-        <div aria-hidden="true" class="ornament">❧ ───── ✦ ───── ❧</div>
-            <p class="hero-subtitle author-subtitle"><span>Auteur de</span><span>La Guerre de l’Hérésie</span></p>
-            <p class="hero-rank">Fantasy · Suisse</p>
-            <blockquote>Donner un sens à la vie et une raison à la mort...</blockquote>
-        <div class="registry">
-            <h2>✧ Registre ✧</h2>
-            <dl>
-            <dt>Nom</dt>
-            <dd>Quentin Nater</dd>
-            <dt>Pays</dt>
-            <dd>Suisse</dd>
-            <dt>Univers</dt>
-            <dd>La Guerre de l’Hérésie</dd>
-            <dt>Personnages</dt>
-            <dd>
-            <a href="nate_ansicht.html">Nate Ansicht</a><br><a href="pruinae_enneis.html">Pruinae Enneis</a><br><a href="irilla.html">Irilla</a>…</dd>
-            <dt>1ère publication</dt>
-            <dd>2022</dd>
-            <dt>Dernier roman</dt>
-            <dd>
-            <a href="lordre_de_lheresie.html">L’Ordre de l’Hérésie</a> (2026)</dd>
-            <dt>Instagram</dt>
-            <dd><a href="https://www.instagram.com/quentin_nater/" target="_blank" rel="noopener noreferrer">Lien</a></dd>
-            <dt>Site officiel</dt>
-            <dd><a href="https://laguerredelheresie.com/">Lien</a></dd>
-            </dl>
-        </div>
-    </div>
-</section>
-
-<section class="lore" id="biographie">
-    <div class="chapter-mark">I</div>
-    <div>
-    <h2>Biographie</h2>
-    <p><span class="drop">Q</span>uentin Nater est l’auteur de La Guerre de l’Hérésie, une série de romans d’heroic fantasy contant les aventures de <a class="character-link" href="nate_ansicht.html">Nate Ansicht</a>, l’épéiste aux yeux d’argent, et de <a class="character-link" href="pruinae_enneis.html">Pruinae Enneis</a>, la sylphide du lac Azur. Le premier roman, S’estomper vers les Ténèbres, a été publié en juillet 2022 par les Éditions Vérone.</p>
-    <p>Quand il n’est pas plongé dans ses recherches, l’écriture lui permet de se plonger dans un rêve merveilleux. Il vit en Valais, en Suisse, aux portes de la nature et des montagnes.</p>
-    </div>
-</section>
-<section class="lore" id="parcours">
-    <div class="chapter-mark">II</div>
-    <div>
-    <h2>Parcours et inspirations</h2>
-    <p>Quentin Nater est titulaire d’une licence en informatique de la Haute école spécialisée de Suisse occidentale (HES-SO) et a étudié les neurosciences digitales. Il poursuit actuellement un doctorat à l’Université de Fribourg.</p>
-
-    <p>Dès l’âge de sept ans, Quentin commence à imaginer les légendes et les récits qui façonneront ses mondes. Enfant, armé d’un simple bâton, il s’imaginait brandir la plus majestueuse des épées. L’écriture lui a toujours permis de coucher ses émotions sur le papier, jusqu’à entreprendre, en 2017, la rédaction des premières lignes officielles de <em>La Guerre de l’Hérésie</em>.</p>
-
-    <p>Quentin nourrit depuis toujours le rêve de donner vie à cet univers qui lui est cher. À travers ses récits et les convictions de ses personnages, il espère inviter ses lecteurs à la réflexion, convaincu que la fantasy, au-delà de l’imaginaire, est avant tout un reflet de notre réalité.</p>
-    </div>
-</section>
-<section class="lore" id="oeuvres">
-    <div class="chapter-mark">III</div>
-    <div>
-    <h2>Livres et univers</h2>
-    <p>La saga La Guerre de l’Hérésie comprend les romans suivants :</p>
-    <ul class="author-book-list">
-    <li>
-    <em>S’estomper vers les Ténèbres</em> (2022)</li>
-    <li>
-    <em>L’Aube d’un Idéal</em> (2023)</li>
-    <li>
-    <em>L’Illusion d’un Souhait</em> (2024)</li>
-    <li>
-    <a class="character-link" href="lordre_de_lheresie.html"><em>L’Ordre de l’Hérésie</em></a> (octobre 2026)</li>
-    </ul>
-    <p>Au fil de ses romans, il donne vie à <a class="character-link" href="nate_ansicht.html">Nate Ansicht</a>, <a class="character-link" href="pruinae_enneis.html">Pruinae Enneis</a>, <a class="character-link" href="irilla.html">Irilla</a>, <a class="character-link" href="ryvin_hydrs.html">Ryvin Hydrs</a>, <a class="character-link" href="faint_desabel.html">Faint Desabel</a> et de nombreux autres personnages.</p>
-    </div>
-</section>
-<section class="lore" id="interviews">
-    <div class="chapter-mark">IV</div>
-    <div>
-    <h2>Rencontres et interviews</h2>
-    <p>Dans ses interviews à Rhône FM, Quentin Nater revient sur son attachement à la fantasy et aux personnages qui l’accompagnent depuis son enfance.</p>
-
-    <p>Quentin Nater a aussi été présenté à la télévision nationale suisse, la RTS :</p>
-    <figure class="author-media author-video"><iframe allowfullscreen="" height="180" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.rts.ch/play/embed?urn=urn:rts:video:15214380&amp;subdivisions=false" title="Reportage RTS sur Quentin Nater" width="320"></iframe></figure>
-    <p>Lors de la sortie du deuxième livre, il a également participé au salon du livre de Saint-Pierre-de-Clages, en Valais, en 2023. Il a également fait l’objet d’un <a class="character-link" href="https://www.hevs.ch/fr/actualites/quentin-nater-l-alumni-en-informatique-de-gestion-devenu-ecrivain-204212" target="_blank" rel="noopener noreferrer">portrait publié par la HES-SO Valais-Wallis</a>.</p>
-    <figure class="author-media"><img alt="Quentin Nater au salon du livre de Saint-Pierre-de-Clages en 2023, photographie de Jean-Michel Reuteler" loading="lazy" onerror="this.style.display='none'" src="../pictures/Quentin-nater-auteur-st-pierre-de-clages-2023.jpg"></figure>
-    </div>
-</section>
-<section class="lore author-contact-chibi" id="reseaux">
-    <div class="chapter-mark">V</div>
-    <div>
-    <h2>Retrouver l’auteur</h2>
-    <p>Retrouvez Quentin Nater sur ses réseaux et ses pages officielles.</p>
-    <div class="author-links">
-    <a href="https://www.instagram.com/quentin_nater/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://www.facebook.com/quentin.nater" target="_blank" rel="noopener noreferrer">Facebook</a>
-    <a href="https://www.babelio.com/auteur/Quentin-Nater/628198" target="_blank" rel="noopener noreferrer">Babelio</a>
-    <a href="https://booknode.com/auteur/quentin-nater" target="_blank" rel="noopener noreferrer">Booknode</a>
-    <a href="https://laguerredelheresie.com/">Site officiel</a>
-    </div>
-
-    <img class="author-contact-chibi-image" src="../pictures/pruinaeenneis_chibi_sword_laguerredelheresie_quentinnater.png" alt="Pruinae Enneis chibi avec son épée" loading="lazy" decoding="async">
-    </div>
-</section>
-<section class="portal">
-    <p class="eyebrow">✦ POURSUIVRE DANS LES ARCHIVES ✦</p>
-    <h2>Explorer La Guerre de l’Hérésie</h2>
-    <div class="portal-links">
-    <a href="grimoire.html"><span>✧</span><strong>Le Grimoire</strong><small>Retrouver tous les personnages</small></a><a href="https://laguerredelheresie.com/"><span>✦</span><strong>Page principale</strong><small>Livres, univers et actualités</small></a><a href="pruinae_enneis.html"><span>❧</span><strong>Pruinae Enneis</strong><small>La Sylphide du lac Azur</small></a><a href="nate_ansicht.html"><span>✧</span><strong>Nate Ansicht</strong><small>L’épéiste aux yeux d’argent</small></a>
-    </div>
-</section>
-</main>
-<!-- PAGE FOOTER -->
-<footer><a href="https://laguerredelheresie.com/">
-    ✦　LA GUERRE DE L'HÉRÉSIE　✦
-   </a></footer>
-<script>
-   // Smoothly scroll to internal sections when using the page navigation.
-        document.querySelectorAll('a[href^="#"]').forEach((link) => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
-
-                const target = document.querySelector(link.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
+            "@type": "Person",
+            "@id": "https://laguerredelheresie.com/page/quentin_nater.html#author",
+            "name": "Quentin Nater",
+            "url": "https://laguerredelheresie.com/page/quentin_nater.html",
+            "image": "https://laguerredelheresie.com/pictures/quentin_nater_pic.jpg",
+            "description": "Découvrez Quentin Nater, auteur suisse de la saga de fantasy La Guerre de l’Hérésie : biographie, parcours, romans, interviews et réseaux officiels.",
+            "jobTitle": "Écrivain",
+            "nationality": {
+                "@type": "Country",
+                "name": "Suisse"
+            },
+            "sameAs": [
+                "https://www.instagram.com/quentin_nater/",
+                "https://www.facebook.com/quentin.nater",
+                "https://www.babelio.com/auteur/Quentin-Nater/628198",
+                "https://booknode.com/auteur/quentin-nater"
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://laguerredelheresie.com/page/quentin_nater.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "La Guerre de l’Hérésie",
+                    "item": "https://laguerredelheresie.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Quentin Nater",
+                    "item": "https://laguerredelheresie.com/page/quentin_nater.html"
                 }
+            ]
+        }
+    ]
+}</script>
+    </head>
+    <body class="author-page">
+        <div aria-hidden="true" class="stars"></div>
+        <!-- MAIN NAVIGATION -->
+        <header class="top"><a aria-label="La Guerre de l’Hérésie" class="brand" href="https://laguerredelheresie.com/"><img alt="La Guerre de l’Hérésie" class="brand-white-logo" src="../pictures/LaGuerredelHeresie_w_logo.PNG"/></a>
+            <nav aria-label="Navigation principale">
+                <a href="https://laguerredelheresie.com/">Accueil</a>
+                <a href="#biographie">Biographie</a>
+                <a href="#parcours">Parcours</a>
+                <a href="#oeuvres">Œuvres</a>
+                <a href="#interviews">Interviews</a>
+                <a href="#reseaux">Réseaux</a>
+            </nav>
+        </header>
+        <!-- AUTHOR PAGE CONTENT -->
+        <main class="page">
+            <nav aria-label="Fil d’Ariane" class="breadcrumbs"><a href="https://laguerredelheresie.com/">La Guerre de l’Hérésie</a>
+                <span>✧</span>
+                <strong>Quentin Nater</strong>
+            </nav>
+            <section aria-labelledby="author-title" class="hero">
+                <div class="portrait-wrap">
+                    <div aria-hidden="true" class="arcane-ring r1"></div>
+                    <div aria-hidden="true" class="arcane-ring r2"></div>
+                    <div aria-hidden="true" class="runes">✧　✦　✧　✦　✧　✦　✧</div>
+                    <img alt="Portrait de Quentin Nater, auteur suisse de La Guerre de l’Hérésie" class="portrait" decoding="async" loading="eager" src="../pictures/quentin_nater_pic.jpg"/>
+                    <div class="fallback">Quentin Nater</div>
+                </div>
+                <div class="hero-copy">
+                    <p class="eyebrow">✦ L’AUTEUR ✦</p>
+                    <h1 class="character-name-fixed character-name-force" id="author-title">Quentin Nater</h1>
+                    <div aria-hidden="true" class="ornament">❧ ───── ✦ ───── ❧</div>
+                    <p class="hero-subtitle author-subtitle"><span>Auteur de</span><span>La Guerre de l’Hérésie</span></p>
+                    <p class="hero-rank">Fantasy · Suisse</p>
+                    <blockquote>Donner un sens à la vie et une raison à la mort...</blockquote>
+                    <div class="registry"><h2>✧ Registre ✧</h2>
+                        <dl>
+                            <dt>Nom</dt><dd>Quentin Nater</dd>
+                            <dt>Pays</dt><dd>Suisse</dd>
+                            <dt>Univers</dt><dd>La Guerre de l’Hérésie</dd>
+                            <dt>Personnages</dt><dd><a href="nate_ansicht.html">Nate Ansicht</a><br/><a href="pruinae_enneis.html">Pruinae Enneis</a><br/><a href="irilla.html">Irilla</a>…</dd>
+                            <dt>1ère publication</dt><dd>2022</dd>
+                            <dt>Dernier roman</dt><dd><a href="lordre_de_lheresie.html">L’Ordre de l’Hérésie</a>(2026)</dd>
+                            <dt>Instagram</dt><dd><a href="https://www.instagram.com/quentin_nater/" target="_blank" rel="noopener noreferrer">Lien</a></dd>
+                            <dt>Site officiel</dt><dd><a href="https://laguerredelheresie.com/">Lien</a></dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+            <section class="lore" id="biographie">
+                <div class="chapter-mark">I</div>
+                <div>
+                    <h2>Biographie</h2>
+                    <p><span class="drop">Q</span>uentin Nater est l’auteur de La Guerre de l’Hérésie, une série de romans d’heroic fantasy contant les aventures de<a class="character-link" href="nate_ansicht.html">Nate Ansicht</a>, l’épéiste aux yeux d’argent, et de<a class="character-link" href="pruinae_enneis.html">Pruinae Enneis</a>, la sylphide du lac Azur. Le premier roman, S’estomper vers les Ténèbres, a été publié en juillet 2022 par les Éditions Vérone.</p>
+                    <p>Quand il n’est pas plongé dans ses recherches, l’écriture lui permet de se plonger dans un rêve merveilleux. Il vit en Valais, en Suisse, aux portes de la nature et des montagnes.</p>
+                </div>
+            </section>
+            <section class="lore" id="parcours">
+                <div class="chapter-mark">II</div>
+                <div>
+                    <h2>Parcours et inspirations</h2>
+                    <p>Quentin Nater est titulaire d’une licence en informatique de la Haute école spécialisée de Suisse occidentale (HES-SO) et a étudié les neurosciences digitales. Il poursuit actuellement un doctorat à l’Université de Fribourg.</p>
+                    <p>Dès l’âge de sept ans, Quentin commence à imaginer les légendes et les récits qui façonneront ses mondes. Enfant, armé d’un simple bâton, il s’imaginait brandir la plus majestueuse des épées. L’écriture lui a toujours permis de coucher ses émotions sur le papier, jusqu’à entreprendre, en 2017, la rédaction des premières lignes officielles de<em>La Guerre de l’Hérésie</em>.</p>
+                    <p>Quentin nourrit depuis toujours le rêve de donner vie à cet univers qui lui est cher. À travers ses récits et les convictions de ses personnages, il espère inviter ses lecteurs à la réflexion, convaincu que la fantasy, au-delà de l’imaginaire, est avant tout un reflet de notre réalité.</p>
+                </div>
+            </section>
+            <section class="lore" id="oeuvres">
+                <div class="chapter-mark">III</div>
+                <div>
+                    <h2>Livres et univers</h2>
+                    <p>La saga La Guerre de l’Hérésie comprend les romans suivants :</p>
+                    <ul class="author-book-list">
+                        <li>
+                            <em>S’estomper vers les Ténèbres</em>(2022)
+                        </li>
+                        <li>
+                            <em>L’Aube d’un Idéal</em>(2023)
+                        </li>
+                        <li>
+                            <em>L’Illusion d’un Souhait</em>(2024)
+                        </li>
+                        <li>
+                            <a class="character-link" href="lordre_de_lheresie.html"><em>L’Ordre de l’Hérésie</em></a>(octobre 2026)
+                        </li>
+                    </ul>
+                    <p>Au fil de ses romans, il donne vie à<a class="character-link" href="nate_ansicht.html">Nate Ansicht</a>,<a class="character-link" href="pruinae_enneis.html">Pruinae Enneis</a>,<a class="character-link" href="irilla.html">Irilla</a>,<a class="character-link" href="ryvin_hydrs.html">Ryvin Hydrs</a>,<a class="character-link" href="faint_desabel.html">Faint Desabel</a>et de nombreux autres personnages.</p>
+                </div>
+            </section>
+            <section class="lore" id="interviews">
+                <div class="chapter-mark">IV</div>
+                <div>
+                    <h2>Rencontres et interviews</h2>
+                    <p>Dans ses interviews à Rhône FM, Quentin Nater revient sur son attachement à la fantasy et aux personnages qui l’accompagnent depuis son enfance.</p>
+                    <p>Quentin Nater a aussi été présenté à la télévision nationale suisse, la RTS :</p>
+                    <figure class="author-media author-video">
+                        <iframe allowfullscreen="" height="180" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.rts.ch/play/embed?urn=urn:rts:video:15214380&amp;subdivisions=false" title="Reportage RTS sur Quentin Nater" width="320"></iframe>
+                    </figure>
+                    <p>Lors de la sortie du deuxième livre, il a également participé au salon du livre de Saint-Pierre-de-Clages, en Valais, en 2023. Il a également fait l’objet d’un<a class="character-link" href="https://www.hevs.ch/fr/actualites/quentin-nater-l-alumni-en-informatique-de-gestion-devenu-ecrivain-204212" target="_blank" rel="noopener noreferrer">portrait publié par la HES-SO Valais-Wallis</a>.</p>
+                    <figure class="author-media">
+                        <img alt="Quentin Nater au salon du livre de Saint-Pierre-de-Clages en 2023, photographie de Jean-Michel Reuteler" loading="lazy" onerror="this.style.display='none'" src="../pictures/Quentin-nater-auteur-st-pierre-de-clages-2023.jpg"/>
+                    </figure>
+                </div>
+            </section>
+            <section class="lore author-contact-chibi" id="reseaux">
+                <div class="chapter-mark">V</div>
+                <div>
+                    <h2>Retrouver l’auteur</h2>
+                    <p>Retrouvez Quentin Nater sur ses réseaux et ses pages officielles.</p>
+                    <div class="author-links">
+                        <a href="https://www.instagram.com/quentin_nater/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.facebook.com/quentin.nater" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://www.babelio.com/auteur/Quentin-Nater/628198" target="_blank" rel="noopener noreferrer">Babelio</a>
+                        <a href="https://booknode.com/auteur/quentin-nater" target="_blank" rel="noopener noreferrer">Booknode</a>
+                        <a href="https://laguerredelheresie.com/">Site officiel</a>
+                    </div>
+                    <img class="author-contact-chibi-image" src="../pictures/pruinaeenneis_chibi_sword_laguerredelheresie_quentinnater.png" alt="Pruinae Enneis chibi avec son épée" loading="lazy" decoding="async"/>
+                </div>
+            </section>
+            <section class="portal">
+                <p class="eyebrow">✦ POURSUIVRE DANS LES ARCHIVES ✦</p>
+                <h2>Explorer La Guerre de l’Hérésie</h2>
+                <div class="portal-links">
+                    <a href="grimoire.html"><span>✧</span><strong>Le Grimoire</strong><small>Retrouver tous les personnages</small></a>
+                    <a href="https://laguerredelheresie.com/"><span>✦</span><strong>Page principale</strong><small>Livres, univers et actualités</small></a>
+                    <a href="pruinae_enneis.html"><span>❧</span><strong>Pruinae Enneis</strong><small>La Sylphide du lac Azur</small></a>
+                    <a href="nate_ansicht.html"><span>✧</span><strong>Nate Ansicht</strong><small>L’épéiste aux yeux d’argent</small></a>
+                </div>
+            </section>
+        </main>
+        <!-- PAGE FOOTER -->
+        <footer>
+            <a href="https://laguerredelheresie.com/">✦　LA GUERRE DE L'HÉRÉSIE　✦</a>
+        </footer>
+        <script>
+            // Smoothly scroll to internal sections when using the page navigation.
+            document.querySelectorAll('a[href^="#"]').forEach((link) => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+
+                    const target = document.querySelector(link.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
             });
-        });
-  </script>
-</body>
+        </script>
+    </body>
 </html>
