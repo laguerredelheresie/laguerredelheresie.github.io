@@ -2092,6 +2092,19 @@ body.map-lightbox-open { overflow: hidden; }
 	height: 100%;
 }
 
+/* Grimoire : titre adapte aux petits ecrans, sans modifier la version ordinateur. */
+@media screen and (max-width: 600px) {
+    .characters-simple > h1 {
+        font-size: clamp(1.45rem, 6vw, 2rem);
+        line-height: 1.2;
+        white-space: normal;
+        overflow-wrap: break-word;
+        max-width: 100%;
+        padding-inline: 0.5rem;
+    }
+}
+
+
 /* Fond bleu nuit du Grimoire sur ordinateur : davantage de bleu. */
 @media screen and (min-width: 601px)
 {
