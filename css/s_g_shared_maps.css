@@ -1,0 +1,23 @@
+/* Styles communs des cartes : Doimh Neacht, Ween, Freea et Heara. */
+/* One single bordered panel containing BOTH the heading and the image. */
+    .hero { display: flex !important; flex-direction: column !important; gap: 24px !important; align-items: stretch !important; }
+    .hero > .map-feature-card { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 22px !important; width: 100% !important; max-width: none !important; padding: clamp(16px, 3vw, 36px) !important; margin: 0 !important; box-sizing: border-box !important; border: 2px solid rgba(156,119,63,.8) !important; border-radius: 12px !important; background: rgba(255,252,244,.045) !important; box-shadow: none !important; }
+    .hero .map-feature-card .hero-copy { width: 100% !important; max-width: none !important; margin: 0 !important; text-align: center !important; }
+    /* Remove the original portrait frame and all its decorative overlays. */
+    .hero .map-feature-card .portrait-wrap { display: flex !important; flex-direction: column !important; align-items: center !important; width: 100% !important; max-width: none !important; height: auto !important; aspect-ratio: auto !important; min-height: 0 !important; padding: 0 !important; margin: 0 !important; border: 0 !important; border-radius: 0 !important; background: transparent !important; box-shadow: none !important; overflow: visible !important; position: static !important; }
+    .hero .map-feature-card .portrait-wrap::before, .hero .map-feature-card .portrait-wrap::after, .hero .map-feature-card .arcane-ring, .hero .map-feature-card .runes, .hero .map-feature-card .fallback { display: none !important; content: none !important; }
+    /* The border is on the image element itself, exactly at its visible edges. */
+    .hero .map-feature-card .map-image-link { display: block !important; width: fit-content !important; max-width: 100% !important; height: auto !important; padding: 0 !important; margin: 0 auto !important; border: 0 !important; background: transparent !important; line-height: 0 !important; cursor: zoom-in; }
+    .hero .map-feature-card .map-image-link .portrait { display: block !important; position: static !important; inset: auto !important; width: auto !important; max-width: 100% !important; height: auto !important; max-height: none !important; margin: 0 !important; padding: 0 !important; box-sizing: border-box !important; object-fit: contain !important; border: 3px solid #9c773f !important; border-radius: 0 !important; box-shadow: none !important; transform: none !important; }
+    .hero .map-image-hint { display: block; margin-top: 10px; font-size: .83rem; opacity: .75; text-align: center; }
+    .hero > .registry { width: 100% !important; max-width: 760px !important; margin: 0 auto !important; box-sizing: border-box; }
+    .map-bottom-return { text-align: center; margin: 30px auto 20px; }
+    .map-bottom-return a { display: inline-block; padding: 12px 22px; border: 1px solid rgba(156,119,63,.7); border-radius: 6px; color: inherit; text-decoration: none; }
+    .map-bottom-return a:hover { text-decoration: underline; }
+
+    /* Séparation nette entre les paragraphes des chapitres */
+    .lore p + p { margin-top: 1.35em !important; }
+    
+/* Texte descriptif justifié, avec une séparation nette des paragraphes. */
+    .lore p { text-align: justify; text-justify: inter-word; }
+    .lore p + p { margin-top: 1.15em; }

@@ -33,27 +33,7 @@
 
 		<link id="cssLink" rel="stylesheet" type="text/css" href="css/main_rayza.css">
 
-		<script>
-			function randomizeCSS()
-			{
-				//const cssFiles = ['css/main_pruinae.css', 'css/main_rayza.css', 'css/main_satelia.css', 'css/main_irilla.css']; // Replace with the paths to your CSS files.
-				const cssFiles = ['css/main_pruinae.css']; // Replace with the paths to your CSS files.
-				const randomIndex = Math.floor(Math.random() * cssFiles.length);
-				const randomCSS = cssFiles[randomIndex];
-
-				const cssLink = document.getElementById('cssLink');
-				if (cssLink)
-				{
-					cssLink.href = randomCSS;
-				}
-                else
-                {
-					console.error("Element with id 'cssLink' not found!");
-				}
-			}
-
-			randomizeCSS();
-		</script>
+		<script src="js/s_g_index_theme.js"></script>
 
         <link rel="stylesheet" href="css/hereliande_style.css" />
 
@@ -851,16 +831,32 @@
                     <td><h1 #="Doimh Neacht" class="inv_mob"><a class="map-title-link" href="page/doimh_neacht.html">Doimh Neacht</a></h1>
                         <h2 class="inv_mob">Territoire désertique des doimhiens, <span #="Doimh Neacht la guerre de l'hérésie" #kroyven="">Doimh Neacht,</span> est un monde empli de mystère sous le règne de Dame Sillia.</h2>
                         <p class="map-page-link"><a href="page/doimh_neacht.html">Découvrir Doimh Neacht</a></p>
-                            <h4>(illustration : <a href="https://saintgenezjudicael.carrd.co/">Judicaël Saint-Genez</a></h4></td>
+                            <h4>(illustration : <a href="https://saintgenezjudicael.carrd.co/">Judicaël Saint-Genez</a>)</h4></td>
                 </tr>
                 <tr>
                     <td class="td_book"><a href="pictures/Ween_LaGuerreDeLHeresie_QuentinNater.jpg" class="map-lightbox-trigger" aria-label="Agrandir la carte" data-map-full="pictures/Ween_LaGuerreDeLHeresie_QuentinNater.jpg"><img alt="Ween, planète minière du Tracé des Mondes" class="carte" src="pictures/Ween_LaGuerreDeLHeresie_QuentinNater.jpg"/></a></td>
                     <td><h1 class="inv_mob"><a class="map-title-link" href="page/ween.html">Ween</a></h1>
                         <h2 class="inv_mob">Planète minière des Ruaals, Ween abrite la Forêt d’Yrabilis, une immense forêt souterraine de champignons luminescents. Sa capitale, Wvil es Ween, est occupée par les armées de la Mort.</h2>
                             <p class="map-page-link"><a href="page/ween.html">Découvrir Ween</a></p>
-                                <h4>(illustration : <a href="https://saintgenezjudicael.carrd.co/">Judicaël Saint-Genez</a></h4></td>
+                                <h4>(illustration : <a href="https://saintgenezjudicael.carrd.co/">Judicaël Saint-Genez</a>)</h4></td>
                     </td>
 
+                </tr>
+                <tr>
+                    <td class="td_book"><a href="pictures/Freea_LaGuerreDeLHeresie_QuentinNater.jpg" class="map-lightbox-trigger" aria-label="Agrandir la carte" data-map-full="pictures/Freea_LaGuerreDeLHeresie_QuentinNater.jpg"><img alt="Carte de Freea" class="carte" src="pictures/Freea_LaGuerreDeLHeresie_QuentinNater.jpg"/></a></td>
+                    <td><h1 class="inv_mob"><a class="map-title-link" href="page/freea.html">Freea</a></h1>
+                        <h2 class="inv_mob">Freea est une planète de glace recouverte de vastes plaines enneigées et de hautes montagnes. Son climat glacial rend la vie difficile sans préparation adéquate. Pourtant, sa capitale, Freesester, est réputée pour son atmosphère chaleureuse malgré son environnement gelé.</h2>
+                        <p class="map-page-link"><a href="page/freea.html">Découvrir Freea</a></p>
+                            <h4>(illustration : <a href="https://saintgenezjudicael.carrd.co/">Judicaël Saint-Genez</a>)</h4></td>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_book"><a href="pictures/Heara_LaGuerreDeLHeresie_QuentinNater.jpg" class="map-lightbox-trigger" aria-label="Agrandir la carte" data-map-full="pictures/Heara_LaGuerreDeLHeresie_QuentinNater.jpg"><img alt="Carte de Heara" class="carte" src="pictures/Heara_LaGuerreDeLHeresie_QuentinNater.jpg"/></a></td>
+                    <td><h1 class="inv_mob"><a class="map-title-link" href="page/heara.html">Heara</a></h1>
+                        <h2 class="inv_mob">Ancienne capitale du Dieu de l’Eau, Heara est le centre politique et économique du Tracé des Mondes.</h2>
+                        <p class="map-page-link"><a href="page/heara.html">Découvrir Heara</a></p>
+                            <h4>(illustration : <a href="https://saintgenezjudicael.carrd.co/">Judicaël Saint-Genez</a>)</h4></td>
+                    </td>
                 </tr>
             </table>
             <br>
@@ -1174,10 +1170,10 @@
                     <h1 #="La Guerre de l'heresie : Interview" #LaGuerreDeLHeresieInterview class='title_character' id='interview' >Interview</h1>
 
                     <h4 #RTSQuentinNater #="Quentin Nater RTS La Guerre de l'Hérésie" id='rts' >RTS</h4>
-                    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; /* 16:9 aspect ratio */">
+                    <div class="rts-video-container">
                       <iframe
                         src="https://www.rts.ch/play/embed?urn=urn:rts:video:15214380&subdivisions=false"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                        class="rts-video-iframe"
                         frameborder="0" allowfullscreen allow="geolocation *; autoplay; encrypted-media">
                       </iframe>
                     </div>
@@ -1333,127 +1329,8 @@
       <img class="map-lightbox__image" alt="Carte agrandie" />
     </div>
 
-<script>
-    (() => {
-      const viewer = document.getElementById('map-lightbox');
-      const image = viewer.querySelector('.map-lightbox__image');
-      const closeButton = viewer.querySelector('.map-lightbox__close');
-      let previousFocus = null;
-      function close() {
-        viewer.hidden = true;
-        image.removeAttribute('src');
-        document.body.classList.remove('map-lightbox-open');
-        if (previousFocus) previousFocus.focus();
-      }
-      document.querySelectorAll('.map-lightbox-trigger').forEach(link => {
-        link.addEventListener('click', event => {
-          event.preventDefault();
-          previousFocus = link;
-          image.src = link.dataset.mapFull;
-          image.alt = link.querySelector('img')?.alt || 'Carte agrandie';
-          viewer.hidden = false;
-          document.body.classList.add('map-lightbox-open');
-          closeButton.focus();
-        });
-      });
-      closeButton.addEventListener('click', close);
-      viewer.addEventListener('click', event => { if (event.target === viewer) close(); });
-      document.addEventListener('keydown', event => {
-        if (viewer.hidden) return;
-        if (event.key === 'Escape') close();
-        if (event.key === 'Tab') { event.preventDefault(); closeButton.focus(); }
-      });
-    })();
-</script>
-
-    <script>
-      /* V13: comportement mobile uniquement. Le lexique original reste intact. */
-      (function () {
-        const mobile = window.matchMedia('(max-width: 600px)');
-        function init() {
-          const input = document.getElementById('searchInput');
-          const container = document.getElementById('lexiconGroups');
-          const firstPanel = document.querySelector('body.grimoire-index > article > .core:first-of-type');
-          const vernissage = firstPanel && firstPanel.querySelector(':scope > .vernissage-feature');
-          const article = firstPanel && firstPanel.parentElement;
-          if (!input || !container || !firstPanel || !article || !vernissage) return;
-          const groups = Array.from(container.querySelectorAll(':scope > .group'));
-          const rows = new Map(groups.map(group => [group, Array.from(group.querySelectorAll('tbody tr'))]));
-          const normalize = value => (value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
-          let showAll = false;
-          function apply() {
-            if (!mobile.matches) return;
-            const query = normalize(input.value);
-            const active = Boolean(query) || showAll;
-            container.classList.toggle('mobile-search-active', active);
-            container.classList.toggle('mobile-lexicon-idle', !active);
-            groups.forEach(group => {
-              const category = normalize(group.dataset.category || group.querySelector('.group-title')?.textContent);
-              let count = 0;
-              rows.get(group).forEach(row => {
-                const match = !query || category.includes(query) || normalize(row.textContent).includes(query);
-                row.hidden = !match;
-                row.style.setProperty('display', match ? 'table-row' : 'none', 'important');
-                if (match) count++;
-              });
-              const visible = (active && count > 0) || (!active && group === groups[0]);
-              group.hidden = !visible;
-              group.style.setProperty('display', visible ? 'block' : 'none', 'important');
-              const wrap = group.querySelector('.table-wrap');
-              if (wrap) {
-                wrap.hidden = !visible;
-                wrap.style.setProperty('display', visible ? 'block' : 'none', 'important');
-                if (visible) {
-                  wrap.style.setProperty('height', 'auto', 'important');
-                  wrap.style.setProperty('max-height', 'none', 'important');
-                }
-              }
-            });
-          }
-          function layout() {
-            if (mobile.matches) {
-              if (vernissage.parentElement !== article) article.insertBefore(vernissage, firstPanel);
-              apply();
-            } else {
-              if (vernissage.parentElement !== firstPanel) firstPanel.insertBefore(vernissage, firstPanel.firstElementChild);
-              container.classList.remove('mobile-search-active', 'mobile-lexicon-idle');
-              groups.forEach(group => {
-                group.hidden = false;
-                group.style.removeProperty('display');
-                rows.get(group).forEach(row => { row.hidden = false; row.style.removeProperty('display'); });
-                const wrap = group.querySelector('.table-wrap');
-                if (wrap) {
-                  wrap.hidden = false;
-                  ['display', 'height', 'max-height'].forEach(p => wrap.style.removeProperty(p));
-                }
-              });
-            }
-          }
-          ['input', 'search', 'change', 'keyup'].forEach(type => {
-            window.addEventListener(type, event => {
-              if (!mobile.matches || event.target !== input) return;
-              event.stopImmediatePropagation();
-              showAll = false;
-              apply();
-            }, true);
-          });
-          ['showAllLexicon', 'showAllLexiconBottom'].forEach(id => {
-            const button = document.getElementById(id);
-            if (button) button.addEventListener('click', event => {
-              if (!mobile.matches) return;
-              event.preventDefault();
-              event.stopImmediatePropagation();
-              input.value = '';
-              showAll = true;
-              apply();
-            }, true);
-          });
-          mobile.addEventListener?.('change', layout);
-          layout();
-        }
-        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-        else init();
-      })();
-    </script>
+    <script src="js/s_g_index_lightbox.js"></script>
+    <script src="js/s_g_index_mobile.js"></script>
+    <script src="js/s_g_index_vernissage.js"></script>
 </body>
 </html>

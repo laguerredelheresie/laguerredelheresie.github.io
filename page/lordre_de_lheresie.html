@@ -92,13 +92,17 @@
       object-position: center !important;
       }
       /* Ween: original map, fully visible on a white card background. */
-      .lore.book-card-chapter .codex-card[href="ween.html"] .codex-card-image {
+      .lore.book-card-chapter .codex-card[href="ween.html"] .codex-card-image,
+      .lore.book-card-chapter .codex-card[href="freea.html"] .codex-card-image,
+      .lore.book-card-chapter .codex-card[href="heara.html"] .codex-card-image {
         background: #fff !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
       }
-      .lore.book-card-chapter .codex-card[href="ween.html"] .codex-card-image img {
+      .lore.book-card-chapter .codex-card[href="ween.html"] .codex-card-image img,
+      .lore.book-card-chapter .codex-card[href="freea.html"] .codex-card-image img,
+      .lore.book-card-chapter .codex-card[href="heara.html"] .codex-card-image img {
         width: 100% !important;
         height: 100% !important;
         object-fit: contain !important;
@@ -308,14 +312,10 @@
               <strong>Arée Lazima</strong>
             </div>
             </a>
-            <div class="codex-card codex-card--static">
-              <div class="codex-card-image">
-                <img alt="Énora Von Dess" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-              </div>
-              <div class="codex-card-text">
-                <strong>Énora Von Dess</strong>
-              </div>
-            </div>
+            <a class="codex-card" href="enora_von_dess.html">
+              <div class="codex-card-image"><img alt="Énora Von Dess" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/></div>
+              <div class="codex-card-text"><strong>Énora Von Dess</strong><small>La Maîtresse des Spectres</small></div>
+            </a>
           </div>
         </div>
       </section>
@@ -424,22 +424,14 @@
                 <strong>Ween</strong>
               </div>
             </a>
-            <div class="codex-card codex-card--static">
-              <div class="codex-card-image">
-                <img alt="Carte : Freea" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-              </div>
-              <div class="codex-card-text">
-                <strong>Freea</strong>
-              </div>
-            </div>
-            <div class="codex-card codex-card--static">
-              <div class="codex-card-image">
-                <img alt="Carte : Heara" decoding="async" loading="lazy" src="../img/LaGuerreDeLHeresie_QuentinNater_Cover.png"/>
-              </div>
-              <div class="codex-card-text">
-                <strong>Heara</strong>
-              </div>
-            </div>
+            <a class="codex-card" href="freea.html">
+              <div class="codex-card-image"><img alt="Carte : Freea" decoding="async" loading="lazy" src="../pictures/Freea_LaGuerreDeLHeresie_QuentinNater.jpg"/></div>
+              <div class="codex-card-text"><strong>Freea</strong></div>
+            </a>
+            <a class="codex-card" href="heara.html">
+              <div class="codex-card-image"><img alt="Carte : Heara" decoding="async" loading="lazy" src="../pictures/Heara_LaGuerreDeLHeresie_QuentinNater.jpg"/></div>
+              <div class="codex-card-text"><strong>Heara</strong></div>
+            </a>
           </div>
         </div>
       </section>
