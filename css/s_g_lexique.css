@@ -1,0 +1,442 @@
+/* Lexique du Livre 1. Complète s_g_shared_char.css. */
+.lex-hero {
+    text-align:center;
+    padding:3rem 1rem 2rem;
+    max-width:900px;
+    margin:auto
+}
+
+.lex-hero h1 {
+    font-size:clamp(2.1rem,5vw,4rem);
+    margin:.4rem 0
+}
+
+.lex-subtitle {
+    font-size:1.2rem;
+    color:#e4bb84
+}
+
+.lex-hero>p:last-child {
+    max-width:720px;
+    margin:1.5rem auto;
+    line-height:1.7
+}
+
+.lex-search {
+    max-width:850px;
+    margin:1.5rem auto 2rem;
+    padding:1.5rem;
+    border:1px solid rgba(230,188,119,.4);
+    border-radius:16px;
+    background:rgba(13,18,36,.72)
+}
+
+.lex-search label {
+    display:block;
+    margin-bottom:.8rem;
+    font-weight:700;
+    color:#f3dbb4
+}
+
+.lex-search-row {
+    display:flex;
+    gap:.7rem
+}
+
+.lex-search input {
+    flex:1;
+    min-width:0;
+    padding:.85rem 1rem;
+    border-radius:9px;
+    border:1px solid #b39a74;
+    background:#101729;
+    color:#fff;
+    font:inherit
+}
+
+.lex-search input:focus {
+    outline:2px solid #e4bb84;
+    outline-offset:2px
+}
+
+.lex-search button {
+    padding:.7rem 1rem;
+    border:1px solid #b39a74;
+    border-radius:9px;
+    color:#f4dfb8;
+    background:#24233b;
+    cursor:pointer;
+    font:inherit
+}
+
+.lex-search button:hover {
+    background:#3a3042
+}
+
+.lex-search p {
+    margin:.8rem 0 0;
+    opacity:.85
+}
+
+.lex-alphabet {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:.45rem;
+    margin:1.5rem auto 3rem;
+    max-width:980px
+}
+
+.lex-alphabet a {
+    display:grid;
+    place-items:center;
+    min-width:2.25rem;
+    height:2.4rem;
+    border:1px solid rgba(228,187,132,.45);
+    border-radius:7px;
+    text-decoration:none;
+    color:#f3d6a5;
+    background:rgba(20,24,44,.8);
+    font-weight:700
+}
+
+.lex-alphabet a:hover,.lex-alphabet a:focus-visible {
+    background:#6b4d38;
+    color:#fff
+}
+
+.lex-alphabet a[hidden] {
+    display:none
+}
+
+.lex-chapter {
+    scroll-margin-top:6rem
+}
+
+.lex-chapter-content {
+    min-width:0;
+    width:100%
+}
+
+.lex-chapter h2 {
+    margin-top:0
+}
+
+.lex-terms {
+    margin:0
+}
+
+.lex-entry {
+    padding:.85rem 0;
+    border-bottom:1px solid rgba(226,201,163,.19)
+}
+
+.lex-entry:last-child {
+    border-bottom:0
+}
+
+.lex-entry dt {
+    font-weight:700;
+    color:#f2d4a1;
+    font-size:1.12rem
+}
+
+.lex-entry dd {
+    margin:.4rem 0 0;
+    line-height:1.65;
+    overflow-wrap:anywhere
+}
+
+.lex-empty {
+    text-align:center;
+    padding:2rem;
+    font-size:1.2rem
+}
+
+.lex-bottom {
+    text-align:center;
+    margin:3rem auto;
+    padding:2rem 1rem;
+    line-height:1.7
+}
+
+.lex-bottom a {
+    color:#f1c68d
+}
+
+.lex-chapter[hidden],.lex-entry[hidden],.lex-empty[hidden] {
+    display:none!important
+}
+
+@media(max-width:650px) {
+    .lex-hero {
+        padding:2rem .3rem 1rem
+    }
+
+    .lex-search {
+        padding:1rem
+    }
+
+    .lex-search-row {
+        flex-wrap:wrap
+    }
+
+    .lex-search input {
+        flex-basis:100%
+    }
+
+    .lex-search button {
+        width:100%
+    }
+
+    .lex-alphabet {
+        gap:.35rem
+    }
+
+    .lex-alphabet a {
+        min-width:2rem;
+        height:2.1rem
+    }
+
+    .lex-entry {
+        padding:.9rem 0
+    }
+
+    .lex-entry dd {
+        text-align:left
+    }
+
+}
+
+/* Alphabet : une seule ligne si la largeur le permet. */
+.lex-alphabet {
+    max-width:none;
+    width:100%;
+    gap:.3rem;
+    flex-wrap:wrap;
+}
+
+.lex-alphabet a, .lex-alphabet .lex-letter-disabled {
+    box-sizing:border-box;
+    flex:0 1 2rem;
+    min-width:1.5rem;
+    height:2.2rem;
+}
+
+.lex-letter-disabled {
+    display:grid;
+    place-items:center;
+    border:1px solid rgba(228,187,132,.15);
+    border-radius:7px;
+    color:rgba(243,214,165,.35);
+    background:rgba(20,24,44,.35);
+    cursor:default;
+}
+
+.lex-visually-hidden {
+    position:absolute;
+    width:1px;
+    height:1px;
+    padding:0;
+    margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+}
+
+@media(max-width:650px) {
+    .lex-alphabet a, .lex-alphabet .lex-letter-disabled {
+        flex:0 1 2rem;
+    }
+}
+
+/* Espacement des définitions du lexique. */
+.lex-entry {
+    padding:1.45rem 0;
+}
+
+.lex-entry dd {
+    margin:.65rem 0 0;
+}
+
+/* Décoration chibi : même disposition que sur la page de Pruinae. */
+.portal-with-chibi {
+    position:relative;
+    isolation:isolate;
+    padding-bottom:185px;
+}
+
+.portal-with-chibi .portal-chibi {
+    position:absolute;
+    right:clamp(12px,5%,65px);
+    bottom:-12px;
+    width:clamp(175px,25vw,270px);
+    height:auto;
+    object-fit:contain;
+    pointer-events:none;
+    filter:drop-shadow(0 8px 10px rgba(0,0,0,.25));
+    z-index:1;
+    transition:transform .25s ease;
+}
+
+.portal-with-chibi:hover .portal-chibi {
+    transform:translateY(-5px) rotate(2deg);
+}
+
+@media(max-width:600px) {
+    .lex-entry {
+        padding:1.3rem 0;
+    }
+
+    .portal-with-chibi {
+        padding-bottom:155px;
+    }
+
+    .portal-with-chibi .portal-chibi {
+        width:165px;
+        right:12px;
+        bottom:-8px;
+    }
+}
+
+/* Navigation commune aux quatre lexiques. */
+.lex-books {
+    max-width:900px;
+    margin:1.5rem auto 2rem;
+    text-align:center;
+}
+
+.lex-books-label {
+    display:block;
+    margin-bottom:.85rem;
+    color:#f3dbb4;
+    font-weight:700;
+}
+
+.lex-books-links {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:.65rem;
+}
+
+.lex-books-links a {
+    display:inline-block;
+    padding:.7rem 1.25rem;
+    border:1px solid rgba(230,188,119,.4);
+    border-radius:9px;
+    color:#f3dbb4;
+    background:rgba(13,18,36,.72);
+    text-decoration:none;
+}
+
+.lex-books-links a:hover, .lex-books-links a.active {
+    border-color:#e4bb84;
+    background:rgba(228,187,132,.18);
+}
+
+.lex-coming-soon {
+    padding:2rem;
+    text-align:center;
+    color:#f3dbb4;
+}
+
+/* Largeur et typographie communes aux quatre lexiques. */
+.page:has(.lex-books) {
+    width:min(1440px,96vw);
+}
+
+.lex-hero {
+    max-width:1100px;
+}
+
+.lex-hero h1 {
+    font-size:clamp(2.25rem,5.2vw,4.25rem);
+}
+
+.lex-subtitle {
+    font-size:1.28rem;
+}
+
+.lex-hero>p:last-child {
+    max-width:900px;
+    font-size:1.08rem;
+}
+
+.lex-search, .lex-books {
+    max-width:1050px;
+}
+
+.lex-search, .lex-books, .lex-alphabet, .lex-chapter-content {
+    font-size:1.06rem;
+}
+
+.lex-entry dt {
+    font-size:1.2rem;
+}
+
+.lex-entry dd {
+    font-size:1.08rem;
+}
+
+@media(max-width:650px) {
+    .page:has(.lex-books) {
+        width:94vw;
+    }
+
+    .lex-hero h1 {
+        font-size:clamp(2rem,7vw,3rem);
+    }
+
+    .lex-entry dt {
+        font-size:1.14rem;
+    }
+
+    .lex-entry dd {
+        font-size:1.04rem;
+    }
+}
+
+/* Ajustement supplémentaire : lisibilité des titres et du texte. */
+.lex-hero h1 {
+    font-size:clamp(2.4rem,5.5vw,4.5rem);
+}
+
+.lex-subtitle {
+    font-size:1.36rem;
+}
+
+.lex-hero>p:last-child {
+    font-size:1.16rem;
+}
+
+.lex-search, .lex-books, .lex-alphabet, .lex-chapter-content {
+    font-size:1.13rem;
+}
+
+.lex-chapter h2 {
+    font-size:1.3rem;
+}
+
+.lex-entry dt {
+    font-size:1.28rem;
+}
+
+.lex-entry dd {
+    font-size:1.16rem;
+}
+
+@media(max-width:650px) {
+    .lex-hero h1 {
+        font-size:clamp(2.15rem,7.3vw,3.2rem);
+    }
+
+    .lex-entry dt {
+        font-size:1.21rem;
+    }
+
+    .lex-entry dd {
+        font-size:1.11rem;
+    }
+}
