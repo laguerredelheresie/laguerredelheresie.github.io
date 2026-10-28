@@ -1015,3 +1015,9 @@
  .press-reviews-layout > .journal-section, .press-reviews-layout > .reviews-section { min-width:0; width:100%; box-sizing:border-box; }
  .press-reviews-layout > hr { display:none; }
 }
+
+/* Lexicon link in the characters section: mobile-only counterpart. */
+article .core_character .characters-more-mobile { display: none; }
+@media screen and (max-width: 1000px) {
+    article .core_character .characters-more-mobile { display: block !important; }
+}
