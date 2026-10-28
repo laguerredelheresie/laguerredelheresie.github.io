@@ -440,3 +440,39 @@
         font-size:1.11rem;
     }
 }
+
+/* Lexiques : ajustements réservés aux écrans mobiles. */
+@media (max-width:650px) {
+    /* Masquer uniquement le paragraphe de présentation sous le livre. */
+    .lex-hero > p:last-child {
+        display:none;
+    }
+
+    /* Deux livres par ligne, avec un bloc par lien. */
+    .lex-books-links {
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:.65rem;
+    }
+
+    .lex-books-links a {
+        display:block;
+        min-width:0;
+        text-align:center;
+    }
+
+    /* Justification des définitions, sans toucher aux titres. */
+    .lex-entry dd {
+        text-align:justify;
+    }
+}
+
+
+hr
+{
+	width: 90%;
+	height: 1px;
+	margin: 60px auto !important;
+	border: 0;
+	background: linear-gradient(90deg,transparent,#806238,transparent);
+}
