@@ -476,3 +476,16 @@ hr
 	border: 0;
 	background: linear-gradient(90deg,transparent,#806238,transparent);
 }
+/* Lexiques : marge latérale uniquement pour la navigation sur mobile.
+   Les sections des définitions restent inchangées. */
+@media (max-width:650px) {
+    .page:has(.lex-books) > .lex-hero,
+    .page:has(.lex-books) > .lex-books,
+    .page:has(.lex-books) > .lex-search,
+    .page:has(.lex-books) > .lex-alphabet {
+        box-sizing:border-box;
+        width:calc(100% - 20px);
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
