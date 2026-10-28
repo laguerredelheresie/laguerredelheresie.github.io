@@ -489,3 +489,17 @@ hr
         margin-right:auto;
     }
 }
+
+/* Lexiques : espacement du fil d’Ariane, uniquement sur mobile. */
+@media (max-width:650px) {
+    .page:has(.lex-books) > .breadcrumbs {
+        box-sizing:border-box;
+        padding-left:10px;
+        padding-right:10px;
+    }
+}
+
+/* Le style display:grid des lettres désactivées ne doit pas annuler hidden. */
+.lex-alphabet .lex-letter-disabled[hidden] {
+    display:none !important;
+}

@@ -41,6 +41,12 @@
             }
         });
 
+        // Masquer aussi les lettres sans définition pendant une recherche.
+        // Elles réapparaissent lorsque le champ est vidé.
+        document.querySelectorAll('.lex-alphabet .lex-letter-disabled').forEach(letter => {
+            letter.hidden = Boolean(query);
+        });
+
         count.textContent = `${visible} définition${visible > 1 ? 's' : ''} affichée${visible > 1 ? 's' : ''} sur ${total}`;
         empty.hidden = visible !== 0;
     }
