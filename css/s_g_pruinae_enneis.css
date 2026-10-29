@@ -20,4 +20,3 @@
 .portal-with-chibi .portal-chibi{position:absolute;right:clamp(12px,5%,65px);bottom:-12px;width:clamp(175px,25vw,270px);height:auto;object-fit:contain;pointer-events:none;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25));z-index:1;transition:transform .25s ease}
 .portal-with-chibi:hover .portal-chibi{transform:translateY(-5px) rotate(2deg)}
 @media(max-width:600px){.portal-with-chibi{padding-bottom:155px}.portal-with-chibi .portal-chibi{width:165px;right:12px;bottom:-8px}}
-

@@ -760,3 +760,13 @@ h1.character-name-force {
   }
   .lore { column-gap: 8px !important; }
 }
+
+
+
+/* Larger descriptions on desktop for character and map pages. */
+@media (min-width: 769px) {
+    .lore p {
+        font-size: 21px;
+        text-align: justify;
+    }
+}
