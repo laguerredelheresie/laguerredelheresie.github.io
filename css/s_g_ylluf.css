@@ -1,0 +1,35 @@
+/* Ylluf : cartes des territoires, sans modifier les autres pages. */
+.ylluf-submap .ylluf-subtitle {
+    margin-top:0;
+    opacity:.8;
+    font-style:italic;
+}
+.ylluf-submap-content {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(220px,38%);
+    align-items:start;
+    gap:24px;
+}
+.ylluf-submap-text p:first-child { margin-top:0; }
+.ylluf-submap-figure { margin:0; text-align:center; }
+.ylluf-submap-figure a { display:block; width:fit-content; max-width:100%; margin:0 auto; cursor:zoom-in; }
+.ylluf-submap-figure img {
+    display:block;
+    width:100%;
+    height:auto;
+    box-sizing:border-box;
+    object-fit:contain;
+    border:3px solid #9c773f;
+    border-radius:0;
+}
+.ylluf-submap-figure figcaption { margin-top:8px; font-size:.85rem; opacity:.8; }
+@media (max-width:750px) {
+    .ylluf-submap-content { grid-template-columns:minmax(0,1fr); gap:16px; }
+    .ylluf-submap-figure { max-width:520px; width:100%; margin:0 auto; }
+}
+
+.map-page-link a,
+.map-page-link a:visited
+{
+    color: orange;
+}

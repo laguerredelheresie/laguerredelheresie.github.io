@@ -69,6 +69,7 @@
       object-position: center !important;
       }
       /* Ween: original map, fully visible on a white card background. */
+      .lore.book-card-chapter .codex-card[href="ylluf.html"] .codex-card-image,
       .lore.book-card-chapter .codex-card[href="ween.html"] .codex-card-image,
       .lore.book-card-chapter .codex-card[href="freea.html"] .codex-card-image,
       .lore.book-card-chapter .codex-card[href="heara.html"] .codex-card-image {
@@ -77,6 +78,7 @@
         align-items: center !important;
         justify-content: center !important;
       }
+      .lore.book-card-chapter .codex-card[href="ylluf.html"] .codex-card-image img,
       .lore.book-card-chapter .codex-card[href="ween.html"] .codex-card-image img,
       .lore.book-card-chapter .codex-card[href="freea.html"] .codex-card-image img,
       .lore.book-card-chapter .codex-card[href="heara.html"] .codex-card-image img {

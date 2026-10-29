@@ -2177,9 +2177,11 @@ body.map-lightbox-open { overflow: hidden; }
 .codex-card[href="doimh_neacht.html"] .codex-card-image,
 .codex-card[href="ween.html"] .codex-card-image,
 .codex-card[href="freea.html"] .codex-card-image,
+.codex-card[href="ylluf.html"] .codex-card-image,
 .codex-card[href="heara.html"] .codex-card-image { background: #fff !important; display: flex !important; align-items: center !important; justify-content: center !important; overflow: hidden !important; }
 .codex-card[href="doimh_neacht.html"] .codex-card-image img,
 .codex-card[href="ween.html"] .codex-card-image img,
 .codex-card[href="freea.html"] .codex-card-image img,
+.codex-card[href="ylluf.html"] .codex-card-image img,
 .codex-card[href="heara.html"] .codex-card-image img { width: 100% !important; height: 100% !important; max-width: 100% !important; object-fit: contain !important; object-position: center !important; }
 
