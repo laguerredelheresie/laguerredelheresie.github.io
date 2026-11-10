@@ -652,7 +652,7 @@
           .vernissage-feature__details { color:#553b26 !important; font:normal 1rem/1.8 Georgia,serif !important; margin:0 0 22px !important; text-align:left !important; }
           .vernissage-feature__registration { color:#553b26 !important; font:normal 1rem/1.6 Georgia,serif !important; margin:0 0 24px !important; }
           .vernissage-feature__registration a { color:#613d21 !important; font-weight:bold; text-decoration:underline; }
-          .vernissage-feature__link { display:inline-block; padding:12px 22px; border-radius:5px; background:#493020; color:#000000 !important; text-decoration:none !important; font:700 .95rem Georgia,serif; transition:background .2s,transform .2s; }
+          .vernissage-feature__link { margin-top:60px; display:inline-block; padding:12px 22px; border-radius:5px; background:#493020; color:#000000 !important; text-decoration:none !important; font:700 .95rem Georgia,serif; transition:background .2s,transform .2s; }
           .vernissage-feature__link:hover { background:#74502d; transform:translateY(-2px); }
           .vernissage-feature__poster { display:block; text-align:center; }
           .vernissage-feature__poster img { display:block; width:100%; max-width:480px; height:auto; margin:auto; border:5px solid #f8eed8; box-shadow:0 12px 30px rgba(37,23,13,.3); box-sizing:border-box; }
