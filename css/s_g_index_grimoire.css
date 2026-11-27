@@ -668,7 +668,7 @@ body.grimoire-index::after
 .grimoire-index > article > .lexicon-article
 {
 	counter-increment: grimoire-index-chapter;
-	padding-left: clamp(112px,10vw,165px) !important;
+	padding-left: calc(clamp(112px,10vw,165px) + 15px) !important;
 }
 .grimoire-index > article > .core::after,
 .grimoire-index > article > .core_table::after,
@@ -2185,3 +2185,17 @@ body.map-lightbox-open { overflow: hidden; }
 .codex-card[href="ylluf.html"] .codex-card-image img,
 .codex-card[href="heara.html"] .codex-card-image img { width: 100% !important; height: 100% !important; max-width: 100% !important; object-fit: contain !important; object-position: center !important; }
 
+
+/* CHAPTER CONTENT SPACING */
+@media screen and (min-width: 601px) {
+    body.grimoire-index > article > .core,
+    body.grimoire-index > article > .core_table,
+    body.grimoire-index > article > .core_character,
+    body.grimoire-index > article > .press-reviews-layout,
+    body.grimoire-index > article > .hereliande-unified,
+    body.grimoire-index > article > .lexicon-article,
+    body.grimoire-index > article > .press-reviews-layout + hr + .core,
+    body.grimoire-index > article > .core:has(> h1.title_character:first-child):has(> a[href*="fnac.com/ia10677023"]) {
+        padding-left: calc(clamp(112px, 10vw, 165px) + 15px) !important;
+    }
+}

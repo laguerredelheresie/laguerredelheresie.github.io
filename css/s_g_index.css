@@ -1021,3 +1021,89 @@ article .core_character .characters-more-mobile { display: none; }
 @media screen and (max-width: 1000px) {
     article .core_character .characters-more-mobile { display: block !important; }
 }
+
+/*HERELIANDE PORTAL*/
+
+.hereliande-portal {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px 25px;
+    text-align: center;
+    border: 1px solid #897044;
+    border-radius: 12px;
+    background: radial-gradient(ellipse at top, #242031, #100e19);
+    color: #e8d3a4;
+}
+
+.hereliande-eyebrow {
+    color: #c7a76c;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+}
+
+.hereliande-ornament {
+    color: #ad8d53;
+    margin: 20px 0;
+}
+
+.hereliande-quote {
+    color: #e8d3a4;
+    font-size: 1.8rem;
+    font-style: italic;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+
+.hereliande-translation {
+    color: #b8ac96;
+    font-size: 0.9rem;
+}
+
+.hereliande-register {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 25px 0;
+}
+
+.hereliande-register strong {
+    display: block;
+    color: #dfc18a;
+    font-size: 1.8rem;
+}
+
+.hereliande-register small {
+    color: #b8ac96;
+}
+
+.hereliande-link {
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid #ae9055;
+    border-radius: 6px;
+    background: #302719;
+    color: #f2d9a5;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.hereliande-link:hover {
+    background: #493a23;
+    color: #fff0cc;
+    box-shadow: 0 0 20px rgba(174, 144, 85, 0.3);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .hereliande-portal {
+        padding: 25px 15px;
+    }
+
+    .hereliande-register {
+        gap: 30px;
+    }
+
+    .hereliande-link {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,26 @@
+#lexique { display: block; width: 100%; }
+#lexique .her-group { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 1rem; width: 100%; max-width: none; box-sizing: border-box; margin: 1.2rem 0; scroll-margin-top: 6rem; }
+.her-content { min-width: 0; width: 100%; }
+.her-group h2 { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .6rem; margin: 0 0 1rem; }
+.her-content.lexicon {
+    --lexicon-panel: #111723;
+    --lexicon-panel-soft: #1b2230;
+    --lexicon-panel-hover: #292b38;
+    --lexicon-text: #eee4cf;
+    --lexicon-muted: #c5b38e;
+    --lexicon-line: #66502e;
+    --lexicon-accent: #d8b46a;
+    --lexicon-accent-soft: #d8b46a22;
+    color: #eee4cf;
+    width: 100%;
+}
+.her-content.lexicon .term { color: #f1dfb6; }
+.her-content.lexicon .translation { color: #ddd1b9; }
+.her-group .her-badge { font-size: .78rem; white-space: nowrap; }
+.her-content.lexicon .table-wrap { overflow-x: auto; }
+#lexique .her-group[hidden], .her-group tr[hidden], #her-empty[hidden] { display: none !important; }
+@media (max-width: 720px) {
+    #lexique .her-group { grid-template-columns: minmax(0, 1fr); scroll-margin-top: 2rem; }
+    .her-content.lexicon table { min-width: 0; }
+    .her-content.lexicon th, .her-content.lexicon td { width: 50%; padding: 8px 9px; font-size: 13px; line-height: 1.4; }
+}
