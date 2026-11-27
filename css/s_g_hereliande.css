@@ -23,4 +23,5 @@
     #lexique .her-group { grid-template-columns: minmax(0, 1fr); scroll-margin-top: 2rem; }
     .her-content.lexicon table { min-width: 0; }
     .her-content.lexicon th, .her-content.lexicon td { width: 50%; padding: 8px 9px; font-size: 13px; line-height: 1.4; }
+    .her-group .her-badge { display: none; }
 }
